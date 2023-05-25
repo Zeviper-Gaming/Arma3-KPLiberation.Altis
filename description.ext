@@ -33,7 +33,7 @@ author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
 */
 
 // -- Mission name displayed in the mission selection menu.
-briefingName = myKP Liberation (current mission);
+briefingName = [my] KP Liberation (TEST ALiVE);
 
 // -- Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // -- Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
@@ -250,9 +250,11 @@ class CfgTaskDescriptions {
 
 
 // -- Custom addon
+// -- Executed when a unit man is spawned
+
 class Extended_Init_EventHandlers {
  class Man {
-  init = "_this call (compile preprocessFileLineNumbers 'man_init.sqf')";
+  init = "_this call (compile preprocessFileLineNumbers 'my_fnc\man_init.sqf')";
  };
 };
 
