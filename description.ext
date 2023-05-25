@@ -33,7 +33,7 @@ author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
 */
 
 // -- Mission name displayed in the mission selection menu.
-briefingName = myKP_Liberation_Game;
+briefingName = myKP Liberation (current mission);
 
 // -- Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // -- Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
@@ -247,4 +247,12 @@ class CfgTaskDescriptions {
 #include "GREUH\UI\GREUH_interface.hpp"
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
+
+
+// -- Custom addon
+class Extended_Init_EventHandlers {
+ class Man {
+  init = "_this call (compile preprocessFileLineNumbers 'man_init.sqf')";
+ };
+};
 
