@@ -708,7 +708,7 @@ class Mission
 						rank="COLONEL";
 						init="removeallWeapons this; removebackpack this; this setVariable ['ace_medical_medicClass', 1]; this setVariable ['ACE_isEngineer', 1];";
 						name="commandant";
-						description="Platoon Leader (Commander)";
+						description="Platoon Leader (Florian)";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -746,7 +746,8 @@ class Mission
 					{
 						rank="CAPTAIN";
 						init="removeallWeapons this; removebackpack this;";
-						description="Platoon Sergeant";
+						name="second_commandant"
+						description="Platoon Sergeant (Adrien)";
 						isPlayable=1;
 					};
 					id=564;
