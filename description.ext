@@ -254,7 +254,7 @@ class CfgTaskDescriptions {
 
 class Extended_Init_EventHandlers {
  class Man {
-  init = "_this call (compile preprocessFileLineNumbers 'my_fnc\man_init.sqf')";
+  init = "_this call (compile preprocessFileLineNumbers 'scripts\my_fnc\man_init.sqf')";
  };
 };
 
