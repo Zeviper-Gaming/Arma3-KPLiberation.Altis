@@ -17,7 +17,7 @@
 
     You can also remove unwanted start vehicles by deleting the corresponding line
     in the array below. Just keep the correct comma separation in mind.
-    Refer to: https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_ImportantHints#commas-inside-an-array
+    Refer to: https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_ImportantHints#commas-inside-an-array
 */
 
 waitUntil {!isNil "save_is_loaded"};

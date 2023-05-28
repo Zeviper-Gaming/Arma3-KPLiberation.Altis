@@ -1,9 +1,9 @@
 /*
     File: fn_getSquadComp.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2020-04-24
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Provides an infantry squad composition of classnames in accordance to the current weights to adapt to the players playstyle.

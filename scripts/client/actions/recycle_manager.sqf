@@ -26,8 +26,8 @@ while {true} do {
             (typeOf _x) in KP_liberation_ace_crates) &&
             alive _x &&
             (
-                // ignore null objects left by Advanced Towing
-                // see https://github.com/sethduda/AdvancedTowing/pull/46
+                // -- ignore null objects left by Advanced Towing
+                // -- see https:// --github.com/sethduda/AdvancedTowing/pull/46
                 (((attachedObjects _x) select {!isNull _X}) isEqualTo [])
                 || ((typeOf _x) == "rhsusf_mkvsoc")
             ) &&

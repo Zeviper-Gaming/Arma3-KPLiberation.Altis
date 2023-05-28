@@ -2,10 +2,10 @@
     Killah Potatoes GUI base classes
 
     File: KPGUI_classes.hpp
-    Author: Wyqer - https://github.com/KillahPotatoes
+    Author: Wyqer - https:// --github.com/KillahPotatoes
     Date: 2018-09-13
     Last Update: 2020-05-09
-    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    License: GNU General Public License v3.0 - https:// --www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Base UI classes for KPGUI.
@@ -34,7 +34,7 @@
     --- General Classes ---
 */
 
-// Scrollbar
+// -- Scrollbar
 class KPGUI_PRE_ScrollBar {
     color[] = {1, 1, 1, 0.6};
     colorActive[] = {1, 1, 1, 1};
@@ -53,7 +53,7 @@ class KPGUI_PRE_ScrollBar {
     autoScrollRewind = 0;
 };
 
-// Title bar for dialogs
+// -- Title bar for dialogs
 class KPGUI_PRE_Title {
     deletable = 0;
     fade = 0;
@@ -78,7 +78,7 @@ class KPGUI_PRE_Title {
     linespacing = 1;
 };
 
-// Cross symbol for dialog close
+// -- Cross symbol for dialog close
 class KPGUI_PRE_CloseCross {
     deletable = 0;
     fade = 0;
@@ -111,14 +111,14 @@ class KPGUI_PRE_CloseCross {
     action = "closeDialog 0";
 };
 
-// Help or version info icon
+// -- Help or version info icon
 class KPGUI_PRE_VersionIcon: KPGUI_PRE_CloseCross {
     text = "\A3\Ui_f\data\Map\Markers\Military\unknown_CA.paa";
     tooltip = "";
     action = "";
 };
 
-// General background for the dialog area
+// -- General background for the dialog area
 class KPGUI_PRE_Background {
     deletable = 0;
     fade = 0;
@@ -143,7 +143,7 @@ class KPGUI_PRE_Background {
     linespacing = 1;
 };
 
-// Normal Text
+// -- Normal Text
 class KPGUI_PRE_Text {
     deletable = 0;
     fade = 0;
@@ -168,13 +168,13 @@ class KPGUI_PRE_Text {
     linespacing = 1;
 };
 
-// Inline Title
+// -- Inline Title
 class KPGUI_PRE_InlineTitle: KPGUI_PRE_Text {
     style = 2;
     sizeEx = KP_TEXT_L;
 };
 
-// Active Text
+// -- Active Text
 class KPGUI_PRE_ActiveText {
     deletable = 0;
     fade = 0;
@@ -203,29 +203,29 @@ class KPGUI_PRE_ActiveText {
     url = "";
 };
 
-// Picture
+// -- Picture
 class KPGUI_PRE_Picture: KPGUI_PRE_Text {
     style = 48;
 };
 
-// Active Picture
+// -- Active Picture
 class KPGUI_PRE_ActivePicture: KPGUI_PRE_ActiveText {
     color[] = {1, 1, 1, 0.5};
     colorActive[] = {1, 1, 1, 1};
     style = 48;
 };
 
-// Active Picture which keeps aspect ratio
+// -- Active Picture which keeps aspect ratio
 class KPGUI_PRE_ActivePictureRatio: KPGUI_PRE_ActivePicture {
     style = 48 + 2048;
 };
 
-// Picture which keeps aspect ratio
+// -- Picture which keeps aspect ratio
 class KPGUI_PRE_PictureRatio: KPGUI_PRE_Picture {
     style = 48 + 2048;
 };
 
-// Button
+// -- Button
 class KPGUI_PRE_Button {
     deletable = 0;
     fade = 0;
@@ -260,7 +260,7 @@ class KPGUI_PRE_Button {
     borderSize = 0;
 };
 
-// Inline Button
+// -- Inline Button
 class KPGUI_PRE_InlineButton: KPGUI_PRE_Button {
     colorBackground[] = {0.25, 0.25, 0.25, 1};
     colorBackgroundDisabled[] = {0, 1, 0, 1};
@@ -270,7 +270,7 @@ class KPGUI_PRE_InlineButton: KPGUI_PRE_Button {
     offsetPressedY = safeZoneH * 0.001;
 };
 
-// Controls group
+// -- Controls group
 class KPGUI_PRE_ControlsGroup {
     deletable = 0;
     fade = 0;
@@ -294,7 +294,7 @@ class KPGUI_PRE_ControlsGroup {
     style = 16;
 };
 
-// Controls group no scrollbars
+// -- Controls group no scrollbars
 class KPGUI_PRE_ControlsGroupNoScrollbars: KPGUI_PRE_ControlsGroup {
     class VScrollbar: VScrollbar {
         width = 0;
@@ -304,7 +304,7 @@ class KPGUI_PRE_ControlsGroupNoScrollbars: KPGUI_PRE_ControlsGroup {
     };
 };
 
-// Combo
+// -- Combo
 class KPGUI_PRE_Combo {
     deletable = 0;
     fade = 0;
@@ -348,7 +348,7 @@ class KPGUI_PRE_Combo {
     wholeHeight = 0.45;
 };
 
-// Checkbox
+// -- Checkbox
 class KPGUI_PRE_CheckBox {
     color[] = {1, 1, 1, 0.7};
     colorFocused[] = {1, 1, 1, 1};
@@ -388,7 +388,7 @@ class KPGUI_PRE_CheckBox {
     textureDisabledUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
 };
 
-// ListBox
+// -- ListBox
 class KPGUI_PRE_ListBox {
     deletable = 0;
     fade = 0;
@@ -478,7 +478,7 @@ class KPGUI_PRE_ListNBox {
     h = 0;
 };
 
-// XListBox
+// -- XListBox
 class KPGUI_PRE_XListBox {
     deletable = 0;
     fade = 0;
@@ -513,7 +513,7 @@ class KPGUI_PRE_XListBox {
     sizeEx = KP_TEXT_M;
 };
 
-// Slider
+// -- Slider
 class KPGUI_PRE_Slider {
     deletable = 0;
     fade = 0;
@@ -537,7 +537,7 @@ class KPGUI_PRE_Slider {
     thumb = "\A3\ui_f\data\gui\cfg\slider\thumb_ca.paa";
 };
 
-// Editbox
+// -- Editbox
 class KPGUI_PRE_EditBox {
     deletable = 0;
     fade = 0;
@@ -568,7 +568,7 @@ class KPGUI_PRE_EditBox {
     canModify = 1;
 };
 
-// MapControl
+// -- MapControl
 class KPGUI_PRE_MapControl {
     deletable = 0;
     fade = 0;
@@ -939,26 +939,26 @@ class KPGUI_PRE_MapControl {
     --- Standard sized classes ---
 */
 
-// Title bar
+// -- Title bar
 class KPGUI_PRE_DialogTitle: KPGUI_PRE_Title {
     x = KP_GETX(KP_X_VAL,KP_WIDTH_VAL,0,1);
     y = safeZoneY + safeZoneH * KP_Y_VAL;
     w = KP_GETWPLAIN(KP_WIDTH_VAL,1);
 };
 
-// Cross symbol
+// -- Cross symbol
 class KPGUI_PRE_DialogCross: KPGUI_PRE_CloseCross {
     x = KP_GETX_CROSS(KP_X_VAL);
     y = KP_GETY_CROSS(KP_Y_VAL);
 };
 
-// Version info
+// -- Version info
 class KPGUI_PRE_DialogVersionIcon: KPGUI_PRE_VersionIcon {
     x = safeZoneX + safeZoneW * (KP_X_VAL + KP_WIDTH_VAL - 0.04);
     y = KP_GETY_CROSS(KP_Y_VAL);
 };
 
-// Background
+// -- Background
 class KPGUI_PRE_DialogBackground: KPGUI_PRE_Background {
     x = KP_GETX(KP_X_VAL,KP_WIDTH_VAL,0,1);
     y = KP_GETY_AREA(KP_Y_VAL);
@@ -966,7 +966,7 @@ class KPGUI_PRE_DialogBackground: KPGUI_PRE_Background {
     h = safeZoneH * KP_HEIGHT_VAL;
 };
 
-// Button pos 1 in 4 button row
+// -- Button pos 1 in 4 button row
 class KPGUI_PRE_DialogButton: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL,KP_WIDTH_VAL,0,4);
     y = KP_GETY_BELOW(KP_Y_VAL,KP_HEIGHT_VAL);
@@ -977,26 +977,26 @@ class KPGUI_PRE_DialogButton: KPGUI_PRE_Button {
     --- Large sized classes ---
 */
 
-// Title bar
+// -- Title bar
 class KPGUI_PRE_DialogTitleL: KPGUI_PRE_Title {
     x = KP_GETX(KP_X_VAL_L,KP_WIDTH_VAL_L,0,1);
     y = safeZoneY + safeZoneH * KP_Y_VAL_L;
     w = KP_GETWPLAIN(KP_WIDTH_VAL_L,1);
 };
 
-// Cross symbol
+// -- Cross symbol
 class KPGUI_PRE_DialogCrossL: KPGUI_PRE_CloseCross {
     x = KP_GETX_CROSS(KP_X_VAL_L);
     y = KP_GETY_CROSS(KP_Y_VAL_L);
 };
 
-// Version info
+// -- Version info
 class KPGUI_PRE_DialogVersionIconL: KPGUI_PRE_VersionIcon {
     x = safeZoneX + safeZoneW * (KP_X_VAL_L + KP_WIDTH_VAL_L - 0.04);
     y = KP_GETY_CROSS(KP_Y_VAL_L);
 };
 
-// Background
+// -- Background
 class KPGUI_PRE_DialogBackgroundL: KPGUI_PRE_Background {
     x = KP_GETX(KP_X_VAL_L,KP_WIDTH_VAL_L,0,1);
     y = KP_GETY_AREA(KP_Y_VAL_L);
@@ -1004,7 +1004,7 @@ class KPGUI_PRE_DialogBackgroundL: KPGUI_PRE_Background {
     h = safeZoneH * KP_HEIGHT_VAL_L;
 };
 
-// Button pos 1 in 4 button row
+// -- Button pos 1 in 4 button row
 class KPGUI_PRE_DialogButtonL: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL_L,KP_WIDTH_VAL_L,0,4);
     y = KP_GETY_BELOW(KP_Y_VAL_L,KP_HEIGHT_VAL_L);
@@ -1015,26 +1015,26 @@ class KPGUI_PRE_DialogButtonL: KPGUI_PRE_Button {
     --- Corner sized classes ---
 */
 
-// Title bar
+// -- Title bar
 class KPGUI_PRE_DialogTitleC: KPGUI_PRE_Title {
     x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
     y = safeZoneY + safeZoneH * KP_Y_VAL_C;
     w = KP_GETWPLAIN(KP_WIDTH_VAL_C,1);
 };
 
-// Cross symbol
+// -- Cross symbol
 class KPGUI_PRE_DialogCrossC: KPGUI_PRE_CloseCross {
     x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_VAL_C - 0.02);
     y = KP_GETY_CROSS(KP_Y_VAL_C);
 };
 
-// Version info
+// -- Version info
 class KPGUI_PRE_DialogVersionIconC: KPGUI_PRE_VersionIcon {
     x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_VAL_C - 0.04);
     y = KP_GETY_CROSS(KP_Y_VAL_C);
 };
 
-// Background
+// -- Background
 class KPGUI_PRE_DialogBackgroundC: KPGUI_PRE_Background {
     x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
     y = KP_GETY_AREA(KP_Y_VAL_C);
@@ -1042,7 +1042,7 @@ class KPGUI_PRE_DialogBackgroundC: KPGUI_PRE_Background {
     h = safeZoneH * KP_HEIGHT_VAL_C;
 };
 
-// Button
+// -- Button
 class KPGUI_PRE_DialogButtonC: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
     y = KP_GETY_BELOW(KP_Y_VAL_C,KP_HEIGHT_VAL_C);
@@ -1053,26 +1053,26 @@ class KPGUI_PRE_DialogButtonC: KPGUI_PRE_Button {
     --- Left panel sized classes ---
 */
 
-// Title bar
+// -- Title bar
 class KPGUI_PRE_DialogTitle_LeftPanel: KPGUI_PRE_Title {
     x = KP_GETX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
     y = safeZoneY + safeZoneH * KP_Y_VAL_LP;
     w = KP_GETWPLAIN(KP_WIDTH_VAL_LP,1);
 };
 
-// Cross symbol
+// -- Cross symbol
 class KPGUI_PRE_DialogCross_LeftPanel: KPGUI_PRE_CloseCross {
     x = safeZoneX + safeZoneW * (KP_X_VAL_LP + KP_WIDTH_VAL_LP - 0.02);
     y = KP_GETY_CROSS(KP_Y_VAL_LP);
 };
 
-// Version info
+// -- Version info
 class KPGUI_PRE_DialogVersionIcon_LeftPanel: KPGUI_PRE_VersionIcon {
     x = safeZoneX + safeZoneW * (KP_X_VAL_LP + KP_WIDTH_VAL_LP - 0.04);
     y = KP_GETY_CROSS(KP_Y_VAL_LP);
 };
 
-// Background
+// -- Background
 class KPGUI_PRE_DialogBackground_LeftPanel: KPGUI_PRE_Background {
     x = KP_GETX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
     y = KP_GETY_AREA(KP_Y_VAL_LP);
@@ -1080,7 +1080,7 @@ class KPGUI_PRE_DialogBackground_LeftPanel: KPGUI_PRE_Background {
     h = safeZoneH * KP_HEIGHT_VAL_LP;
 };
 
-// Button
+// -- Button
 class KPGUI_PRE_DialogButton_LeftPanel: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
     y = KP_GETY_BELOW(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP);

@@ -1,9 +1,9 @@
 /*
     File: fn_initCuratorHandlers.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-08-07
     Last Update: 2020-08-30
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Initialize curator handlers.
@@ -19,10 +19,10 @@
 
 if (isServer) then {
 
-    // delete old Liberation mission placed Zeus module
+    // -- delete old Liberation mission placed Zeus module
     deleteVehicle zm1;
 
-    // add curator assign EventHandler
+    // -- add curator assign EventHandler
     [true, "KPLIB_createZeus", {
         params [
             ["_player", objNull, [objNull]],
@@ -32,14 +32,14 @@ if (isServer) then {
         if (isNull _player) exitWith {};
         private _uid = getPlayerUID _player;
 
-        // check if there's already a managed zeus module for this player, if so we can just reassign
+        // -- check if there's already a managed zeus module for this player, if so we can just reassign
         private _oldManagedZeus = missionNamespace getVariable [ZEUSVAR(_uid), objNull];
         if (!isNull _oldManagedZeus && {_limited isEqualTo (_oldManagedZeus getVariable ["KPLIB_limited", -1])}) exitWith {
             _player assignCurator _oldManagedZeus;
             [true, "KPLIB_zeusAssigned", [_oldManagedZeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
         };
 
-        // remove currently assigned curator
+        // -- remove currently assigned curator
         private _oldZeus = getAssignedCuratorLogic _player;
         unassignCurator _oldZeus;
         deleteVehicle _oldZeus;
@@ -82,7 +82,7 @@ if (isServer) then {
         _zeus addCuratorAddons _addons;
     }] call BIS_fnc_addScriptedEventHandler;
 
-    // remove the assigned curator on player disconnect
+    // -- remove the assigned curator on player disconnect
     addMissionEventHandler ["HandleDisconnect", {
         params ["", "", "_uid"];
         private _zeus = missionNamespace getVariable ZEUSVAR(_uid);

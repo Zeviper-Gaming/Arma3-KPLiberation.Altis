@@ -25,7 +25,7 @@ if (KP_liberation_arsenalUsePreset) then {
         KP_liberation_allowed_items append GRLIB_arsenal_weapons;
     };
 
-    // Support for CBA disposable launchers, https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers
+    // -- Support for CBA disposable launchers, https:// --github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers
     if !(configProperties [configFile >> "CBA_DisposableLaunchers"] isEqualTo []) then {
         private _disposableLaunchers = ["CBA_FakeLauncherMagazine"];
         {
@@ -99,7 +99,7 @@ if (KP_liberation_arsenalUsePreset) then {
         [player, KP_liberation_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
     };
 
-    // Lowercase all classnames
+    // -- Lowercase all classnames
     KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
 } else {
     [missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;

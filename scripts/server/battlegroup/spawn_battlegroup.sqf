@@ -1,4 +1,4 @@
-// TODO Refactor and create function
+// -- TODO Refactor and create function
 params [
     ["_spawn_marker", "", [""]],
     ["_infOnly", false, [false]]
@@ -23,13 +23,13 @@ if !(_spawn_marker isEqualTo "") then {
     };
 
     if (_infOnly) then {
-        // Infantry units to choose from
+        // -- Infantry units to choose from
         private _infClasses = [KPLIB_o_inf_classes, militia_squad] select (combat_readiness < 50);
 
-        // Adjust target size for infantry
+        // -- Adjust target size for infantry
         _target_size = 12 max (_target_size * 4);
 
-        // Create infantry groups with up to 8 units per squad
+        // -- Create infantry groups with up to 8 units per squad
         private _grp = createGroup [GRLIB_side_enemy, true];
         for "_i" from 0 to (_target_size - 1) do {
             if (_i > 0 && {(_i % 8) isEqualTo 0}) then {

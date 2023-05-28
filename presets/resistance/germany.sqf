@@ -19,7 +19,7 @@ KP_liberation_guerilla_units = [
     "I_G_Soldier_SL_F"
 ];
 
-// Armed vehicles
+// -- Armed vehicles
 KP_liberation_guerilla_vehicles = [];
 
 /* Guerilla Equipment
@@ -48,7 +48,7 @@ KP_liberation_guerilla_weapons_3 = [
     ["gm_lmgrpk_brn","gm_75Rnd_762x39mm_B_M43_ak47_blk",4,"",""]
 ];
 
-// Uniforms
+// -- Uniforms
 KP_liberation_guerilla_uniforms_1 = [
     "gm_gc_civ_uniform_man_01_80_blu",
     "gm_gc_civ_uniform_man_02_80_brn",
@@ -83,7 +83,7 @@ KP_liberation_guerilla_uniforms_3 = [
     "U_B_GEN_Commander_F"
 ];
 
-// Vests
+// -- Vests
 KP_liberation_guerilla_vests_1 = [
     "V_LegStrapBag_coyote_F",
     "V_LegStrapBag_olive_F",
@@ -112,7 +112,7 @@ KP_liberation_guerilla_vests_3 = [
     "gm_ge_bgs_vest_80_rifleman"
 ];
 
-// Headgear
+// -- Headgear
 KP_liberation_guerilla_headgear_1 = [
     "",
     "",
@@ -167,7 +167,7 @@ KP_liberation_guerilla_headgear_3 = [
     "H_Shemag_olive"
 ];
 
-// Facegear. Applies for tier 2 and 3.
+// -- Facegear. Applies for tier 2 and 3.
 KP_liberation_guerilla_facegear = [
     "",
     "",

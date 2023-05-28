@@ -1,9 +1,9 @@
 /*
     File: fn_getFobName.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2020-04-05
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets the FOB name in accordance to the military alphabet set in init presets.

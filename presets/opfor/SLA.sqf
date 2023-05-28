@@ -6,7 +6,7 @@
     - None
 */
 
-// Enemy infantry classes
+// -- Enemy infantry classes
 opfor_officer = "LOP_SLA_Infantry_Officer";
 opfor_squad_leader = "LOP_SLA_Infantry_SL";
 opfor_team_leader = "LOP_SLA_Infantry_TL";
@@ -25,12 +25,12 @@ opfor_medic = "LOP_SLA_Infantry_Corpsman";
 opfor_engineer = "LOP_SLA_Infantry_Engineer";
 opfor_paratrooper = "LOP_SLA_Infantry_Rifleman";
 
-// Enemy vehicles used by secondary objectives.
+// -- Enemy vehicles used by secondary objectives.
 opfor_mrap = "LOP_SLA_UAZ";
 opfor_mrap_armed = "LOP_SLA_UAZ_DshKM";
 opfor_transport_helo = "LOP_SLA_Mi8MT_Cargo";
 opfor_transport_truck = "LOP_SLA_Ural";
-opfor_ammobox_transport = "LOP_SLA_Ural_open";                          //-> Has to be able to transport resource crates!
+opfor_ammobox_transport = "LOP_SLA_Ural_open";                          // ---> Has to be able to transport resource crates!
 opfor_fuel_truck = "rhs_gaz66_ammo_vmf";
 opfor_ammo_truck = "rhs_gaz66_ammo_vmf";
 opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";
@@ -56,7 +56,7 @@ militia_squad = [
     "LOP_SLA_Infantry_Engineer"
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
+// -- Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
@@ -65,7 +65,7 @@ militia_vehicles = [
     "LOP_SLA_UAZ_Open"
 ];
 
-// All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
+// -- All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
@@ -81,7 +81,7 @@ opfor_vehicles = [
     "LOP_SLA_T72BA"
 ];
 
-// All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
+// -- All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
@@ -90,7 +90,7 @@ opfor_vehicles_low_intensity = [
     "LOP_SLA_BMP2"
 ];
 
-// All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
+// -- All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
@@ -107,7 +107,7 @@ opfor_battlegroup_vehicles = [
     "LOP_SLA_Mi8MTV3_UPK23"
 ];
 
-// All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
+// -- All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
     "LOP_SLA_UAZ_DshKM",
     "LOP_SLA_UAZ_AGS",
@@ -131,12 +131,12 @@ opfor_troup_transports = [
     "LOP_SLA_Mi8MTV3_UPK23"
 ];
 
-// Enemy rotary-wings that will need to spawn in flight.
+// -- Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
     "LOP_SLA_Mi8MTV3_FAB",
     "LOP_SLA_Mi8MT_Cargo",
     "LOP_SLA_Mi8MTV3_UPK23"
 ];
 
-// Enemy fixed-wings that will need to spawn in the air.
+// -- Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [];

@@ -1,9 +1,9 @@
 /*
     File: fn_setFobMass.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2017-12-02
     Last Update: 2020-04-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Sets mass of FOB box to Max slingload weight of "huron_typename" lowered by 100.

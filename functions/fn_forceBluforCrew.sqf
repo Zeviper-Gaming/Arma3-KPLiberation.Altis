@@ -1,9 +1,9 @@
 /*
     File: fn_forceBluforCrew.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2019-12-04
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Creates vehicle crew from vehicle config.
@@ -22,10 +22,10 @@ params [
 
 if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-// Create regular config crew
+// -- Create regular config crew
 private _grp = createVehicleCrew _veh;
 
-// If the config crew isn't the correct side, replace it with the crew classnames from the preset
+// -- If the config crew isn't the correct side, replace it with the crew classnames from the preset
 if ((side _grp) != GRLIB_side_friendly) then {
     {deleteVehicle _x} forEach (units _grp);
 
@@ -37,13 +37,13 @@ if ((side _grp) != GRLIB_side_friendly) then {
     ((units _grp) select 1) moveInGunner _veh;
     ((units _grp) select 2) moveInCommander _veh;
 
-    // Delete crew which isn't in the vehicle due to e.g. no commander seat
+    // -- Delete crew which isn't in the vehicle due to e.g. no commander seat
     {
         if (isNull objectParent _x) then {deleteVehicle _x};
     } forEach (units _grp);
 };
 
-// Set the crew to safe behaviour
+// -- Set the crew to safe behaviour
 _grp setBehaviour "SAFE";
 
 true

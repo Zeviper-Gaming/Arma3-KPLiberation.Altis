@@ -1,4 +1,4 @@
-// TODO This needs absolutely a code refactoring, flamethrower or nuke
+// -- TODO This needs absolutely a code refactoring, flamethrower or nuke
 
 private [ "_maxdist", "_truepos", "_built_object_remote", "_pos", "_grp", "_classname", "_idx", "_unitrank", "_posfob", "_ghost_spot", "_vehicle", "_dist", "_actualdir", "_near_objects", "_near_objects_25", "_debug_colisions" ];
 

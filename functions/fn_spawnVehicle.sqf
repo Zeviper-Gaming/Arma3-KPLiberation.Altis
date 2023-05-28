@@ -1,9 +1,9 @@
 /*
     File: fn_spawnVehicle.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-12-03
     Last Update: 2020-05-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Spawns a vehicle with all needed Liberation connections/dependencies.
@@ -33,10 +33,10 @@ private _newvehicle = objNull;
 private _spawnpos = [];
 
 if (_precise) then {
-    // Directly use given pos, if precise placement is true
+    // -- Directly use given pos, if precise placement is true
     _spawnpos = _pos;
 } else {
-    // Otherwise find a suitable position for vehicle spawning near given pos
+    // -- Otherwise find a suitable position for vehicle spawning near given pos
     private _i = 0;
     while {_spawnPos isEqualTo []} do {
         _i = _i + 1;
@@ -51,7 +51,7 @@ if (_spawnPos isEqualTo zeroPos) exitWith {
     objNull
 };
 
-// If it's a chopper, spawn it flying
+// -- If it's a chopper, spawn it flying
 if (_classname in opfor_choppers) then {
     _newvehicle = createVehicle [_classname, _spawnpos, [], 0, 'FLY'];
     _newvehicle flyInHeight (80 + (random 120));
@@ -62,7 +62,7 @@ if (_classname in opfor_choppers) then {
 
     [_newvehicle] call KPLIB_fnc_allowCrewInImmobile;
 
-    // Randomize direction and reset position and vector
+    // -- Randomize direction and reset position and vector
     if (_rndDir) then {
         _newvehicle setDir (random 360);
     };
@@ -70,13 +70,13 @@ if (_classname in opfor_choppers) then {
     _newvehicle setVectorUp surfaceNormal position _newvehicle;
 };
 
-// Clear cargo, if enabled
+// -- Clear cargo, if enabled
 [_newvehicle] call KPLIB_fnc_clearCargo;
 
-// Process KP object init
+// -- Process KP object init
 [_newvehicle] call KPLIB_fnc_addObjectInit;
 
-// Spawn crew of vehicle
+// -- Spawn crew of vehicle
 if (_classname in militia_vehicles) then {
     [_newvehicle] call KPLIB_fnc_spawnMilitiaCrew;
 } else {
@@ -87,7 +87,7 @@ if (_classname in militia_vehicles) then {
     {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach _crew;
 };
 
-// Add MPKilled and GetIn EHs and enable damage again
+// -- Add MPKilled and GetIn EHs and enable damage again
 _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 sleep 0.1;
 _newvehicle allowDamage true;

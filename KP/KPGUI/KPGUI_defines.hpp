@@ -2,36 +2,36 @@
     Killah Potatoes GUI defines and functions
 
     File: KPGUI_defines.hpp
-    Author: Wyqer - https://github.com/KillahPotatoes
+    Author: Wyqer - https:// --github.com/KillahPotatoes
     Date: 2018-07-10
     Last Update: 2020-04-10
-    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    License: GNU General Public License v3.0 - https:// --www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         UI defines and functions used in mods and missions from the Killah Potatoes Gaming Community.
 */
 
-// Prefix for this use case to avoid issues with duplicated definitions
+// -- Prefix for this use case to avoid issues with duplicated definitions
 #define KPGUI_PRE                       KPLIB
 
 /*
     --- General Defines ---
 */
 
-// Text sizes
+// -- Text sizes
 #define KP_TEXT_XS                      safeZoneH * 0.016
 #define KP_TEXT_S                       safeZoneH * 0.018
 #define KP_TEXT_M                       safeZoneH * 0.02
 #define KP_TEXT_L                       safeZoneH * 0.025
 #define KP_TEXT_XL                      safeZoneH * 0.03
 
-// Constant values for calculation
+// -- Constant values for calculation
 #define KP_SPACING_X                    0.002
 #define KP_SPACING_Y                    0.004
 #define KP_HEIGTH_TITLE                 0.035
 #define KP_HEIGTH_BUTTON                0.025
 
-// Colors
+// -- Colors
 #define KP_COLOR_PLAYERDEFINE           {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"}
 #define KP_COLOR_BACKGROUND             {0, 0, 0, 0.5}
 
@@ -134,5 +134,5 @@
 #define KP_WIDTH_VAL_LP                 0.2
 #define KP_HEIGHT_VAL_LP                (1 - 2 * KP_Y_VAL_LP - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
 
-// Classes include
+// -- Classes include
 #include "KPGUI_classes.hpp"

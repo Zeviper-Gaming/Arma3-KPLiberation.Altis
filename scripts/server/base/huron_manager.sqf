@@ -3,14 +3,14 @@ waitUntil {save_is_loaded};
 
 huron = objNull;
 
-// Detect possible huron from loaded save data
+// -- Detect possible huron from loaded save data
 private _savedHuron = vehicles select {(toLower (typeOf _x)) isEqualTo (toLower huron_typename)};
 if !(_savedHuron isEqualTo []) then {
     huron = _savedHuron select 0;
 };
 
 while {true} do {
-    // Spawn new huron if not loaded or destroyed
+    // -- Spawn new huron if not loaded or destroyed
     if !(alive huron) then {
         huron = huron_typename createVehicle [(getposATL huronspawn) select 0, (getposATL huronspawn) select 1, ((getposATL huronspawn) select 2) + 0.2];
         huron enableSimulationGlobal false;
@@ -28,12 +28,12 @@ while {true} do {
     huron setVariable ["ace_medical_isMedicalVehicle", true, true];
     publicVariable "huron";
 
-    // Wait until huron is destroyed to respawn it
+    // -- Wait until huron is destroyed to respawn it
     waitUntil {sleep 5; !alive huron};
     stats_spartan_respawns = stats_spartan_respawns + 1;
     sleep 10;
 
-    // Delete wreck, if near startbase
+    // -- Delete wreck, if near startbase
     if (huron distance startbase < 500) then {
         deletevehicle huron;
     };

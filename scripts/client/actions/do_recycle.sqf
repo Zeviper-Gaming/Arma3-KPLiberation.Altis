@@ -1,4 +1,4 @@
-// TODO Split this in an added action to the vehicles and add the dorecycle == 1 part in a button action
+// -- TODO Split this in an added action to the vehicles and add the dorecycle == 1 part in a button action
 params ["_vehToRecycle"];
 
 if (_vehToRecycle getVariable ["KP_liberation_preplaced", false]) exitWith {hint localize "STR_PREPLACED_ERROR";};

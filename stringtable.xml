@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     File: stringtable.xml
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2017-03-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Localization contributors:
         English | Updated: 0.96.7a
-            KP Liberation Dev Team  - https://github.com/KillahPotatoes
+            KP Liberation Dev Team  - https:// --github.com/KillahPotatoes
 
         Chinese Simplified | Updated: pre 0.96.7a
-            Nercon                  - https://github.com/nercon
+            Nercon                  - https:// --github.com/nercon
 
         Chinese Traditional | Updated: pre 0.96.7a
-            dustin902001            - https://github.com/dustin902001
-            John M. Rodriguez       - https://github.com/KOEI5113
+            dustin902001            - https:// --github.com/dustin902001
+            John M. Rodriguez       - https:// --github.com/KOEI5113
 
         French | Updated: pre 0.96.7a
-            zbug                    - https://github.com/GreuhZbug
+            zbug                    - https:// --github.com/GreuhZbug
 
         German | Updated: 0.96.7a
-            Wyqer                   - https://github.com/Wyqer
+            Wyqer                   - https:// --github.com/Wyqer
 
         Italian | Updated: pre 0.96.7a
-            k4s0                    - https://github.com/k4s0
+            k4s0                    - https:// --github.com/k4s0
 
         Portuguese | Updated: pre 0.96.7a
-            NomadRomeo              - https://github.com/NomadRomeo
-            AngusDLX                - https://github.com/AngusDLX
+            NomadRomeo              - https:// --github.com/NomadRomeo
+            AngusDLX                - https:// --github.com/AngusDLX
 
         Russian | Updated: pre 0.96.7a
             _KOC_                   - Constantin.rogozin@ya.ru
-            Dj_Haski                - https://github.com/DjHaski
+            Dj_Haski                - https:// --github.com/DjHaski
 
         Spanish | Updated: pre 0.96.7a
-            amunoz20                - https://github.com/amunoz20
-            regiregi22              - https://github.com/regiregi22
+            amunoz20                - https:// --github.com/amunoz20
+            regiregi22              - https:// --github.com/regiregi22
 
         Turkish | Updated: pre 0.96.7a
-            Carbneth                - https://github.com/Carbneth
+            Carbneth                - https:// --github.com/Carbneth
 
         Czech | Updated: 0.96.7a
-            MJVEVERUSKA             - https://github.com/MJVEVERUSKA
+            MJVEVERUSKA             - https:// --github.com/MJVEVERUSKA
 -->
 <Project name="Liberation">
     <Package name="Liberation">
@@ -6889,9 +6889,9 @@
             <Czech>Chcete povolit interaktivní výukový program?&lt;br/&gt;Provede vás aspekty mise. Další informace o jednotlivých úkolech naleznete v oblasti úkolů na mapě.&lt;br/&gt;&lt;br/&gt;(Toto okno lze v parametrech mise deaktivovat)</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TEXT_END">
-            <Original>You've completed all currently available/implemented tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.&lt;br/&gt;&lt;br/&gt;Should you've questions or want to learn the more deeper mechanics, make sure you visit the &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;We've also a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; where hundreds of KP Libertion players are around.</Original>
-            <German>Du hast alle derzeit verfügbaren/implementierten Tutorials abgeschlossen.&lt;br/&gt;Wir wünschen dir sehr viel Spaß mit dem Spielen der Mission.&lt;br/&gt;&lt;br/&gt;Solltest du Fragen haben oder die etwas über die tiefergehenden Mechaniken erfahren wollen, dann schaue als erstes in das &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;Außerdem gibt es unseren &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt;, wo hunderte von KP Liberation Spielern zu finden sind.</German>
-            <Czech>Dokončili jste všechny aktuálně dostupné/implementované výukové programy.&lt;br/&gt; Užij si spoustu zábavy při hraní této mise.&lt;br/&gt;&lt;br/&gt; Pokud máte dotazy nebo se chcete dozvědět hlubší mechaniku, ujistěte se, že navštívíte stránku &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt; KP Osvobození Wiki&lt;/a&gt;. &lt;br/&gt; Také jsme a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; kde jsou kolem stovky hráčů KP Libertion.</Czech>
+            <Original>You've completed all currently available/implemented tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.&lt;br/&gt;&lt;br/&gt;Should you've questions or want to learn the more deeper mechanics, make sure you visit the &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;We've also a &lt;a href="https:// --discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; where hundreds of KP Libertion players are around.</Original>
+            <German>Du hast alle derzeit verfügbaren/implementierten Tutorials abgeschlossen.&lt;br/&gt;Wir wünschen dir sehr viel Spaß mit dem Spielen der Mission.&lt;br/&gt;&lt;br/&gt;Solltest du Fragen haben oder die etwas über die tiefergehenden Mechaniken erfahren wollen, dann schaue als erstes in das &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;Außerdem gibt es unseren &lt;a href="https:// --discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt;, wo hunderte von KP Liberation Spielern zu finden sind.</German>
+            <Czech>Dokončili jste všechny aktuálně dostupné/implementované výukové programy.&lt;br/&gt; Užij si spoustu zábavy při hraní této mise.&lt;br/&gt;&lt;br/&gt; Pokud máte dotazy nebo se chcete dozvědět hlubší mechaniku, ujistěte se, že navštívíte stránku &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki"&gt; KP Osvobození Wiki&lt;/a&gt;. &lt;br/&gt; Také jsme a &lt;a href="https:// --discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; kde jsou kolem stovky hráčů KP Libertion.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_MAIN_TITLE">
             <Original>KP Liberation Tutorial Tasks</Original>
@@ -6969,9 +6969,9 @@
             <Czech>Přistupte k továrně</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_DESC">
-            <Original>It's always a good decision to start your campaign with capturing a factory. That way you'll be able to produce more resources, which you'll need in order to build more vehicles and later air assets.&lt;br/&gt;We've marked up to three near factory sectors on the map for you. Decide by yourself, which one you want to approach.&lt;br/&gt;We'll continue, if you're near one of the marked factories.&lt;br/&gt;&lt;br/&gt;More information about the different sector types can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Original>
-            <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
-            <Czech>Je vždy dobré začít kampaň se zachycením továrny. Tímto způsobem budete moci produkovat více zdrojů, které budete potřebovat, abyste mohli postavit více vozidel a později letecké prostředky.&lt;br/&gt; Označili jsme na mapě až tři blízké výrobní sektory. Rozhodněte se sami, který z nich chcete přistupovat.&lt;br/&gt; Budeme pokračovat, pokud jste poblíž jedné z označených továren.&lt;br/&gt;&lt;br/&gt; Více informací o různých typech odvětví naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt; Wiki&lt;/a&gt;.</Czech>
+            <Original>It's always a good decision to start your campaign with capturing a factory. That way you'll be able to produce more resources, which you'll need in order to build more vehicles and later air assets.&lt;br/&gt;We've marked up to three near factory sectors on the map for you. Decide by yourself, which one you want to approach.&lt;br/&gt;We'll continue, if you're near one of the marked factories.&lt;br/&gt;&lt;br/&gt;More information about the different sector types can be found in our &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Original>
+            <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
+            <Czech>Je vždy dobré začít kampaň se zachycením továrny. Tímto způsobem budete moci produkovat více zdrojů, které budete potřebovat, abyste mohli postavit více vozidel a později letecké prostředky.&lt;br/&gt; Označili jsme na mapě až tři blízké výrobní sektory. Rozhodněte se sami, který z nich chcete přistupovat.&lt;br/&gt; Budeme pokračovat, pokud jste poblíž jedné z označených továren.&lt;br/&gt;&lt;br/&gt; Více informací o různých typech odvětví naleznete v našem &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt; Wiki&lt;/a&gt;.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_TITLE">
             <Original>Conquer the factory</Original>
@@ -7009,9 +7009,9 @@
             <Czech>Zahajte výrobu</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_05_DESC">
-            <Original>Now the factory is ready to start produce resources. Use the scroll-wheel action to open the production interface and start the production in the just conquered factory.&lt;br/&gt;More detailed information about the interface can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Original>
-            <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
-            <Czech>Nyní je továrna připravena začít vyrábět zdroje. Pomocí akce rolovacího kolečka otevřete výrobní rozhraní a začněte vyrábět v právě dobyté továrně.&lt;br/&gt; Podrobnější informace o rozhraní naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Czech>
+            <Original>Now the factory is ready to start produce resources. Use the scroll-wheel action to open the production interface and start the production in the just conquered factory.&lt;br/&gt;More detailed information about the interface can be found in our &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Original>
+            <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
+            <Czech>Nyní je továrna připravena začít vyrábět zdroje. Pomocí akce rolovacího kolečka otevřete výrobní rozhraní a začněte vyrábět v právě dobyté továrně.&lt;br/&gt; Podrobnější informace o rozhraní naleznete v našem &lt;a href="https:// --github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Czech>
         </Key>
         <Key ID="STR_PARAMS_DIRECTARSENAL">
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>

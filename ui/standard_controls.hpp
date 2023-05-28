@@ -375,10 +375,10 @@ class StdButton {
     colorShadow[] = { 0, 0, 0, 0.5 };
     colorBorder[] = { 0, 0, 0, 1 };
     borderSize = 0;
-    soundEnter[] = { "", 0, 1 };  // no sound
+    soundEnter[] = { "", 0, 1 };  // -- no sound
     soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
-    soundClick[] = { "", 0, 1 };  // no sound
-    soundEscape[] = { "", 0, 1 };  // no sound
+    soundClick[] = { "", 0, 1 };  // -- no sound
+    soundEscape[] = { "", 0, 1 };  // -- no sound
     x = 0.4 * safezoneW + safezoneX;
     w = 0.2 * safezoneW; h = 0.03 * safezoneH;
     text = "";

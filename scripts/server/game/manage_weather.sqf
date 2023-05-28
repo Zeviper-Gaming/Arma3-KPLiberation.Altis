@@ -14,5 +14,5 @@ while {GRLIB_endgame == 0} do {
     _newWeather = selectRandom _weathers;
     (3600 * timeMultiplier) setOvercast _newWeather;
     [format ["Set next weather transition to: %1 - Time: %2", _newWeather, diag_tickTime], "WEATHER"] call KPLIB_fnc_log;
-    sleep 3000; // Slighty less than weather transition time, as sleep duration is depending on FPS
+    sleep 3000; // -- Slighty less than weather transition time, as sleep duration is depending on FPS
 };

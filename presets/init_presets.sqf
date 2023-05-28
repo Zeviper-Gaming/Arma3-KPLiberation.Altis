@@ -89,7 +89,7 @@ switch (KP_liberation_preset_civilians) do {
     default  {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
-// Prices for the blufor infantry squads (supplies, ammo, fuel)
+// -- Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
     [blufor_squad_inf_light,200,0,0],
     [blufor_squad_inf,300,0,0],
@@ -99,7 +99,7 @@ KPLIB_b_allSquads = [
     [blufor_squad_para,200,0,0]
 ];
 
-// Squad names for build menu
+// -- Squad names for build menu
 squads_names = [
     localize "STR_LIGHT_RIFLE_SQUAD",
     localize "STR_RIFLE_SQUAD",
@@ -109,7 +109,7 @@ squads_names = [
     localize "STR_PARA_SQUAD"
 ];
 
-// Classnames of objects which should be ignored when building
+// -- Classnames of objects which should be ignored when building
 GRLIB_ignore_colisions_when_building = [
     "Land_HelipadSquare_F",
     "Land_TentHangar_V1_F",
@@ -148,24 +148,24 @@ GRLIB_ignore_colisions_when_building = [
     "Land_ClutterCutter_large_F",
     "Land_HighVoltageColumnWire_F",
     "Land_PowerWireBig_left_F",
-    "B_HMG_01_F",                                                       // Mk30A HMG .50
-    "B_HMG_01_high_F",                                                  // Mk30 HMG .50 (Raised)
-    "B_HMG_01_A_F",                                                     // Mk30 HMG .50 (Autonomous)
-    "B_GMG_01_F",                                                       // Mk32A GMG 20mm
-    "B_GMG_01_high_F",                                                  // Mk32 GMG 20mm (Raised)
-    "B_GMG_01_A_F",                                                     // Mk32 GMG 20mm (Autonomous)
-    "B_static_AT_F",                                                    // Static Titan Launcher (AT)
-    "B_static_AA_F",                                                    // Static Titan Launcher (AA)
-    "B_Mortar_01_F",                                                    // Mk6 Mortar
-    "ACE_friesAnchorBar",                                               // ACE FRIES
-    "ACE_friesGantryReverse",                                           // ACE FRIES
-    "ACE_friesGantry"                                                   // ACE FRIES
+    "B_HMG_01_F",                                                       // -- Mk30A HMG .50
+    "B_HMG_01_high_F",                                                  // -- Mk30 HMG .50 (Raised)
+    "B_HMG_01_A_F",                                                     // -- Mk30 HMG .50 (Autonomous)
+    "B_GMG_01_F",                                                       // -- Mk32A GMG 20mm
+    "B_GMG_01_high_F",                                                  // -- Mk32 GMG 20mm (Raised)
+    "B_GMG_01_A_F",                                                     // -- Mk32 GMG 20mm (Autonomous)
+    "B_static_AT_F",                                                    // -- Static Titan Launcher (AT)
+    "B_static_AA_F",                                                    // -- Static Titan Launcher (AA)
+    "B_Mortar_01_F",                                                    // -- Mk6 Mortar
+    "ACE_friesAnchorBar",                                               // -- ACE FRIES
+    "ACE_friesGantryReverse",                                           // -- ACE FRIES
+    "ACE_friesGantry"                                                   // -- ACE FRIES
 ];
 
 /*
     Checking all preset arrays for missing mods and sort out not available classnames
 */
-// Blufor
+// -- Blufor
 infantry_units                              = infantry_units                            select {[( _x select 0)] call KPLIB_fnc_checkClass};
 light_vehicles                              = light_vehicles                            select {[( _x select 0)] call KPLIB_fnc_checkClass};
 heavy_vehicles                              = heavy_vehicles                            select {[( _x select 0)] call KPLIB_fnc_checkClass};
@@ -181,7 +181,7 @@ blufor_squad_recon                          = blufor_squad_recon                
 blufor_squad_para                           = blufor_squad_para                         select {[_x] call KPLIB_fnc_checkClass};
 elite_vehicles                              = elite_vehicles                            select {[_x] call KPLIB_fnc_checkClass};
 
-// Opfor
+// -- Opfor
 militia_squad                               = militia_squad                             select {[_x] call KPLIB_fnc_checkClass};
 militia_vehicles                            = militia_vehicles                          select {[_x] call KPLIB_fnc_checkClass};
 opfor_vehicles                              = opfor_vehicles                            select {[_x] call KPLIB_fnc_checkClass};
@@ -192,15 +192,15 @@ opfor_troup_transports                      = opfor_troup_transports            
 opfor_choppers                              = opfor_choppers                            select {[_x] call KPLIB_fnc_checkClass};
 opfor_air                                   = opfor_air                                 select {[_x] call KPLIB_fnc_checkClass};
 
-// Resistance
+// -- Resistance
 KP_liberation_guerilla_units                = KP_liberation_guerilla_units              select {[_x] call KPLIB_fnc_checkClass};
 KP_liberation_guerilla_vehicles             = KP_liberation_guerilla_vehicles           select {[_x] call KPLIB_fnc_checkClass};
 
-// Civilians
+// -- Civilians
 civilians                                   = civilians                                 select {[_x] call KPLIB_fnc_checkClass};
 civilian_vehicles                           = civilian_vehicles                         select {[_x] call KPLIB_fnc_checkClass};
 
-// Misc
+// -- Misc
 KPLIB_transportConfigs                      = KPLIB_transportConfigs                    select {[_x select 0] call KPLIB_fnc_checkClass};
 KPLIB_aiResupplySources                     = KPLIB_aiResupplySources                   select {[_x] call KPLIB_fnc_checkClass};
 
@@ -248,7 +248,7 @@ KPLIB_aiResupplySources = KPLIB_aiResupplySources   apply {toLower _x};
 /*
     Classname collections
 */
-// All land vehicle classnames
+// -- All land vehicle classnames
 KPLIB_allLandVeh_classes = [[], [huron_typename]] select (huron_typename isKindOf "Air");;
 {
     KPLIB_allLandVeh_classes append _x;
@@ -265,19 +265,19 @@ KPLIB_allLandVeh_classes = [[], [huron_typename]] select (huron_typename isKindO
 ];
 KPLIB_allLandVeh_classes = KPLIB_allLandVeh_classes arrayIntersect KPLIB_allLandVeh_classes;
 
-// All air vehicle classnames
+// -- All air vehicle classnames
 KPLIB_allAirVeh_classes = [[], [huron_typename]] select (huron_typename isKindOf "Air");
 {
     KPLIB_allAirVeh_classes append _x;
 } forEach [opfor_choppers apply {toLower _x}, opfor_air apply {toLower _x}, KPLIB_b_air_classes, KPLIB_b_support_classes select {_x isKindOf "Air"}];
 
-// All blufor vehicle (land and air) classnames
+// -- All blufor vehicle (land and air) classnames
 KPLIB_b_allVeh_classes = [];
 {
     KPLIB_b_allVeh_classes append _x;
 } forEach [KPLIB_b_light_classes, KPLIB_b_heavy_classes, KPLIB_b_air_classes, KPLIB_b_static_classes, KPLIB_b_support_classes];
 
-// All opfor vehicle (land and air) classnames
+// -- All opfor vehicle (land and air) classnames
 KPLIB_o_allVeh_classes  = [];
 {
     KPLIB_o_allVeh_classes append _x;
@@ -294,7 +294,7 @@ KPLIB_o_allVeh_classes  = [];
 KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes apply {toLower _x};
 KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes arrayIntersect KPLIB_o_allVeh_classes;
 
-// All regular opfor soldier classnames
+// -- All regular opfor soldier classnames
 KPLIB_o_inf_classes = [opfor_sentry, opfor_rifleman, opfor_grenadier, opfor_squad_leader, opfor_team_leader, opfor_marksman, opfor_machinegunner, opfor_heavygunner, opfor_medic, opfor_rpg, opfor_at, opfor_aa, opfor_officer, opfor_sharpshooter, opfor_sniper,opfor_engineer];
 KPLIB_o_inf_classes = KPLIB_o_inf_classes apply {toLower _x};
 
@@ -312,10 +312,10 @@ KPLIB_typeAirClasses   = +KPLIB_b_air_classes;
     };
 } forEach (KPLIB_b_support_classes + [toLower huron_typename]);
 
-// Military alphabet used for FOBs and convois
+// -- Military alphabet used for FOBs and convois
 military_alphabet = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-Ray", "Yankee", "Zulu"];
 
-// Misc variables
+// -- Misc variables
 markers_reset = [99999,99999,0];
 zeropos = [0,0,0];
 KPLIB_sarWreck = "Land_Wreck_Heli_Attack_01_F";

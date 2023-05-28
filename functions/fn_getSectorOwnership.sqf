@@ -1,9 +1,9 @@
 /*
     File: fn_getSectorOwnership.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-12-03
     Last Update: 2020-05-02
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets the side of the owner of a given position with given radius.

@@ -1,9 +1,9 @@
 /*
     File: fn_hasPermission.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2020-04-09
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Checks if local player has the given permission granted.

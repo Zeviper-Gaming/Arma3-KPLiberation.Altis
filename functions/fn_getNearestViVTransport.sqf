@@ -1,9 +1,9 @@
 /*
     File: fn_getNearestViVTransport.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-05-08
     Last Update: 2019-12-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets nearest object that can transport given object via ViV.

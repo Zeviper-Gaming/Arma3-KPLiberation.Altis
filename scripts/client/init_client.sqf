@@ -30,8 +30,8 @@ if (typeOf player == "VirtualSpectator_F") exitWith {
     execVM "scripts\client\ui\ui_manager.sqf";
 };
 
-// This causes the script error with not defined variable _display in File A3\functions_f_bootcamp\Inventory\fn_arsenal.sqf [BIS_fnc_arsenal], line 2122
-// ["Preload"] call BIS_fnc_arsenal;
+// -- This causes the script error with not defined variable _display in File A3\functions_f_bootcamp\Inventory\fn_arsenal.sqf [BIS_fnc_arsenal], line 2122
+// -- ["Preload"] call BIS_fnc_arsenal;
 spawn_camera = compileFinal preprocessFileLineNumbers "scripts\client\spawn\spawn_camera.sqf";
 cinematic_camera = compileFinal preprocessFileLineNumbers "scripts\client\ui\cinematic_camera.sqf";
 write_credit_line = compileFinal preprocessFileLineNumbers "scripts\client\ui\write_credit_line.sqf";
@@ -74,13 +74,13 @@ player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permission
 player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_permissions;}];
 player addEventHandler ["HandleRating", {if ((_this select 1) < 0) then {0};}];
 
-// Disable stamina, if selected in parameter
+// -- Disable stamina, if selected in parameter
 if (!GRLIB_fatigue) then {
     player enableStamina false;
     player addEventHandler ["Respawn", {player enableStamina false;}];
 };
 
-// Reduce aim precision coefficient, if selected in parameter
+// -- Reduce aim precision coefficient, if selected in parameter
 if (!KPLIB_sway) then {
     player setCustomAimCoef 0.1;
     player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
@@ -90,13 +90,13 @@ execVM "scripts\client\ui\intro.sqf";
 
 [player] joinSilent (createGroup [GRLIB_side_friendly, true]);
 
-// Commander init
+// -- Commander init
 if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
-    // Start tutorial
+    // -- Start tutorial
     if (KP_liberation_tutorial) then {
         [] call KPLIB_fnc_tutorial;
     };
-    // Request Zeus if enabled
+    // -- Request Zeus if enabled
     if (KP_liberation_commander_zeus) then {
         [] spawn {
             sleep 5;

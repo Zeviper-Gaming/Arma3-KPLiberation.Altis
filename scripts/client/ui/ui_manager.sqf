@@ -3,11 +3,11 @@ scriptName "KPLIB_uiManager";
 disableSerialization;
 
 private _sectorcontrols = [
-    201,    // BG Picture Sector
-    202,    // Capture Frame
-    203,    // Capture Frame OPFOR
-    205,    // Label Point
-    244     // Capture Frame BLUFOR
+    201,    // -- BG Picture Sector
+    202,    // -- Capture Frame
+    203,    // -- Capture Frame OPFOR
+    205,    // -- Label Point
+    244     // -- Capture Frame BLUFOR
 ];
 
 GRLIB_ui_notif = "";
@@ -54,7 +54,7 @@ while {true} do {
     _overlay = uiNamespace getVariable ["KPLIB_overlay", displayNull];
     _overlayVisible = !isNull _overlay;
 
-    // Player is at FOB
+    // -- Player is at FOB
     if (_currentFob != "" || {_visibleMap}) then {
         _showResources = true;
 
@@ -62,7 +62,7 @@ while {true} do {
         ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
         if (KP_liberation_resources_global || {_visibleMap}) then {
-            // Overwrite FOB name in global mode
+            // -- Overwrite FOB name in global mode
             _currentFob = localize "STR_RESOURCE_GLOBAL";
 
             KP_liberation_supplies = KP_liberation_supplies_global;
@@ -73,7 +73,7 @@ while {true} do {
             KP_liberation_ammo = _ammo;
             KP_liberation_fuel = _fuel;
         };
-        // TODO this is used by build scripts, move to relevant places
+        // -- TODO this is used by build scripts, move to relevant places
         KP_liberation_air_vehicle_building_near = _hasAir;
         KP_liberation_recycle_building_near = _hasRecycling;
     } else {
@@ -104,12 +104,12 @@ while {true} do {
             (_overlay displayCtrl (403)) ctrlSetText "";
         };
 
-        // Update resources overlay
+        // -- Update resources overlay
         [
             _overlay,
             _showResources,
-            _uiticks % 5 == 0,  // update values
-            _currentFob         // area title
+            _uiticks % 5 == 0,  // -- update values
+            _currentFob         // -- area title
         ] call KPLIB_fnc_overlayUpdateResources;
 
         if (_uiticks % 25 == 0) then {

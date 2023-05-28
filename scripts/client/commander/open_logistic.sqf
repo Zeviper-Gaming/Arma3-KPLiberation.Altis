@@ -182,7 +182,7 @@ while {dialog && (alive player)} do {
             ctrlShow [758024,false];
             ctrlShow [758033,true];
             {
-                // Why the hell does "if ((_selectedGroup select 2) isEqualTo (_x select 1)) ..." return false? -.-
+                // -- Why the hell does "if ((_selectedGroup select 2) isEqualTo (_x select 1)) ..." return false? -.-
                 if (((_selectedGroup select 2) distance2D (_x select 1) < 10)) exitWith {ctrlSetText [758033, _x select 0];};
             } forEach _logi_destinations;
         } else {

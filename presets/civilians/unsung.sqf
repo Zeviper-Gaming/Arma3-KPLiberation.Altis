@@ -6,7 +6,7 @@
     - None
 */
 
-// Civilian classnames.
+// -- Civilian classnames.
 civilians = [
     "uns_civilian1",
     "uns_civilian1_b1",
@@ -18,7 +18,7 @@ civilians = [
     "uns_civilian4_b1"
 ];
 
-// Civilian vehicle classnames.
+// -- Civilian vehicle classnames.
 civilian_vehicles = [
     "C_Truck_02_fuel_F",
     "C_Truck_02_transport_F",

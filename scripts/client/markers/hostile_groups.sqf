@@ -17,7 +17,7 @@ while {true} do {
             _kp_markers_posy = floor (_kp_markers_pos select 1);
             _kp_markers_posy = _kp_markers_posy - (_kp_markers_posy mod 500);
 
-            // Chernarus Grid Fix
+            // -- Chernarus Grid Fix
             if (worldName == "Chernarus") then {
                 _kp_markers_posy = _kp_markers_posy - 140;
                 if ((_kp_markers_posy + 500) < (_kp_markers_pos select 1)) then {
@@ -25,7 +25,7 @@ while {true} do {
                 };
             };
 
-            // Sahrani Grid Fix
+            // -- Sahrani Grid Fix
             if (worldName == "Sara") then {
                 _kp_markers_posy = _kp_markers_posy - 20;
                 if ((_kp_markers_posy + 500) < (_kp_markers_pos select 1)) then {

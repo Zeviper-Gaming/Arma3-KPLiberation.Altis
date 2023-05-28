@@ -1,9 +1,9 @@
 /*
     File: fn_getCrateHeight.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-03-26
     Last Update: 2020-03-26
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets the height for the relative positioning of a crate.

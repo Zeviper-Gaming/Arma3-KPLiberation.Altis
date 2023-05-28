@@ -1,9 +1,9 @@
 /*
     File: fn_getLocationName.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2019-12-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets the name of the nearest FOB/sector from given position.

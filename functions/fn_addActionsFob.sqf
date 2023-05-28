@@ -1,9 +1,9 @@
 /*
     File: fn_addActionsFob.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-04-13
     Last Update: 2020-04-13
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Adds build action to FOB box and repackage action to FOB building.

@@ -1,4 +1,4 @@
-// AI
+// -- AI
 add_civ_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_civ_waypoints.sqf";
 add_defense_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_defense_waypoints.sqf";
 battlegroup_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\battlegroup_ai.sqf";
@@ -7,32 +7,32 @@ patrol_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\patrol_ai.
 prisonner_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\prisonner_ai.sqf";
 troup_transport = compileFinal preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
 
-// Battlegroup
+// -- Battlegroup
 spawn_air = compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\spawn_air.sqf";
 spawn_battlegroup = compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\spawn_battlegroup.sqf";
 
-// Game
+// -- Game
 check_victory_conditions = compileFinal preprocessFileLineNumbers "scripts\server\game\check_victory_conditions.sqf";
 
-// Patrol
+// -- Patrol
 manage_one_civilian_patrol = compileFinal preprocessFileLineNumbers "scripts\server\patrols\manage_one_civilian_patrol.sqf";
 manage_one_patrol = compileFinal preprocessFileLineNumbers "scripts\server\patrols\manage_one_patrol.sqf";
 reinforcements_manager = compileFinal preprocessFileLineNumbers "scripts\server\patrols\reinforcements_manager.sqf";
 send_paratroopers = compileFinal preprocessFileLineNumbers "scripts\server\patrols\send_paratroopers.sqf";
 
-// Secondary objectives
+// -- Secondary objectives
 fob_hunting = compileFinal preprocessFileLineNumbers "scripts\server\secondary\fob_hunting.sqf";
 convoy_hijack = compileFinal preprocessFileLineNumbers "scripts\server\secondary\convoy_hijack.sqf";
 search_and_rescue = compileFinal preprocessFileLineNumbers "scripts\server\secondary\search_and_rescue.sqf";
 
-// Sector
+// -- Sector
 attack_in_progress_fob = compileFinal preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_fob.sqf";
 attack_in_progress_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_sector.sqf";
 ied_manager = compileFinal preprocessFileLineNumbers "scripts\server\sector\ied_manager.sqf";
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
-// Globals
+// -- Globals
 active_sectors = []; publicVariable "active_sectors";
 
 execVM "scripts\server\base\startgame.sqf";
@@ -68,7 +68,7 @@ execVM "scripts\server\sector\lose_sectors.sqf";
 KPLIB_fsm_sectorMonitor = [] call KPLIB_fnc_sectorMonitor;
 if (KP_liberation_high_command) then {KPLIB_fsm_highcommand = [] call KPLIB_fnc_highcommand;};
 
-// Select FOB templates
+// -- Select FOB templates
 switch (KP_liberation_preset_opfor) do {
     case 1: {
         KPLIB_fob_templates = [
@@ -104,16 +104,16 @@ switch (KP_liberation_preset_opfor) do {
     };
 };
 
-// Civil Reputation
+// -- Civil Reputation
 execVM "scripts\server\civrep\init_module.sqf";
 
-// Civil Informant
+// -- Civil Informant
 execVM "scripts\server\civinformant\init_module.sqf";
 
-// Asymmetric Threats
+// -- Asymmetric Threats
 execVM "scripts\server\asymmetric\init_module.sqf";
 
-// Groupcheck for deletion when empty
+// -- Groupcheck for deletion when empty
 execVM "scripts\server\offloading\group_diag.sqf";
 
 {
@@ -122,7 +122,7 @@ execVM "scripts\server\offloading\group_diag.sqf";
     };
 } forEach allUnits;
 
-// Server Restart Script from K4s0
+// -- Server Restart Script from K4s0
 if (KP_liberation_restart > 0) then {
     execVM "scripts\server\game\server_restart.sqf";
 };

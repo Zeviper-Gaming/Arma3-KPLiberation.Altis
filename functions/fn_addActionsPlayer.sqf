@@ -1,9 +1,9 @@
 /*
     File: fn_addActionsPlayer.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-04-13
     Last Update: 2020-08-07
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Adds Liberation player actions to the given player.
@@ -23,7 +23,7 @@ if !(isPlayer _player) exitWith {["No player given"] call BIS_fnc_error; false};
 
 if (isNil "KP_liberation_resources_global") then {KP_liberation_resources_global = false;};
 
-// Tutorial
+// -- Tutorial
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_TUTO_ACTION", "</t>"] joinString "",
     {howtoplay = 1;},
@@ -38,7 +38,7 @@ _player addAction [
     "
 ];
 
-// HALO
+// -- HALO
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_HALO_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
     "scripts\client\spawn\do_halo.sqf",
@@ -59,7 +59,7 @@ _player addAction [
     "
 ];
 
-// Redeploy
+// -- Redeploy
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_DEPLOY_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
     {GRLIB_force_redeploy = true;},
@@ -80,7 +80,7 @@ _player addAction [
     "
 ];
 
-// Squad management
+// -- Squad management
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_SQUAD_MANAGEMENT_ACTION", "</t><img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>"] joinString "",
     "scripts\client\ui\squad_management.sqf",
@@ -98,7 +98,7 @@ _player addAction [
     "
 ];
 
-// Arsenal
+// -- Arsenal
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_ARSENAL_ACTION", "</t><img size='2' image='res\ui_arsenal.paa'/>"] joinString "",
     "scripts\client\actions\open_arsenal.sqf",
@@ -120,7 +120,7 @@ _player addAction [
     "
 ];
 
-// Build
+// -- Build
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_BUILD_ACTION", "</t><img size='2' image='res\ui_build.paa'/>"] joinString "",
     "scripts\client\build\open_build_menu.sqf",
@@ -141,7 +141,7 @@ _player addAction [
     "
 ];
 
-// Secondary missions
+// -- Secondary missions
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECONDARY_OBJECTIVES", "</t>"] joinString "",
     "scripts\client\ui\secondary_ui.sqf",
@@ -165,7 +165,7 @@ _player addAction [
     "
 ];
 
-// Build sector storage
+// -- Build sector storage
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSTORAGEBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
@@ -187,7 +187,7 @@ _player addAction [
     "
 ];
 
-// Build supply facility
+// -- Build supply facility
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSUPPLYBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
@@ -210,7 +210,7 @@ _player addAction [
     "
 ];
 
-// Build ammo facility
+// -- Build ammo facility
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECAMMOBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
@@ -233,7 +233,7 @@ _player addAction [
     "
 ];
 
-// Build fuel facility
+// -- Build fuel facility
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECFUELBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
@@ -256,7 +256,7 @@ _player addAction [
     "
 ];
 
-// Switch global/local resources
+// -- Switch global/local resources
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_RESOURCE_GLOBAL_ACTION", "</t>"] joinString "",
     {KP_liberation_resources_global = !KP_liberation_resources_global},
@@ -272,7 +272,7 @@ _player addAction [
     "
 ];
 
-// Production
+// -- Production
 _player addAction [
     ["<t color='#FF8000'>", localize "STR_PRODUCTION_ACTION", "</t>"] joinString "",
     "scripts\client\commander\open_production.sqf",
@@ -294,7 +294,7 @@ _player addAction [
     "
 ];
 
-// Logistic
+// -- Logistic
 _player addAction [
     ["<t color='#FF8000'>", localize "STR_LOGISTIC_ACTION", "</t>"] joinString "",
     "scripts\client\commander\open_logistic.sqf",
@@ -317,7 +317,7 @@ _player addAction [
     "
 ];
 
-// Permissions
+// -- Permissions
 _player addAction [
     ["<t color='#FF8000'>", localize "STR_COMMANDER_ACTION", "</t><img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>"] joinString "",
     "scripts\client\commander\open_permissions.sqf",
@@ -334,7 +334,7 @@ _player addAction [
     "
 ];
 
-// Reassign Zeus
+// -- Reassign Zeus
 if (player == ([] call KPLIB_fnc_getCommander)) then {
     _player addAction [
         ["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
@@ -352,7 +352,7 @@ if (player == ([] call KPLIB_fnc_getCommander)) then {
     ];
 };
 
-// Create FOB clearance
+// -- Create FOB clearance
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_CLEARANCE_ACTION", "</t>"] joinString "",
     {[player getVariable ["KPLIB_fobPos", [0, 0, 0]], GRLIB_fob_range * 0.9, true] call KPLIB_fnc_createClearanceConfirm;},
