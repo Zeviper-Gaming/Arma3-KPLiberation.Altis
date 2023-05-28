@@ -1,4 +1,4 @@
-// Custom Arsenal Preset
+// -- Custom Arsenal Preset
 GRLIB_arsenal_weapons = [
 
 ];

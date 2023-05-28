@@ -21,7 +21,7 @@ KP_liberation_guerilla_units = [
     "CUP_I_GUE_Officer"
 ];
 
-// Armed vehicles
+// -- Armed vehicles
 KP_liberation_guerilla_vehicles = [
     "CUP_I_Datsun_PK_Random",
     "CUP_I_Datsun_PK_Random",
@@ -72,7 +72,7 @@ KP_liberation_guerilla_weapons_3 = [
     ["CUP_srifle_SVD_wdl","CUP_10Rnd_762x54_SVD_M",12,"cup_optic_pso_3_open",""]
 ];
 
-// Uniforms
+// -- Uniforms
 KP_liberation_guerilla_uniforms_1 = [
     "CUP_U_I_Villager_03",
     "CUP_U_I_Woodlander03",
@@ -109,7 +109,7 @@ KP_liberation_guerilla_uniforms_3 = [
     "U_I_C_Soldier_Camo_F"
 ];
 
-// Vests
+// -- Vests
 KP_liberation_guerilla_vests_1 = [
     "CUP_V_I_Guerilla_Jacket",
     "V_LegStrapBag_coyote_F",
@@ -150,7 +150,7 @@ KP_liberation_guerilla_vests_3 = [
     "V_TacChestrig_oli_F"
 ];
 
-// Headgear
+// -- Headgear
 KP_liberation_guerilla_headgear_1 = [
     "",
     "",
@@ -199,7 +199,7 @@ KP_liberation_guerilla_headgear_3 = [
     "CUP_H_GER_LWH_Flecktarn"
 ];
 
-// Facegear. Applies for tier 2 and 3.
+// -- Facegear. Applies for tier 2 and 3.
 KP_liberation_guerilla_facegear = [
     "",
     "",

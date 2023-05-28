@@ -1,9 +1,9 @@
 /*
     File: fn_spawnSectorCrates.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-04-28
     Last Update: 2020-05-07
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Spawns random amount of random resource crates at given sector,

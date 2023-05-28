@@ -1,9 +1,9 @@
 /*
     File: fn_setLoadableViV.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-05-08
     Last Update: 2020-04-05
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Adds ViV load/unload actions to object.
@@ -27,7 +27,7 @@ private _loadFnc = {
     (_target call KPLIB_fnc_getNearestViVTransport) setVehicleCargo _target;
 };
 
-// Add "Load" action
+// -- Add "Load" action
 _object addAction [
     "<t color='#FFFF00'>" + localize "STR_ACTION_LOAD_VIV" + "</t>",
     _loadFnc,
@@ -40,7 +40,7 @@ _object addAction [
     10
 ];
 
-// Add "No transports nearby action"
+// -- Add "No transports nearby action"
 _object addAction [
     "<t color='#FF0000'>" + localize "STR_ACTION_NOTRANSPORT_VIV" + "</t>",
     {},
@@ -59,7 +59,7 @@ private _unloadFnc = {
     objNull setVehicleCargo _target;
 };
 
-// Add "Unload" action
+// -- Add "Unload" action
 _object addAction [
     "<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_VIV" + "</t>",
     _unloadFnc,

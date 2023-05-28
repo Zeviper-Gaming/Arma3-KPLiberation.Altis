@@ -1,9 +1,9 @@
 /*
     File: fn_getLoadout.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2019-11-25
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         No description added yet.
@@ -14,7 +14,7 @@
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
+// -- TODO
 /*
 
     AUTHOR: aeroson
@@ -22,8 +22,8 @@
     VERSION: 3.4
 
     DOWNLOAD & PARTICIPATE:
-    https://github.com/aeroson/a3-loadout
-    http://forums.bistudio.com/showthread.php?148577-GET-SET-Loadout-(saves-and-loads-pretty-much-everything)
+    https:// --github.com/aeroson/a3-loadout
+    http:// --forums.bistudio.com/showthread.php?148577-GET-SET-Loadout-(saves-and-loads-pretty-much-everything)
 
     DESCRIPTION:
     I guarantee backwards compatibility.
@@ -52,7 +52,7 @@ private ["_target","_options","_saveMagsAmmo","_isRepetitive","_isOnFoot","_curr
 
 _options = [];
 
-// addAction support
+// -- addAction support
 if(count _this < 4) then {
     #define PARAM_START private ["_PARAM_INDEX"]; _PARAM_INDEX=0;
     #define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { systemChat format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
@@ -75,7 +75,7 @@ _isIRLaserOn = false;
 
 _magazinesAmmo = magazinesAmmoFull _target;
 
-// save weapon mode and muzzle
+// -- save weapon mode and muzzle
 if(_isOnFoot) then {
     _currentWeapon = currentMuzzle _target;
     _currentMode = currentWeaponMode _target;
@@ -88,13 +88,13 @@ if(_isOnFoot) then {
 
 _loadedMagazines=[];
 
-// universal weapon saving
+// -- universal weapon saving
 _saveWeaponMagazines = {
     private ["_weapon","_magazines","_muzzles","_saveMagazine"];
     _weapon = _this select 0;
     _magazines = [];
 
-    _saveMagazine = { // find, save and eat mag for _weapon
+    _saveMagazine = { // -- find, save and eat mag for _weapon
         private ["_weapon","_magazine","_ammo"];
         _weapon = _this select 0;
         _magazine = "";
@@ -120,7 +120,7 @@ _saveWeaponMagazines = {
         [_weapon] call _saveMagazine;
         _muzzles = configFile>>"CfgWeapons">>_weapon>>"muzzles";
         if(isArray(_muzzles)) then {
-            { // add one mag for each muzzle
+            { // -- add one mag for each muzzle
                 if (_x != "this") then {
                     [_x] call _saveMagazine;
                 };
@@ -131,16 +131,16 @@ _saveWeaponMagazines = {
     _loadedMagazines set [count _loadedMagazines, _magazines];
 };
 
-// save loaded mags for each weapon separetely, since some weapons can use same magazines
+// -- save loaded mags for each weapon separetely, since some weapons can use same magazines
 [primaryWeapon _target] call _saveWeaponMagazines;
 [handgunWeapon _target] call _saveWeaponMagazines;
 [secondaryWeapon _target] call _saveWeaponMagazines;
 
-_getMagsAmmo = { // default function with _saveMagsAmmo == false
+_getMagsAmmo = { // -- default function with _saveMagsAmmo == false
     _this select 0;
 };
 if(_saveMagsAmmo) then {
-    // check if input array contains magazine, if it does, find it add ammo count
+    // -- check if input array contains magazine, if it does, find it add ammo count
     _getMagsAmmo = {
         private ["_items","_location","_item","_itemIndex"];
         _items = _this select 0;
@@ -161,7 +161,7 @@ if(_saveMagsAmmo) then {
 
 };
 
-// get backpack items
+// -- get backpack items
 _cargo = getbackpackcargo (unitbackpack _target);
 _backpacks = [];
 {
@@ -171,7 +171,7 @@ _backpacks = [];
 } foreach (_cargo select 0);
 _backPackItems = (backpackitems _target) + _backpacks;
 
-// get assigned items, headgear and goggles is not part of assignedItems
+// -- get assigned items, headgear and goggles is not part of assignedItems
 _assignedItems = assignedItems _target;
 _headgear = headgear _target;
 _goggles = goggles _target;
@@ -185,10 +185,10 @@ if((_goggles != "") && !(_goggles in _assignedItems)) then {
 
 
 /*
-// use this once magazinesAmmoFull is fixed and shows magazines of assignedItems
+// -- use this once magazinesAmmoFull is fixed and shows magazines of assignedItems
 
-// get magazines of everything else except weapons, most likely assigned items
-// only ["Uniform","Vest","Backpack"] locations remain, weapon locations have already been eaten
+// -- get magazines of everything else except weapons, most likely assigned items
+// -- only ["Uniform","Vest","Backpack"] locations remain, weapon locations have already been eaten
 _magazines = [];
 {
     if(_x select 2) then {
@@ -205,12 +205,12 @@ _loadedMagazines set [3, _magazines];
 */
 
 
-// old method using selectWeapon, cycles and tries to selectWeapon all assigned items
+// -- old method using selectWeapon, cycles and tries to selectWeapon all assigned items
 if(!_isRepetitive) then {
     private ["_weaponHasChanged"];
     _weaponHasChanged = false;
 
-    // get magazines of all assigned items
+    // -- get magazines of all assigned items
     _magazines = [];
     {
         _target selectWeapon _x;
@@ -228,7 +228,7 @@ if(!_isRepetitive) then {
     } forEach _assignedItems;
     _loadedMagazines set [3, _magazines];
 
-    // select back originaly selected weapon and mode, only if weapon has changed
+    // -- select back originaly selected weapon and mode, only if weapon has changed
     if(_weaponHasChanged) then {
         if(_isOnFoot) then {
             if(_currentWeapon != "" && _currentMode != "") then {
@@ -263,35 +263,35 @@ if(!_isRepetitive) then {
 
 
 _data = [
-    _assignedItems, //0 []
+    _assignedItems, // --0 []
 
-    primaryWeapon _target, //1 ""
-    primaryWeaponItems _target, //2 []
+    primaryWeapon _target, // --1 ""
+    primaryWeaponItems _target, // --2 []
 
-    handgunWeapon _target, //3 ""
-    handgunItems _target, //4 []
+    handgunWeapon _target, // --3 ""
+    handgunItems _target, // --4 []
 
-    secondaryWeapon _target, //5 ""
-    secondaryWeaponItems _target, //6 []
+    secondaryWeapon _target, // --5 ""
+    secondaryWeaponItems _target, // --6 []
 
-    uniform _target, //7 ""
-    [uniformItems _target, "Uniform"] call _getMagsAmmo, //8 ["magazine without ammo count",["magazine with ammo count",30], ....]
+    uniform _target, // --7 ""
+    [uniformItems _target, "Uniform"] call _getMagsAmmo, // --8 ["magazine without ammo count",["magazine with ammo count",30], ....]
 
-    vest _target, //9 ""
-    [vestItems _target, "Vest"] call _getMagsAmmo, //10
+    vest _target, // --9 ""
+    [vestItems _target, "Vest"] call _getMagsAmmo, // --10
 
-    backpack _target, //11  ""
-    [_backPackItems, "Backpack"] call _getMagsAmmo, //12
+    backpack _target, // --11  ""
+    [_backPackItems, "Backpack"] call _getMagsAmmo, // --12
 
-    _loadedMagazines, //13 (optional) [[primary mags],[handgun mags],[secondary mags],[other mags]]
-    _currentWeapon, //14 (optional) ""
-    _currentMode //15 (optional) ""
+    _loadedMagazines, // --13 (optional) [[primary mags],[handgun mags],[secondary mags],[other mags]]
+    _currentWeapon, // --14 (optional) ""
+    _currentMode // --15 (optional) ""
 ];
 
-// addAction support
+// -- addAction support
 if(count _this < 4) then {
     _data;
 } else {
     loadout = _data;
-    //playSound3D ["A3\Sounds_F\sfx\ZoomOut.wav", _target];
+    // --playSound3D ["A3\Sounds_F\sfx\ZoomOut.wav", _target];
 };

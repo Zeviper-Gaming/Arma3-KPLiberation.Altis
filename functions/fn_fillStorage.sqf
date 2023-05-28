@@ -1,9 +1,9 @@
 /*
     File: fn_fillStorage.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-12-03
     Last Update: 2020-05-04
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Fills given storage with given amounts of resources.
@@ -29,7 +29,7 @@ params [
 
 if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-// Make sure it's scheduled, if delay is enabled
+// -- Make sure it's scheduled, if delay is enabled
 if (_delay && {!canSuspend}) exitWith {_this spawn KPLIB_fnc_fillStorage};
 
 private _amount = 0;

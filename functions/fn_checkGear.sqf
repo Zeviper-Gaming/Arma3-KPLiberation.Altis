@@ -1,9 +1,9 @@
 /*
     File: fn_checkGear.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2017-11-22
     Last Update: 2020-04-16
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Checks the players gear for blacklisted items.
@@ -24,7 +24,7 @@ params [
 
 private _removedItems = [];
 
-// Check single item slots
+// -- Check single item slots
 if !(toLower (headgear player) in KP_liberation_allowed_items) then {
     _removedItems pushBack (headgear player);
     removeHeadgear player;
@@ -46,7 +46,7 @@ if (!(toLower (backpack player) in KP_liberation_allowed_items) && ((backpack pl
     removeBackpack player;
 };
 
-// Check items
+// -- Check items
 private _items = assignedItems player;
 _items append ((getItemCargo (uniformContainer player)) select 0);
 _items append ((getItemCargo (vestContainer player)) select 0);
@@ -58,7 +58,7 @@ _items = _items apply {toLower _x};
     player removeItems _x;
 } forEach (((_items arrayIntersect _items) - KP_liberation_allowed_items) select {!([_x] call KPLIB_fnc_isRadio)});
 
-// Check magazines
+// -- Check magazines
 _items = ((getMagazineCargo (uniformContainer player)) select 0);
 _items append ((getMagazineCargo (vestContainer player)) select 0);
 _items append ((getMagazineCargo (backpackContainer player)) select 0);
@@ -68,19 +68,19 @@ _items = _items apply {toLower _x};
     player removeMagazines _x;
 } forEach ((_items arrayIntersect _items) - KP_liberation_allowed_items);
 
-// Check weapons stored in inventory containers
+// -- Check weapons stored in inventory containers
 {
     if (!isNull _x) then {_removedItems append ([_x] call KPLIB_fnc_checkWeaponCargo);};
 } forEach [uniformContainer player, vestcontainer player, backpackContainer player];
 
-// Check equipped weapons
+// -- Check equipped weapons
 _items = (weapons player) apply {toLower ([_x] call BIS_fnc_baseWeapon)};
 {
     _removedItems pushBack _x;
     player removeWeapon _x;
 } forEach (_items - KP_liberation_allowed_items);
 
-// Check weapon items of primary weapon
+// -- Check weapon items of primary weapon
 _items = primaryWeaponItems player;
 _items append primaryWeaponMagazine player;
 _items = _items apply {toLower _x};
@@ -89,7 +89,7 @@ _items = _items apply {toLower _x};
     player removePrimaryWeaponItem _x;
 } forEach (_items - KP_liberation_allowed_items);
 
-// Check weapon items of secondary weapon
+// -- Check weapon items of secondary weapon
 _items = secondaryWeaponItems player;
 _items append secondaryWeaponMagazine player;
 _items = _items apply {toLower _x};
@@ -98,7 +98,7 @@ _items = _items apply {toLower _x};
     player removeSecondaryWeaponItem _x;
 } forEach (_items - KP_liberation_allowed_items);
 
-// Check weapon items of handgun
+// -- Check weapon items of handgun
 _items = handgunItems player;
 _items append handgunMagazine player;
 _items = _items apply {toLower _x};
@@ -107,10 +107,10 @@ _items = _items apply {toLower _x};
     player removeHandgunItem _x;
 } forEach (_items - KP_liberation_allowed_items);
 
-// Remove duplicates and empty strings
+// -- Remove duplicates and empty strings
 _removedItems = (_removedItems arrayIntersect _removedItems) - [""];
 
-// Show hint and log list, if something was found
+// -- Show hint and log list, if something was found
 if !(_removedItems isEqualTo []) exitWith {
     [_removedItems] spawn {
         params ["_removedItems"];

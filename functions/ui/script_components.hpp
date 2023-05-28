@@ -22,7 +22,7 @@
 #define IDC_OVERLAY_RSC_PIC_PLANE 758020
 #define IDC_OVERLAY_RSC_PIC_PLANE_SHADOW 758021
 
-// Combat readiness / enemy altertness
+// -- Combat readiness / enemy altertness
 #define IDC_OVERLAY_RSC_PIC_ALERT 758023
 #define IDC_OVERLAY_RSC_PIC_ALERT_SHADOW 758024
 

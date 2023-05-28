@@ -1,9 +1,9 @@
 /*
     File: fn_removeWeaponCargo.sqf
-    Author: Zharf - https://github.com/zharf
+    Author: Zharf - https:// --github.com/zharf
     Date: 2019-06-21
     Last Update: 2020-04-13
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Removes weapons not found in KP_liberation_allowed_items from a cargo space.
@@ -31,7 +31,7 @@ clearWeaponCargoGlobal _container;
 {
     _x params ["_weapon", "_muzzle", "_pointer", "_optic", "_magazine", "_magazineGL", "_bipod"];
 
-    // Some weapons don't have non-preset parents
+    // -- Some weapons don't have non-preset parents
     _components = _weapon call KPLIB_fnc_getWeaponComponents;
     private _weaponNonPreset = _components select 0;
 
@@ -42,8 +42,8 @@ clearWeaponCargoGlobal _container;
     if ((toLower ([_x] call BIS_fnc_baseWeapon)) in KP_liberation_allowed_items) then {
         _container addWeaponCargoGlobal [_weaponNonPreset, 1];
 
-        // If weapon does not have a non-preset parent, only add attachments that were custom added
-        // Removed attachments cannot be handled (engine limitation) and will be readded due to having to readd preset weapon
+        // -- If weapon does not have a non-preset parent, only add attachments that were custom added
+        // -- Removed attachments cannot be handled (engine limitation) and will be readded due to having to readd preset weapon
         private _presetAttachments = [];
 
         if (_weaponNonPreset == _weapon) then {

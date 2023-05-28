@@ -1,9 +1,9 @@
 /*
     CONFIG FILE FOR KP LIBERATION
-    https://github.com/KillahPotatoes/KP-Liberation
+    https:// --github.com/KillahPotatoes/KP-Liberation
 */
 
-// Vehicle classnames which also function as ACE medical vehicles.
+// -- Vehicle classnames which also function as ACE medical vehicles.
 KP_liberation_medical_vehicles = [
     "B_T_Truck_01_medical_F",
     "B_Truck_01_medical_F",
@@ -54,7 +54,7 @@ KP_liberation_medical_vehicles = [
     "uns_uh1D_med"
 ];
 
-// Building classnames which also function as ACE medical facilities.
+// -- Building classnames which also function as ACE medical facilities.
 KP_liberation_medical_facilities = [
     "Land_Medevac_house_V1_F",
     "Land_Medevac_HQ_V1_F",
@@ -66,7 +66,7 @@ KP_liberation_medical_facilities = [
     "US_Tent_MASH"
 ];
 
-// Classnames of ACE3 crates (which have to be in the unit preset as well).
+// -- Classnames of ACE3 crates (which have to be in the unit preset as well).
 KP_liberation_ace_crates = [
     "ACE_Box_82mm_Mo_HE",
     "ACE_Box_82mm_Mo_Illum",
@@ -181,77 +181,77 @@ KP_liberation_arsenal = 0;
 /* - Fuel consumption settings.
 Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine. */
 KP_liberation_fuel_neutral = 180;
-// Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
+// -- Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
 KP_liberation_fuel_normal = 90;
-// Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
+// -- Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
 KP_liberation_fuel_max = 45;
 
 /* - Gameplay constant settings.
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_save_interval = 60;                                       // Interval in seconds for automatic save.
+KP_liberation_save_interval = 60;                                       // -- Interval in seconds for automatic save.
 
-GRLIB_side_friendly = WEST;                                             // Friendly side.
-GRLIB_side_enemy = EAST;                                                // Enemy side.
-GRLIB_side_resistance = RESISTANCE;                                     // Resistance side.
-GRLIB_side_civilian = CIVILIAN;                                         // Civilian side.
-GRLIB_respawn_marker = "respawn";                                       // Respawn marker name.
+GRLIB_side_friendly = WEST;                                             // -- Friendly side.
+GRLIB_side_enemy = EAST;                                                // -- Enemy side.
+GRLIB_side_resistance = RESISTANCE;                                     // -- Resistance side.
+GRLIB_side_civilian = CIVILIAN;                                         // -- Civilian side.
+GRLIB_respawn_marker = "respawn";                                       // -- Respawn marker name.
 
-GRLIB_color_friendly = "ColorBLUFOR";                                   // Friendly sector marker color.
-GRLIB_color_enemy = "ColorOPFOR";                                       // Enemy sector marker color.
-GRLIB_color_enemy_bright = "ColorRED";                                  // Enemy sector marker color (activated).
+GRLIB_color_friendly = "ColorBLUFOR";                                   // -- Friendly sector marker color.
+GRLIB_color_enemy = "ColorOPFOR";                                       // -- Enemy sector marker color.
+GRLIB_color_enemy_bright = "ColorRED";                                  // -- Enemy sector marker color (activated).
 
-GRLIB_fob_range = 125;                                                  // Build range around the main FOB building.
-GRLIB_halo_altitude = 2500;                                             // Altitude in metres for the HALO jump.
-GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
-GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
-GRLIB_recycling_percentage = 0.5;                                       // Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 30;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
+GRLIB_fob_range = 125;                                                  // -- Build range around the main FOB building.
+GRLIB_halo_altitude = 2500;                                             // -- Altitude in metres for the HALO jump.
+GRLIB_secondary_missions_costs = [15, 10, 8];                           // -- Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
+GRLIB_secondary_objective_impact = 0.6;                                 // -- The percentage impact against enemy combat readiness for a successful FOB hunt.
+GRLIB_recycling_percentage = 0.5;                                       // -- Percentage of resources you get back from recycling.
+KP_liberation_production_interval = 30;                                 // -- Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 1000;                                               // Range to activate a sector.
-GRLIB_capture_size = 175;                                               // Range to capture a sector.
-GRLIB_defended_buildingpos_part = 0.4;                                  // Multiplier for defenders in buildings.
-GRLIB_battlegroup_size = 6;                                             // Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 1200;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_radiotower_size = 2500;                                           // Radio Tower scanning range.
-GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
+GRLIB_sector_size = 1000;                                               // -- Range to activate a sector.
+GRLIB_capture_size = 175;                                               // -- Range to capture a sector.
+GRLIB_defended_buildingpos_part = 0.4;                                  // -- Multiplier for defenders in buildings.
+GRLIB_battlegroup_size = 6;                                             // -- Size of enemy battlegroups.
+GRLIB_vulnerability_timer = 1200;                                       // -- Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_radiotower_size = 2500;                                           // -- Radio Tower scanning range.
+GRLIB_surrender_chance = 80;                                            // -- Chance that enemy infantry will surrender after heavy losses are encountered.
 
-GRLIB_civilians_amount = 10;                                            // Civilian count multiplier.
-GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
+GRLIB_civilians_amount = 10;                                            // -- Civilian count multiplier.
+GRLIB_cleanup_delay = 1200;                                             // -- Time in seconds until bodies of dead soldiers are cleaned up.
 
-GRLIB_blufor_cap = 100;                                                 // Cap for BLUFOR.
-GRLIB_sector_cap = 180;                                                 // Cap for sector defenders.
-GRLIB_battlegroup_cap = 150;                                            // Cap for enemy battlegroups.
-GRLIB_patrol_cap = 150;                                                 // Cap for enemy patrols.
+GRLIB_blufor_cap = 100;                                                 // -- Cap for BLUFOR.
+GRLIB_sector_cap = 180;                                                 // -- Cap for sector defenders.
+GRLIB_battlegroup_cap = 150;                                            // -- Cap for enemy battlegroups.
+GRLIB_patrol_cap = 150;                                                 // -- Cap for enemy patrols.
 
-KP_liberation_cr_kill_penalty = 5;                                      // Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_building_penalty = 3;                                  // Civil Reputation penalty for destroying/damaging a building.
-KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
-KP_liberation_cr_resistance_penalty = 3;                                // Civil Reputation penalty for killing a friendly resistance soldier.
-KP_liberation_cr_sector_gain = 5;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 35;                                   // Chance (0-100) that there are wounded civilians right after capturing a sector.
-KP_liberation_cr_wounded_gain = 2;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
+KP_liberation_cr_kill_penalty = 5;                                      // -- Civil Reputation penalty for killing a civilian.
+KP_liberation_cr_building_penalty = 3;                                  // -- Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_vehicle_penalty = 2;                                   // -- Civil Reputation penalty for stealing a civilian vehicle.
+KP_liberation_cr_resistance_penalty = 3;                                // -- Civil Reputation penalty for killing a friendly resistance soldier.
+KP_liberation_cr_sector_gain = 5;                                       // -- Civil Reputation gain for liberate a sector.
+KP_liberation_cr_wounded_chance = 35;                                   // -- Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_gain = 2;                                      // -- Civil Reputation gain for providing medical assistance for wounded civilians.
 
-KP_liberation_civinfo_min = 5400;                                       // Civil Informant minimum spawn time. (seconds)
-KP_liberation_civinfo_max = 10800;                                      // Civil Informant maximum spawn time. (seconds)
-KP_liberation_civinfo_chance = 75;                                      // Civil Informant spawn chance. (0-100)
-KP_liberation_civinfo_intel = 5;                                        // Civil Informant intel amount.
-KP_liberation_civinfo_duration = 1200;                                  // Civil Informant staytime until despawning. (seconds)
-KP_liberation_civinfo_task_chance = 40;                                 // Chance (0-100) that the delivered informant will spawn a time critical task.
-KP_liberation_civinfo_task_duration = 900;                              // Duration until the task will despawn if no player is near. (seconds)
+KP_liberation_civinfo_min = 5400;                                       // -- Civil Informant minimum spawn time. (seconds)
+KP_liberation_civinfo_max = 10800;                                      // -- Civil Informant maximum spawn time. (seconds)
+KP_liberation_civinfo_chance = 75;                                      // -- Civil Informant spawn chance. (0-100)
+KP_liberation_civinfo_intel = 5;                                        // -- Civil Informant intel amount.
+KP_liberation_civinfo_duration = 1200;                                  // -- Civil Informant staytime until despawning. (seconds)
+KP_liberation_civinfo_task_chance = 40;                                 // -- Chance (0-100) that the delivered informant will spawn a time critical task.
+KP_liberation_civinfo_task_duration = 900;                              // -- Duration until the task will despawn if no player is near. (seconds)
 
-KP_liberation_convoy_ambush_chance = 2;                                 // Chance that a logistic convoy will be ambushed, when civil reputation is low.
-KP_liberation_convoy_ambush_duration = 1200;                            // Duration of the convoy ambush event. (seconds)
+KP_liberation_convoy_ambush_chance = 2;                                 // -- Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_duration = 1200;                            // -- Duration of the convoy ambush event. (seconds)
 
-KP_liberation_resistance_tier2 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
-KP_liberation_resistance_tier3 = 70;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
-KP_liberation_resistance_at_chance = 20;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
-KP_liberation_resistance_sector_chance = 35;                            // Chance that a guerilla squad will join an ongoing sector attack.
-KP_liberation_resistance_ambush_chance = 25;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
+KP_liberation_resistance_tier2 = 30;                                    // -- At which strength (0-100) the guerilla forces will be at tier 2?
+KP_liberation_resistance_tier3 = 70;                                    // -- At which strength (0-100) the guerilla forces will be at tier 3?
+KP_liberation_resistance_at_chance = 20;                                // -- Chance that a guerilla unit has a RPG. (tier 2 and 3)
+KP_liberation_resistance_sector_chance = 35;                            // -- Chance that a guerilla squad will join an ongoing sector attack.
+KP_liberation_resistance_ambush_chance = 25;                            // -- Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
-// Array of worldName values.
-// When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
+// -- Array of worldName values.
+// -- When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KP_liberation_battlegroup_clearance = [
     "song_bin_tanh"
 ];
@@ -426,7 +426,7 @@ blacklisted_from_arsenal = [
     "Uns_US_searchlight_Bag"
 ];
 
-// Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
+// -- Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
 KP_liberation_allowed_items_extension = [
     "ACE_Chemlight_Shield_Blue",
     "ACE_Chemlight_Shield_Green",
@@ -754,7 +754,7 @@ KPLIB_aiResupplySources = [
     "uns_motorpool1_repair"
 ];
 
-// Everything that can resupply other vehicles.
+// -- Everything that can resupply other vehicles.
 vehicle_repair_sources = [
     "B_APC_Tracked_01_CRV_F",
     "B_Slingload_01_Repair_F",
@@ -880,7 +880,7 @@ vehicle_refuel_sources = [
     "uns_M35A2_fueltanker"
 ];
 
-// Classnames of boats, so they can be built on water.
+// -- Classnames of boats, so they can be built on water.
 boats_names = [
     "B_Boat_Armed_01_minigun_F",
     "B_Boat_Transport_01_F",
@@ -909,8 +909,8 @@ boats_names = [
     "UNS_Zodiac_W"
 ];
 
-// Classnames of artillery vehicles, which should be added to the support module
-// (Needed/Favorized as BIS_SUPP_eligible_Artillery from the support module isn't broadcasted over the network and may hold unwanted vehicles)
+// -- Classnames of artillery vehicles, which should be added to the support module
+// -- (Needed/Favorized as BIS_SUPP_eligible_Artillery from the support module isn't broadcasted over the network and may hold unwanted vehicles)
 KP_liberation_suppMod_artyVeh = [
     "B_G_Mortar_01_F",
     "B_MBT_01_arty_F",
@@ -1032,13 +1032,13 @@ KP_liberation_suppMod_artyVeh = [
     "uns_Type55_mortar"
 ];
 
-// Objects which are spawned as intel objects for pickup
+// -- Objects which are spawned as intel objects for pickup
 KPLIB_intelObjectClasses = [
     "Land_File_research_F",
     "Land_Document_01_F"
 ];
 
-// Classnames of buildings inside military sectors, which are valid to hold intel items
+// -- Classnames of buildings inside military sectors, which are valid to hold intel items
 KPLIB_intelBuildingClasses = [
     "Land_Cargo_House_V1_F",
     "Land_Cargo_House_V2_F",
@@ -1058,7 +1058,7 @@ KPLIB_intelBuildingClasses = [
     "Land_u_Barracks_V2_F"
 ];
 
-// Large storage area placement position offsets.
+// -- Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
     [-5.59961,3.60938,0.6],
     [-3.99902,3.60938,0.6],
@@ -1102,7 +1102,7 @@ KP_liberation_large_storage_positions = [
     [5.60059,-3.58984,0.6]
 ];
 
-// Small storage area placement position offsets.
+// -- Small storage area placement position offsets.
 KP_liberation_small_storage_positions = [
     [-2.34961,1.80078,0.6],
     [-0.75,1.80078,0.6],
@@ -1118,7 +1118,7 @@ KP_liberation_small_storage_positions = [
     [2.4502,-1.79883,0.6]
 ];
 
-// DO NOT CHANGE (unless you know what you are doing).
+// -- DO NOT CHANGE (unless you know what you are doing).
 GRLIB_endgame = 0;
 KP_liberation_production_interval = ceil (KP_liberation_production_interval / GRLIB_resources_multiplier);
 GRLIB_battlegroup_size = GRLIB_battlegroup_size * (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);

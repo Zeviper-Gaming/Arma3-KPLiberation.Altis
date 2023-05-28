@@ -1,6 +1,6 @@
 #include "defines.hpp"
 
-// Check if ACE is running
+// -- Check if ACE is running
 if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KP_liberation_ace = false};
 
 /* Not saveable params */
@@ -37,7 +37,7 @@ if(isServer) then {
         };
     };
 
-    // Mission Options
+    // -- Mission Options
     ["--- Mission Options ---", "PARAM"] call KPLIB_fnc_log;
     GET_PARAM(GRLIB_unitcap, "Unitcap", 2);
     GET_PARAM(GRLIB_difficulty_modifier, "Difficulty", 2);
@@ -60,12 +60,12 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_playermenu, "PlayerMenu", 1);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
 
-    // Deactivate BI Revive when ACE Medical is running
+    // -- Deactivate BI Revive when ACE Medical is running
     if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
         bis_reviveParam_mode = 0; publicVariable "bis_reviveParam_mode";
         ["ACE Medical detected. Deactivating BI Revive System.", "PARAM"] call KPLIB_fnc_log;
     } else {
-        // Revive Options
+        // -- Revive Options
         ["--- Revive Options ---", "PARAM"] call KPLIB_fnc_log;
         GET_PARAM(bis_reviveParam_mode, "ReviveMode", 1);
         GET_PARAM(bis_reviveParam_duration, "ReviveDuration", 6);
@@ -77,7 +77,7 @@ if(isServer) then {
         GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
     };
 
-    // Gameplay Options
+    // -- Gameplay Options
     ["--- Gameplay Options ---", "PARAM"] call KPLIB_fnc_log;
     GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
     GET_PARAM_BOOL(KPLIB_sway, "WeaponSway", 1);
@@ -100,7 +100,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_suppMod, "SuppMod", 1);
     GET_PARAM_BOOL(KP_liberation_tutorial, "Tutorial", 1);
 
-    // Technical Options
+    // -- Technical Options
     ["--- Technical Options ---", "PARAM"] call KPLIB_fnc_log;
     GET_PARAM_BOOL(GRLIB_permissions_param, "Permissions", 1);
     GET_PARAM(GRLIB_cleanup_vehicles, "CleanupVehicles", 2);
@@ -118,7 +118,7 @@ if(isServer) then {
     [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
-// Fix for not working float values in mission params
+// -- Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {
     case 0: {GRLIB_unitcap = 0.5;};
     case 1: {GRLIB_unitcap = 0.75;};
@@ -211,7 +211,7 @@ switch (KP_liberation_victoryCondition) do {
 };
 
 if (!isDedicated && hasInterface) then {
-    // Create diary section for an overview of actual mission parameters
+    // -- Create diary section for an overview of actual mission parameters
     player createDiarySubject ["parameters", "Mission Parameters"];
 
     private _param = localize "STR_PARAMS_UNITCAP";

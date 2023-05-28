@@ -41,7 +41,7 @@ params [
     "_stats_rabbits_killed"
 ];
 
-// Some preparations
+// -- Some preparations
 if (isNil "cinematic_camera_started") then {cinematic_camera_started = false};
 private _line_delay = 0.75;
 private _page_delay = 5;
@@ -69,7 +69,7 @@ private _cleanPage = {
     };
 };
 
-// Calculate the playtime
+// -- Calculate the playtime
 private _playtime_days = floor (_stats_playtime / 86400);
 private _playtime_hours = floor ((_stats_playtime % 86400) / 3600);
 private _playtime_minutes = floor ((_stats_playtime % 3600) / 60);
@@ -81,18 +81,18 @@ private _dialog = createDialog "liberation_endscreen";
 waitUntil {dialog};
 if (dialog) then {sleep 3};
 
-// Playtime line
+// -- Playtime line
 [690, format [localize "STR_STATS_PLAYTIME", _playtime_days, _playtime_hours, _playtime_minutes, _playtime_seconds]] call _addReportLine;
 if (dialog) then {sleep 3};
 
-// First page
+// -- First page
 [691, format [localize "STR_STATS_OPFOR_K_INF", _stats_opfor_soldiers_killed]] call _addReportLine;
 [692, format [localize "STR_STATS_OPFOR_K_INF_PL", _stats_opfor_killed_by_players]] call _addReportLine;
 [693, format [localize "STR_STATS_OPFOR_K_VEH", _stats_opfor_vehicles_killed]] call _addReportLine;
 [694, format [localize "STR_STATS_OPFOR_K_VEH_PL", _stats_opfor_vehicles_killed_by_players], true] call _addReportLine;
 [] call _cleanPage;
 
-// Second page
+// -- Second page
 [691, format [localize "STR_STATS_BLUFOR_B_INF", _stats_blufor_soldiers_recruited]] call _addReportLine;
 [692, format [localize "STR_STATS_BLUFOR_K_INF", _stats_blufor_soldiers_killed]] call _addReportLine;
 [693, format [localize "STR_STATS_BLUFOR_B_VEH", _stats_blufor_vehicles_built]] call _addReportLine;
@@ -101,7 +101,7 @@ if (dialog) then {sleep 3};
 [696, format [localize "STR_STATS_BLUFOR_TK", _stats_blufor_teamkills], true] call _addReportLine;
 [] call _cleanPage;
 
-// Third page
+// -- Third page
 [691, format [localize "STR_STATS_GUE_K_INF", _stats_resistance_killed]] call _addReportLine;
 [692, format [localize "STR_STATS_GUE_TK_INF", _stats_resistance_teamkills]] call _addReportLine;
 [693, format [localize "STR_STATS_GUE_TK_INF_PL", _stats_resistance_teamkills_by_players]] call _addReportLine;
@@ -110,7 +110,7 @@ if (dialog) then {sleep 3};
 [696, format [localize "STR_STATS_CIV_B_INF", _stats_civilians_healed], true] call _addReportLine;
 [] call _cleanPage;
 
-// Fourth page
+// -- Fourth page
 [691, format [localize "STR_STATS_CIV_K_VEH", _stats_civilian_vehicles_killed]] call _addReportLine;
 [692, format [localize "STR_STATS_CIV_K_VEH_PL", _stats_civilian_vehicles_killed_by_players]] call _addReportLine;
 [693, format [localize "STR_STATS_CIV_S_VEH", _stats_civilian_vehicles_seized]] call _addReportLine;
@@ -118,7 +118,7 @@ if (dialog) then {sleep 3};
 [695, format [localize "STR_STATS_VEH_RECYCLED", _stats_vehicles_recycled], true] call _addReportLine;
 [] call _cleanPage;
 
-// Fifth page
+// -- Fifth page
 [691, format [localize "STR_STATS_PROD_AMMO", _stats_ammo_produced]] call _addReportLine;
 [692, format [localize "STR_STATS_SPENT_AMMO", _stats_ammo_spent]] call _addReportLine;
 [693, format [localize "STR_STATS_PROD_FUEL", _stats_fuel_produced]] call _addReportLine;
@@ -127,7 +127,7 @@ if (dialog) then {sleep 3};
 [696, format [localize "STR_STATS_SPENT_SUPPLY", _stats_supplies_spent], true] call _addReportLine;
 [] call _cleanPage;
 
-// Sixth page
+// -- Sixth page
 [691, format [localize "STR_STATS_SECTORS_CAPTURED", _stats_sectors_liberated]] call _addReportLine;
 [692, format [localize "STR_STATS_SECTORS_LOST", _stats_sectors_lost]] call _addReportLine;
 [693, format [localize "STR_STATS_FOBS_BUILT", _stats_fobs_built]] call _addReportLine;
@@ -136,7 +136,7 @@ if (dialog) then {sleep 3};
 [696, format [localize "STR_STATS_PRISONERS", _stats_prisoners_captured], true] call _addReportLine;
 [] call _cleanPage;
 
-// Seventh page
+// -- Seventh page
 [691, format [localize "STR_STATS_BATTLEGROUPS", _stats_hostile_battlegroups]] call _addReportLine;
 [692, format [localize "STR_STATS_REINFORCEMENTS", _stats_reinforcements_called]] call _addReportLine;
 [693, format [localize "STR_STATS_COMBATREADINESS", round _stats_readiness_earned]] call _addReportLine;
@@ -145,7 +145,7 @@ if (dialog) then {sleep 3};
 [696, format [localize "STR_STATS_RABBITS", _stats_rabbits_killed], true] call _addReportLine;
 [] call _cleanPage;
 
-// Eighth page
+// -- Eighth page
 [693, localize "STR_STATS_END1"] call _addReportLine;
 [694, localize "STR_STATS_END2"] call _addReportLine;
 [696, localize "STR_STATS_END3"] call _addReportLine;

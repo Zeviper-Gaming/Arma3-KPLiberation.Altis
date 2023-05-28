@@ -1,9 +1,9 @@
 /*
     File: fn_getStoragePositions.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-03-27
     Last Update: 2020-03-30
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets the storage positions and the unload distance for given storage object.

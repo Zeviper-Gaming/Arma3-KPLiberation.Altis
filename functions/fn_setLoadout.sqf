@@ -1,9 +1,9 @@
 /*
     File: fn_setLoadout.sqf
-    Author: aeroson - https://github.com/aeroson
+    Author: aeroson - https:// --github.com/aeroson
     Date: 2014-03-25
     Last Update: 2019-12-03
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         I guarantee backwards compatibility.
@@ -20,12 +20,12 @@
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
+// -- TODO
 private ["_target","_options","_loadMagsAmmo","_data","_loadedMagazines","_placeholderCount","_loadBeforeAdd","_add","_outfit","_addWeapon","_addPrimary","_addHandgun","_addSecondary","_addOrder","_currentWeapon","_currentMode"];
 
 _options = [];
 
-// addAction support
+// -- addAction support
 if(count _this < 4) then {
     #define PARAM_START private ["_PARAM_INDEX"]; _PARAM_INDEX=0;
     #define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { systemChat format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
@@ -37,7 +37,7 @@ if(count _this < 4) then {
 } else {
     _target = player;
     _data = loadout;
-    //playSound3D ["A3\Sounds_F\sfx\ZoomIn.wav", _target];
+    // --playSound3D ["A3\Sounds_F\sfx\ZoomIn.wav", _target];
 };
 
 if(isNil{_data}) exitWith {
@@ -51,9 +51,9 @@ if(count _data < 13) exitWith {
 #define EL(A,B) ((A) select (B))
 #define _THIS(A) EL(_this,A)
 
-// placeholders
-#define PLACEHOLDER_BACKPACK QUOTE(B_Kitbag_mcamo) // any backpack with capacity>0
-#define PLACEHOLDER_ITEM QUOTE(ItemWatch) // addItem placeholder should be smallest item possible
+// -- placeholders
+#define PLACEHOLDER_BACKPACK QUOTE(B_Kitbag_mcamo) // -- any backpack with capacity>0
+#define PLACEHOLDER_ITEM QUOTE(ItemWatch) // -- addItem placeholder should be smallest item possible
 
 _loadMagsAmmo = "ammo" in _options;
 _loadedMagazines = [];
@@ -74,7 +74,7 @@ if(count _data > 15) then {
 
 _placeholderCount = 0;
 
-// basic add function intended for use with uniform and vest
+// -- basic add function intended for use with uniform and vest
 _add = {
     private ["_target","_item","_callback"];
     _target = _this select 0;
@@ -95,27 +95,27 @@ _add = {
     };
 };
 
-// remove clothes to prevent incorrect mag loading
+// -- remove clothes to prevent incorrect mag loading
 removeUniform _target;
 removeVest _target;
 removeBackpack _target;
 
 
-_outfit = PLACEHOLDER_BACKPACK; // we need to add items somewhere before we can assign them
+_outfit = PLACEHOLDER_BACKPACK; // -- we need to add items somewhere before we can assign them
 _target addBackpack _outfit;
 clearAllItemsFromBackpack _target;
 removeAllAssignedItems _target;
 removeHeadgear _target;
 removeGoggles _target;
 
-// add loaded magazines of assigned items
+// -- add loaded magazines of assigned items
 if(count _loadedMagazines>=3) then {
     {
         [_target, _x, { _target addItemToBackpack _x }] call _add;
     } forEach (_loadedMagazines select 3);
 };
 
-// add assigned items
+// -- add assigned items
 {
     [_target, _x, { _target addItemToBackpack _x }] call _add;
     _target assignItem _x;
@@ -123,7 +123,7 @@ if(count _loadedMagazines>=3) then {
 
 clearAllItemsFromBackpack _target;
 
-// get assigned items, headgear and goggles is not part of assignedItems
+// -- get assigned items, headgear and goggles is not part of assignedItems
 private ["_assignedItems","_headgear","_goggles"];
 _assignedItems = assignedItems _target;
 _headgear = headgear _target;
@@ -134,8 +134,8 @@ if((_headgear != "") && !(_headgear in _assignedItems)) then {
 if((_goggles != "") && !(_goggles in _assignedItems)) then {
     _assignedItems set [count _assignedItems, _goggles];
 };
-// add asigned items that could not be added with assign item
-// asuming each assigned item can be put only into one slot
+// -- add asigned items that could not be added with assign item
+// -- asuming each assigned item can be put only into one slot
 {
     if(!(_x in _assignedItems)) then {
         _target addWeapon _x;
@@ -144,7 +144,7 @@ if((_goggles != "") && !(_goggles in _assignedItems)) then {
 
 
 
-// universal add weapon to hands
+// -- universal add weapon to hands
 _addWeapon = {
     private ["_weapon","_magazines","_muzzles"];
     clearAllItemsFromBackpack _target;
@@ -156,8 +156,8 @@ _addWeapon = {
                 _currentWeapon = _weapon;
             };
             if(count _loadedMagazines > 0) then {
-                _magazines = _loadedMagazines select _THIS(5); // get loaded magazines from saved loadout
-                if(typename _magazines != "ARRAY") then { // backwards compatibility, make sure _magazines is array
+                _magazines = _loadedMagazines select _THIS(5); // -- get loaded magazines from saved loadout
+                if(typename _magazines != "ARRAY") then { // -- backwards compatibility, make sure _magazines is array
                     if(_magazines=="") then {
                         _magazines = [];
                     } else {
@@ -165,9 +165,9 @@ _addWeapon = {
                     };
                 };
             } else {
-                _magazines = [getArray(configFile>>"CfgWeapons">>_weapon>>"magazines") select 0]; // generate weapon magazine
+                _magazines = [getArray(configFile>>"CfgWeapons">>_weapon>>"magazines") select 0]; // -- generate weapon magazine
                 _muzzles = configFile>>"CfgWeapons">>_weapon>>"muzzles";
-                if(isArray(_muzzles)) then { // generate magazine for each muzzle
+                if(isArray(_muzzles)) then { // -- generate magazine for each muzzle
                     {
                         if (_x != "this") then {
                             _magazines set [count _magazines, toLower(getArray(configFile>>"CfgWeapons">>_weapon>>_x>>"magazines") select 0)];
@@ -177,13 +177,13 @@ _addWeapon = {
             };
             {
                 [_target, _x, { _target addItemToBackpack _x }] call _add;
-            } forEach _magazines; // add magazines
+            } forEach _magazines; // -- add magazines
             _target addWeapon _weapon;
             {
                 if(_x!="" && !(_x in ([] call _THIS(3)))) then {
                     _x call _THIS(4);
                 };
-            } forEach (_data select (1+_THIS(1))); // add weapon items
+            } forEach (_data select (1+_THIS(1))); // -- add weapon items
         } else {
             systemchat format["%1 %2 doesn't exist",_THIS(2),_weapon];
             if (_currentWeapon == _weapon) then {
@@ -194,44 +194,44 @@ _addWeapon = {
     };
 };
 
-// add primary weapon, add primary weapon loaded magazine, add primary weapon items
+// -- add primary weapon, add primary weapon loaded magazine, add primary weapon items
 _addPrimary = {
     [
-        { primaryWeapon _target }, // 0 // get current weapon
-        1, // 1 //weapon classname index in _data
-        "primary", // 2 // weapon debug type
-        { primaryWeaponItems _target }, // 3 // weapon items
-        { _target addPrimaryWeaponItem _this }, // 4 // add weapon item
-        0 // 5 // index in _loadedMagazines
+        { primaryWeapon _target }, // -- 0 // -- get current weapon
+        1, // -- 1 // --weapon classname index in _data
+        "primary", // -- 2 // -- weapon debug type
+        { primaryWeaponItems _target }, // -- 3 // -- weapon items
+        { _target addPrimaryWeaponItem _this }, // -- 4 // -- add weapon item
+        0 // -- 5 // -- index in _loadedMagazines
     ] call _addWeapon;
 };
 
-// add handgun weapon, add handgun weapon loaded magazine, add handgun weapon items
+// -- add handgun weapon, add handgun weapon loaded magazine, add handgun weapon items
 _addHandgun = {
     [
-        { handgunWeapon _target }, // 0 // get current weapon
-        3, // 1 //weapon classname index in _data
-        "handgun", // 2 // weapon debug type
-        { handgunItems _target }, // 3 // weapon items
-        { _target addHandgunItem _this }, // 4 // add weapon item
-        1 // 5 // index in _loadedMagazines
+        { handgunWeapon _target }, // -- 0 // -- get current weapon
+        3, // -- 1 // --weapon classname index in _data
+        "handgun", // -- 2 // -- weapon debug type
+        { handgunItems _target }, // -- 3 // -- weapon items
+        { _target addHandgunItem _this }, // -- 4 // -- add weapon item
+        1 // -- 5 // -- index in _loadedMagazines
     ] call _addWeapon;
 };
 
-// add secondary weapon, add secondary weapon loaded magazine, add secondary weapon items
+// -- add secondary weapon, add secondary weapon loaded magazine, add secondary weapon items
 _addSecondary = {
     [
-        { secondaryWeapon _target }, // 0 // get current weapon
-        5, // 1 //weapon classname index in _data in _data
-        "secondary", // 2 // weapon debug type
-        { secondaryWeaponItems _target }, // 3 // weapon items
-        { _target addSecondaryWeaponItem _this }, // 4 // add weapon item
-        2 // 5 // index in _loadedMagazines
+        { secondaryWeapon _target }, // -- 0 // -- get current weapon
+        5, // -- 1 // --weapon classname index in _data in _data
+        "secondary", // -- 2 // -- weapon debug type
+        { secondaryWeaponItems _target }, // -- 3 // -- weapon items
+        { _target addSecondaryWeaponItem _this }, // -- 4 // -- add weapon item
+        2 // -- 5 // -- index in _loadedMagazines
     ] call _addWeapon;
 };
 
 
-// first added weapon is selected weapon, order add functions to firstly add currently selected weapon
+// -- first added weapon is selected weapon, order add functions to firstly add currently selected weapon
 _addOrder=[_addPrimary,_addHandgun,_addSecondary];
 if(_currentWeapon!="") then {
     _addOrder = switch _currentWeapon do {
@@ -244,7 +244,7 @@ if(_currentWeapon!="") then {
     [] call _x;
 } forEach _addOrder;
 
-// select weapon and firing mode
+// -- select weapon and firing mode
 if(vehicle _target == _target && _currentWeapon != "" && _currentMode != "") then {
     _muzzles = 0;
     while { (_currentWeapon != currentMuzzle _target || _currentMode != currentWeaponMode _target ) && _muzzles < 100 } do {
@@ -264,7 +264,7 @@ if(_currentMode == "" && _currentWeapon != "") then {
 
 clearAllItemsFromBackpack _target;
 
-// add uniform, add uniform items and fill uniform with item placeholders
+// -- add uniform, add uniform items and fill uniform with item placeholders
 _outfit = _data select 7;
 if(_outfit != "") then {
     if(isClass(configFile>>"CfgWeapons">>_outfit)) then {
@@ -287,7 +287,7 @@ if(_outfit != "") then {
     };
 };
 
-// add vest, add vest items and fill vest with item placeholders
+// -- add vest, add vest items and fill vest with item placeholders
 _outfit = _data select 9;
 if(_outfit != "") then {
     if(isClass(configFile>>"CfgWeapons">>_outfit)) then {
@@ -310,7 +310,7 @@ if(_outfit != "") then {
     };
 };
 
-// add backpack and add backpack items
+// -- add backpack and add backpack items
 removeBackpack _target;
 _outfit = _data select 11;
 if(_outfit != "") then {
@@ -329,14 +329,14 @@ if(_outfit != "") then {
     };
 };
 
-// remove item placeholders
+// -- remove item placeholders
 for "_i" from 1 to _placeholderCount do {
     _target removeItem PLACEHOLDER_ITEM;
 };
 
 
-// make loadout visible fix?
+// -- make loadout visible fix?
 if(vehicle _target == _target) then {
-    //_target switchMove (getArray(configFile>>"CfgMovesMaleSdr">>"States">>animationState player>>"ConnectTo") select 0);
+    // --_target switchMove (getArray(configFile>>"CfgMovesMaleSdr">>"States">>animationState player>>"ConnectTo") select 0);
     _target setPosATL (getPosATL _target);
 };

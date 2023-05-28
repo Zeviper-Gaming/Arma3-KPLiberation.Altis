@@ -46,10 +46,10 @@ class liberation_menu {
         colorDisabled[] = COLOR_WHITE;
         colorFocused[] = COLOR_WHITE;
         font = FontM;
-        soundEnter[] = { "", 0, 1 };  // no sound
+        soundEnter[] = { "", 0, 1 };  // -- no sound
         soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
-        soundClick[] = { "", 0, 1 };  // no sound
-        soundEscape[] = { "", 0, 1 };  // no sound
+        soundClick[] = { "", 0, 1 };  // -- no sound
+        soundEscape[] = { "", 0, 1 };  // -- no sound
         class HitZone {
             Left = 0;
             Right = 0;

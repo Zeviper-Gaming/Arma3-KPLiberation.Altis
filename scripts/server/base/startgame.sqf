@@ -1,22 +1,22 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {save_is_loaded};
 
-// Check if there is no FOB yet (new campaign)
+// -- Check if there is no FOB yet (new campaign)
 if (GRLIB_all_fobs isEqualTo []) then {
 
-    // Prebuild FOB (parameter setting) or spawn FOB box
+    // -- Prebuild FOB (parameter setting) or spawn FOB box
     if (GRLIB_build_first_fob) then {
-        // Only accept spawnpoints which are at least 800m away from any sector
+        // -- Only accept spawnpoints which are at least 800m away from any sector
         private _y = "";
         private _validPlaces =  sectors_opfor select {
             _y = _x;
             (sectors_allSectors findIf {((markerPos _x) distance2d (markerPos _y)) < 800}) isEqualTo -1
         };
 
-        // Spawn first FOB on random valid spawnpoint
+        // -- Spawn first FOB on random valid spawnpoint
         [markerPos (selectRandom _validPlaces), true] remoteExec ["build_fob_remote_call", 2];
     } else {
-        // Spawn FOB box and wait until the first FOB was built
+        // -- Spawn FOB box and wait until the first FOB was built
         private _fobbox = objNull;
         while {GRLIB_all_fobs isEqualTo []} do {
             _fobbox = ([FOB_box_typename, FOB_truck_typename] select KP_liberation_fob_vehicle) createVehicle (getposATL base_boxspawn);
@@ -25,7 +25,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
             [_fobbox, true] call KPLIB_fnc_clearCargo;
             [_fobbox] call KPLIB_fnc_addObjectInit;
 
-            // If the FOB box has fallen into the sea or is destroyed, start again with spawning a new one
+            // -- If the FOB box has fallen into the sea or is destroyed, start again with spawning a new one
             waitUntil {
                 sleep 1;
                 !(alive _fobbox) || !(GRLIB_all_fobs isEqualTo []) || (((getPosASL _fobbox) select 2) < 0)
@@ -35,7 +35,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
         deleteVehicle _fobbox;
     };
 
-    // Wait a short time before paradropping the start resource crates
+    // -- Wait a short time before paradropping the start resource crates
     waitUntil {sleep 1; !(GRLIB_all_fobs isEqualTo [])};
     if (KP_liberation_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
         waitUntil {sleep 1; ["KPLIB_Tasks_Tutorial_Fob_02"] call BIS_fnc_taskCompleted};
@@ -44,7 +44,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
         sleep 10;
     };
 
-    // Spawn start resource crates and attach them to parachutes
+    // -- Spawn start resource crates and attach them to parachutes
     KPLIB_startCrates = [];
     private _crate = objNull;
     for "_i" from 1 to 6 do {
@@ -63,7 +63,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
         KPLIB_startCrates pushBack _crate;
     };
 
-    // Spawn green smoke on the crates short before they hit the ground
+    // -- Spawn green smoke on the crates short before they hit the ground
     uiSleep 25;
     private _smoke = objNull;
     {

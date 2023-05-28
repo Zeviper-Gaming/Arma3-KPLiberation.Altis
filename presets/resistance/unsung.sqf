@@ -19,7 +19,7 @@ KP_liberation_guerilla_units = [
     "uns_men_CIDG_S1"
 ];
 
-// Armed vehicles
+// -- Armed vehicles
 KP_liberation_guerilla_vehicles = [];
 
 /* Guerilla Equipment
@@ -58,7 +58,7 @@ KP_liberation_guerilla_weapons_3 = [
     ["uns_SVD_CAMO_base","uns_svdmag",4,"",""]
 ];
 
-// Uniforms
+// -- Uniforms
 KP_liberation_guerilla_uniforms_1 = [
     "U_C_Man_casual_4_F",
     "U_C_Man_casual_5_F",
@@ -98,7 +98,7 @@ KP_liberation_guerilla_uniforms_3 = [
     "UNS_DCCR_GTS"
 ];
 
-// Vests
+// -- Vests
 KP_liberation_guerilla_vests_1 = [
     "UNS_VC_B1",
     "UNS_VC_S2",
@@ -153,7 +153,7 @@ KP_liberation_guerilla_vests_3 = [
     "V_TacVest_oli"
 ];
 
-// Headgear
+// -- Headgear
 KP_liberation_guerilla_headgear_1 = [
     "",
     "",
@@ -196,7 +196,7 @@ KP_liberation_guerilla_headgear_3 = [
     "uns_sas_booniehat_green2"
 ];
 
-// Facegear. Applies for tier 2 and 3.
+// -- Facegear. Applies for tier 2 and 3.
 KP_liberation_guerilla_facegear = [
     "",
     "",

@@ -1,9 +1,9 @@
 /*
     File: fn_spawnMilitaryPostSquad.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-12-03
     Last Update: 2020-04-05
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Spawns soldiers inside military cargo towers around given position.
@@ -21,15 +21,15 @@ params [
 
 if (_pos isEqualTo [0, 0, 0]) exitWith {["No or zero pos given"] call BIS_fnc_error; []};
 
-// Get all military patrol towers near given position
+// -- Get all military patrol towers near given position
 private _allPosts = (
     nearestObjects [_pos, ["Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_Cargo_Patrol_V4_F"], GRLIB_capture_size, true]
 ) select {alive _x};
 
-// Exit if no patrol towers were found
+// -- Exit if no patrol towers were found
 if (_allPosts isEqualTo []) exitWith {[]};
 
-// Spawn units
+// -- Spawn units
 private _grp = createGroup [GRLIB_side_enemy, true];
 private _unit = objNull;
 private _units = [];

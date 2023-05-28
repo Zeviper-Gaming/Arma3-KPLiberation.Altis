@@ -1,9 +1,9 @@
 /*
     File: fn_getWeaponComponents.sqf
-    Author: Zharf - https://github.com/zharf
+    Author: Zharf - https:// --github.com/zharf
     Date: 2019-06-21
     Last Update: 2020-04-05
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Snatched from CBA since we don't depend on it yet.
@@ -26,20 +26,20 @@ if (_weapon isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; [
 
 private _config = configFile >> "CfgWeapons" >> _weapon;
 
-// Return empty array if the weapon doesn't exist
+// -- Return empty array if the weapon doesn't exist
 if (!isClass _config) exitWith {
     [];
 };
 
-// get attachments
+// -- get attachments
 private _attachments = [];
 {
     _attachments pushBack toLower getText (_x >> "item");
-} forEach ("true" configClasses (_config >> "LinkedItems")); // inheritance is apparently disabled for these
+} forEach ("true" configClasses (_config >> "LinkedItems")); // -- inheritance is apparently disabled for these
 
-// get first parent without attachments
+// -- get first parent without attachments
 private _baseWeapon = "";
-while {isClass _config && {getNumber (_config >> "scope") > 0}} do { // Some preset weapons are scope = 1
+while {isClass _config && {getNumber (_config >> "scope") > 0}} do { // -- Some preset weapons are scope = 1
     if (count (_config >> "LinkedItems") == 0) exitWith {
         _baseWeapon = configName _config;
     };

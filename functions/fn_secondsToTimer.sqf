@@ -1,9 +1,9 @@
 /*
     File: fn_secondsToTimer.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-12-03
     Last Update: 2020-04-03
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Converts given amount of seconds to a MM:SS string.

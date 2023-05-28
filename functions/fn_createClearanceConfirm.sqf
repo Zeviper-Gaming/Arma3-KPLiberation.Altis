@@ -1,9 +1,9 @@
 /*
     File: fn_createClearanceConfirm.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-04-10
     Last Update: 2020-04-10
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Displays a confirmation dialog for the create clearance action.

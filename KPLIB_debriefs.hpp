@@ -1,9 +1,9 @@
 /*
     File: KPLIB_debriefs.hpp
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-05-09
     Last Update: 2020-05-09
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Debriefing defines for KP Liberation.

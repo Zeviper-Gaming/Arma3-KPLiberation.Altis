@@ -16,7 +16,7 @@ createDialog "liberation_arsenal";
 private _backpack = backpack player;
 
 private ["_loadouts_data"];
-// Get loadouts either from ACE or BI arsenals
+// -- Get loadouts either from ACE or BI arsenals
 if (KP_liberation_ace && KP_liberation_arsenal_type) then {
     _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
 } else {

@@ -12,7 +12,7 @@ if (_negative) then {
 
 KP_liberation_civ_rep = -100 max (KP_liberation_civ_rep min 100);
 
-// Set correct resistance standing
+// -- Set correct resistance standing
 private _resistanceEnemy = [0, 1] select (KP_liberation_civ_rep < 25);
 private _resistanceFriendly = [0, 1] select (KP_liberation_civ_rep >= -25);
 

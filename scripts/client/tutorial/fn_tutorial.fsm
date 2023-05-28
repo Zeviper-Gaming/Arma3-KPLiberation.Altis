@@ -124,7 +124,7 @@ link60[] = {57,58};
 link61[] = {58,49};
 globals[] = {0.000000,0,0,0,0,640,480,1,87,6316128,1,-872.324036,426.382813,2058.735596,1126.872803,1232,884,1};
 window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1250};
-*//*%FSM</HEAD>*/
+*// --*%FSM</HEAD>*/
 class FSM
 {
         fsmName = "KPLIB Tutorial";
@@ -135,7 +135,7 @@ class FSM
                 {
                         name = "Attack_one_of_the";
                         itemno = 1;
-                        init = /*%FSM<STATEINIT""">*/"// Create task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_01"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
@@ -148,7 +148,7 @@ class FSM
                          "    true" \n
                          "] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "// Get up to 3 nearest factory sectors" \n
+                         "// -- Get up to 3 nearest factory sectors" \n
                          "private _sectors = (" \n
                          "    sectors_factory select {((markerPos _x) distance2d player) < 10000}" \n
                          ") apply {" \n
@@ -159,7 +159,7 @@ class FSM
                          "_sectors = _sectors select {!isNil ""_x""};" \n
                          "_sectors = _sectors apply {_x select 1};" \n
                          "" \n
-                         "// Create task markers for near factories" \n
+                         "// -- Create task markers for near factories" \n
                          "{" \n
                          "    [" \n
                          "        allPlayers," \n
@@ -200,9 +200,9 @@ class FSM
                 {
                         name = "Author__KPLIB_Dev";
                         itemno = 2;
-                        init = /*%FSM<STATEINIT""">*/"// This FSM is part of KP Liberation" \n
-                         "// https://github.com/KillahPotatoes/KP-Liberation" \n
-                         "// MIT License - http://www.opensource.org/licenses/MIT"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"// -- This FSM is part of KP Liberation" \n
+                         "// -- https:// --github.com/KillahPotatoes/KP-Liberation" \n
+                         "// -- MIT License - http:// --www.opensource.org/licenses/MIT"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -250,7 +250,7 @@ class FSM
                          "    ""TUTORIAL""" \n
                          "] remoteExecCall [""KPLIB_fnc_log"", 2];" \n
                          "" \n
-                         "// Show dialog to offer the tutorial" \n
+                         "// -- Show dialog to offer the tutorial" \n
                          "[] spawn {" \n
                          "    KPLIB_playTutorial = [" \n
                          "        localize ""STR_TUTORIAL_DIALOG_TEXT_START""," \n
@@ -379,7 +379,7 @@ class FSM
                 {
                         name = "Init";
                         itemno = 12;
-                        init = /*%FSM<STATEINIT""">*/"// Create tutorial parent task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create tutorial parent task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    ""KPLIB_Tasks_Tutorial_Main""," \n
@@ -469,7 +469,7 @@ class FSM
                 {
                         name = "Init_path";
                         itemno = 17;
-                        init = /*%FSM<STATEINIT""">*/"// Create tutorial path parent task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create tutorial path parent task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob"", ""KPLIB_Tasks_Tutorial_Main""]," \n
@@ -514,7 +514,7 @@ class FSM
                 {
                         name = "Slingload_crate";
                         itemno = 19;
-                        init = /*%FSM<STATEINIT""">*/"// Create task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_01a"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
@@ -548,7 +548,7 @@ class FSM
                 {
                         name = "Drive_the_truck";
                         itemno = 23;
-                        init = /*%FSM<STATEINIT""">*/"// Create task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_01b"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
@@ -614,11 +614,11 @@ class FSM
                 {
                         name = "Build_storage_ar";
                         itemno = 31;
-                        init = /*%FSM<STATEINIT""">*/"// Complete tasks" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Complete tasks" \n
                          "[""KPLIB_Tasks_Tutorial_Fob_01a"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
                          "[""KPLIB_Tasks_Tutorial_Fob_01b"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
                          "" \n
-                         "// Create task" \n
+                         "// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_02"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
@@ -656,7 +656,7 @@ class FSM
                 {
                         name = "Create_tasks_for";
                         itemno = 33;
-                        init = /*%FSM<STATEINIT""">*/"// Create tasks" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create tasks" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_03"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
@@ -724,7 +724,7 @@ class FSM
                 {
                         name = "Complete_task";
                         itemno = 41;
-                        init = /*%FSM<STATEINIT""">*/"// Complete tasks" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Complete tasks" \n
                          "[""KPLIB_Tasks_Tutorial_Fob_02"", ""SUCCEEDED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -749,7 +749,7 @@ class FSM
                 {
                         name = "Init_path_1";
                         itemno = 45;
-                        init = /*%FSM<STATEINIT""">*/"// Create tutorial path parent task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create tutorial path parent task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector"", ""KPLIB_Tasks_Tutorial_Main""]," \n
@@ -792,7 +792,7 @@ class FSM
                          "} forEach _sectors;" \n
                          "[""KPLIB_Tasks_Tutorial_Sector_01"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
                          "" \n
-                         "// Create task" \n
+                         "// -- Create task" \n
                          "private _factory = (_sectors select {_x in active_sectors}) select 0;" \n
                          "[" \n
                          "    allPlayers," \n
@@ -827,7 +827,7 @@ class FSM
                 {
                         name = "POWs_and_wounded";
                         itemno = 49;
-                        init = /*%FSM<STATEINIT""">*/"// Create task" \n
+                        init = /*%FSM<STATEINIT""">*/"// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_03"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
@@ -840,7 +840,7 @@ class FSM
                          "    true" \n
                          "] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "// Get all POWs and wounded civs" \n
+                         "// -- Get all POWs and wounded civs" \n
                          "private _pows = allUnits select {" \n
                          "    captive _x" \n
                          "    && {((markerPos _factory) distance2d _x) < 250}" \n
@@ -854,7 +854,7 @@ class FSM
                          "    );" \n
                          "} forEach _wounded_markers;" \n
                          "" \n
-                         "// Create tasks for near POWs and wounded civs" \n
+                         "// -- Create tasks for near POWs and wounded civs" \n
                          "private _careTasks = [];" \n
                          "private _taskId = """";" \n
                          "{" \n
@@ -894,7 +894,7 @@ class FSM
                         itemno = 51;
                         init = /*%FSM<STATEINIT""">*/"[""KPLIB_Tasks_Tutorial_Sector_03"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
                          "" \n
-                         "// Create task" \n
+                         "// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_04"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
@@ -934,7 +934,7 @@ class FSM
                         itemno = 53;
                         init = /*%FSM<STATEINIT""">*/"[""KPLIB_Tasks_Tutorial_Sector_04"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
                          "" \n
-                         "// Create task" \n
+                         "// -- Create task" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_05"", ""KPLIB_Tasks_Tutorial_Sector""]," \n

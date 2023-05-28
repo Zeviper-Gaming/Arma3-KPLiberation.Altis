@@ -24,20 +24,20 @@
 */
 
 KPLIB_objectInits = [
-    // Set KP logo on white flag
+    // -- Set KP logo on white flag
     [
         ["Flag_White_F"],
         {_this setFlagTexture "res\flag_kp_co.paa";}
     ],
 
-    // Add helipads to zeus, as they can't be recycled after built
+    // -- Add helipads to zeus, as they can't be recycled after built
     [
         ["Helipad_base_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"],
         {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;},
         true
     ],
 
-    // Add ViV and build action to FOB box/truck
+    // -- Add ViV and build action to FOB box/truck
     [
         [FOB_box_typename, FOB_truck_typename],
         {
@@ -54,7 +54,7 @@ KPLIB_objectInits = [
         }
     ],
 
-    // Add FOB building damage handler override and repack action
+    // -- Add FOB building damage handler override and repack action
     [
         [FOB_typename],
         {
@@ -67,7 +67,7 @@ KPLIB_objectInits = [
         }
     ],
 
-    // Add ViV action to Arsenal crate
+    // -- Add ViV action to Arsenal crate
     [
         [Arsenal_typename],
         {
@@ -79,13 +79,13 @@ KPLIB_objectInits = [
         }
     ],
 
-    // Add storage type variable to built storage areas (only for FOB built/loaded ones)
+    // -- Add storage type variable to built storage areas (only for FOB built/loaded ones)
     [
         [KP_liberation_small_storage_building, KP_liberation_large_storage_building],
         {_this setVariable ["KP_liberation_storage_type", 0, true];}
     ],
 
-    // Add ACE variables to corresponding building types
+    // -- Add ACE variables to corresponding building types
     [
         [KP_liberation_recycle_building],
         {_this setVariable ["ace_isRepairFacility", 1, true];}
@@ -99,26 +99,26 @@ KPLIB_objectInits = [
         {_this setVariable ["ace_medical_isMedicalVehicle", true, true];}
     ],
 
-    // Hide Cover on big GM trucks
+    // -- Hide Cover on big GM trucks
     [
         ["gm_ge_army_kat1_454_cargo", "gm_ge_army_kat1_454_cargo_win"],
         {_this animateSource ["cover_unhide", 0, true];}
     ],
 
-    // Make sure a slingloaded object is local to the helicopter pilot (avoid desync and rope break)
+    // -- Make sure a slingloaded object is local to the helicopter pilot (avoid desync and rope break)
     [
         ["Helicopter"],
         {if (isServer) then {[_this] call KPLIB_fnc_addRopeAttachEh;} else {[_this] remoteExecCall ["KPLIB_fnc_addRopeAttachEh", 2];};},
         true
     ],
 
-    // Add valid vehicles to support module, if system is enabled
+    // -- Add valid vehicles to support module, if system is enabled
     [
         KP_liberation_suppMod_artyVeh,
         {if (KP_liberation_suppMod > 0) then {KPLIB_suppMod_arty synchronizeObjectsAdd [_this];};}
     ],
 
-    // Disable autocombat (if set in parameters) and fleeing
+    // -- Disable autocombat (if set in parameters) and fleeing
     [
         ["Man"],
         {

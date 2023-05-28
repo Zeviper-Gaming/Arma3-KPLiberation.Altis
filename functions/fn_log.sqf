@@ -1,9 +1,9 @@
 /*
     File: fn_log.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-04-16
     Last Update: 2020-04-20
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Logs given string to the rpt of the machine while adding KP Liberation prefix.

@@ -74,84 +74,84 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item4
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			url="https:// --ace3.acemod.org/";
 		};
 		class Item5
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item7
 		{
 			className="ace_sitting";
 			name="ACE3 - Sitting";
 			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			url="https:// --ace3.acemod.org/";
 		};
 		class Item8
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item9
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item10
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			url="https:// --ace3.acemod.org/";
 		};
 		class Item11
 		{
 			className="A3_Boat_F_Jets";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			url="https:// --www.arma3.com";
 		};
 		class Item12
 		{

@@ -1,9 +1,9 @@
 /*
     File: fn_isRadio.sqf
-    Author: Zharf - https://github.com/zharf
+    Author: Zharf - https:// --github.com/zharf
     Date: 2019-07-07
     Last Update: 2020-05-03
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Returns whether the classname is a TFAR/ACRE radio or not.

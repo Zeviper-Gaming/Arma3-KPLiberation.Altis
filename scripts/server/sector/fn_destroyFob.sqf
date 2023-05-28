@@ -1,9 +1,9 @@
 /*
     File: fn_destroyFob.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2020-04-28
     Last Update: 2020-04-29
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Removes all player built buildings (from build list) inside the FOB radius of given position.

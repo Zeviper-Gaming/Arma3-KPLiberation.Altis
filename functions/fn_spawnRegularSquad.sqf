@@ -1,9 +1,9 @@
 /*
     File: fn_spawnRegularSquad.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-12-03
     Last Update: 2020-05-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Spawns a regular enemy squad with given soldier classnames at given sector.
@@ -23,7 +23,7 @@ params [
 
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; grpNull};
 
-// Get spawn position for squad
+// -- Get spawn position for squad
 private _sectorPos = (markerPos _sector) getPos [random 100, random 360];
 private _spawnPos = [];
 private _i = 0;
@@ -39,7 +39,7 @@ if (_spawnPos isEqualTo zeroPos) exitWith {
     grpNull
 };
 
-// Spawn units of squad
+// -- Spawn units of squad
 private _corrected_amount = round ((count _classnames) * ([] call KPLIB_fnc_getOpforFactor));
 private _grp = createGroup [GRLIB_side_enemy, true];
 {

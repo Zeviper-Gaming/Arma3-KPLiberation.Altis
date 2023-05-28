@@ -8,7 +8,7 @@
     - None
 */
 
-// Civilian classnames.
+// -- Civilian classnames.
 civilians = [
     "LOP_Tak_Civ_Random",
     "LOP_Tak_Civ_Man_06",
@@ -28,7 +28,7 @@ civilians = [
     "LOP_Tak_Civ_Man_15"
 ];
 
-// Civilian vehicle classnames.
+// -- Civilian vehicle classnames.
 civilian_vehicles = [
     "LOP_TAK_Civ_Hatchback",
     "LOP_TAK_Civ_Landrover",

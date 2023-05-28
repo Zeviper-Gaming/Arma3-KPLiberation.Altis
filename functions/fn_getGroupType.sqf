@@ -1,9 +1,9 @@
 /*
     File: fn_getGroupType.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2019-11-25
     Last Update: 2020-04-25
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Gets the type of a given group.
@@ -25,7 +25,7 @@ if (isNull _grp) exitWith {["Null group given"] call BIS_fnc_error; ""};
 private _grpType = "infantry";
 private _vehType = "";
 
-// Get vehicle type, if at least one group member is in a crew seat
+// -- Get vehicle type, if at least one group member is in a crew seat
 private _parent = objNull;
 {
     _parent = objectParent _x;
@@ -34,10 +34,10 @@ private _parent = objNull;
     };
 } forEach (units _grp);
 
-// Exit with infantry, if not as crew in objectParent
+// -- Exit with infantry, if not as crew in objectParent
 if (_vehType isEqualTo "") exitWith {_grpType};
 
-// Otherwise continue to get the type of the vehicle
+// -- Otherwise continue to get the type of the vehicle
 [] call {
     if ((toLower _vehType) in KPLIB_b_light_classes) exitWith {_grpType = "light";};
     if ((toLower _vehType) in KPLIB_b_heavy_classes) exitWith {_grpType = "heavy";};

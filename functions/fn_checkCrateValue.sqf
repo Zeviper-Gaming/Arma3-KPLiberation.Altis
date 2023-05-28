@@ -1,9 +1,9 @@
 /*
     File: fn_checkCrateValue.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Author: KP Liberation Dev Team - https:// --github.com/KillahPotatoes
     Date: 2017-05-26
     Last Update: 2019-12-03
-    License: MIT License - http://www.opensource.org/licenses/MIT
+    License: MIT License - http:// --www.opensource.org/licenses/MIT
 
     Description:
         Checks content of given crate and displays a hint about it.

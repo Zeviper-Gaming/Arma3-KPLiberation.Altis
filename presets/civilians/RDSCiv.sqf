@@ -6,7 +6,7 @@
     - None
 */
 
-// Civilian classnames.
+// -- Civilian classnames.
 civilians = [
     "RDS_Assistant",
     "RDS_Citizen_Random",
@@ -48,7 +48,7 @@ civilians = [
     "RDS_Worker2"
 ];
 
-// Civilian vehicle classnames.
+// -- Civilian vehicle classnames.
 civilian_vehicles = [
     "RDS_Van_01_fuel_F",
     "RDS_Gaz24_Civ_03",

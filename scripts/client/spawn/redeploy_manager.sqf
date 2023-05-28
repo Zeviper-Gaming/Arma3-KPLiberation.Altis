@@ -65,7 +65,7 @@ while {true} do {
     _standard_map_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 251);
     _frame_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 198);
 
-    // Get loadouts either from ACE or BI arsenals
+    // -- Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
     if (KP_liberation_ace && KP_liberation_arsenal_type) then {
         _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
@@ -88,7 +88,7 @@ while {true} do {
     lbSetCurSel [203, 0];
 
     while {dialog && alive player && deploy == 0} do {
-        // ARRAY - [[NAME, POSITION(, OBJECT)], ...]
+        // -- ARRAY - [[NAME, POSITION(, OBJECT)], ...]
         KPLIB_respawnPositionsList = [[_basenamestr, getposATL startbase]];
 
         {
@@ -137,7 +137,7 @@ while {true} do {
                     _enddist = 300;
                     _alti = 30;
                 };
-                // Disable if sector is under attack
+                // -- Disable if sector is under attack
                 if (!KPLIB_respawnOnAttackedSectors && {_objectpos in KPLIB_sectorsUnderAttack}) then {
                     (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText localize "STR_DEPLOY_UNDERATTACK";
                     (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlEnable false;

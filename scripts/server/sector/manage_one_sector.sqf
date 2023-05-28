@@ -1,9 +1,9 @@
-// base amount of sector lifetime tickets
-// if there are no enemies one ticket is removed every SECTOR_TICK_TIME seconds
-// 12 * 5 = 60s by default
+// -- base amount of sector lifetime tickets
+// -- if there are no enemies one ticket is removed every SECTOR_TICK_TIME seconds
+// -- 12 * 5 = 60s by default
 #define BASE_TICKETS                12
 #define SECTOR_TICK_TIME            5
-// delay in minutes from which addional time will be added
+// -- delay in minutes from which addional time will be added
 #define ADDITIONAL_TICKETS_DELAY    5
 
 params ["_sector"];
@@ -240,9 +240,9 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
     if (KP_liberation_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     private _activationTime = time;
-    // sector lifetime loop
+    // -- sector lifetime loop
     while {!_stopit} do {
-        // sector was captured
+        // -- sector was captured
         if (([_sectorpos, _local_capture_size] call KPLIB_fnc_getSectorOwnership == GRLIB_side_friendly) && (GRLIB_endgame == 0)) then {
             if (isServer) then {
                 [_sector] spawn sector_liberated_remote_call;
@@ -275,11 +275,11 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
             if (([_sectorpos, (([_opforcount] call KPLIB_fnc_getSectorRange) + 300), GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) == 0) then {
                 _sector_despawn_tickets = _sector_despawn_tickets - 1;
             } else {
-                // start counting running minutes after ADDITIONAL_TICKETS_DELAY
+                // -- start counting running minutes after ADDITIONAL_TICKETS_DELAY
                 private _runningMinutes = (floor ((time - _activationTime) / 60)) - ADDITIONAL_TICKETS_DELAY;
                 private _additionalTickets = (_runningMinutes * BASE_TICKETS);
 
-                // clamp from 0 to "_maximum_additional_tickets"
+                // -- clamp from 0 to "_maximum_additional_tickets"
                 _additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets;
 
                 _sector_despawn_tickets = BASE_TICKETS + _additionalTickets;

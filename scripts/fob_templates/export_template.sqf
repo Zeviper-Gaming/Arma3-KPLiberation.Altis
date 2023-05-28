@@ -11,7 +11,7 @@
     Then preview the mission in eden to execute the script.
 
     The fetched information can be found in your client rpt (between the START and END line) for copy/paste.
-    Ref for finding your RPT file: https://community.bistudio.com/wiki/Crash_Files#Arma_3
+    Ref for finding your RPT file: https:// --community.bistudio.com/wiki/Crash_Files#Arma_3
 
     --- RECOMMENDATIONS ---
 
@@ -30,7 +30,7 @@ diag_log text "";
 diag_log text "";
 diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- START ----------";
 
-// Fetch all objects
+// -- Fetch all objects
 diag_log text "";
 diag_log text "private _objects_to_build = [";
 {
@@ -47,10 +47,10 @@ diag_log text "];";
 
 diag_log text "";
 diag_log text "private _objectives_to_build = [";
-diag_log text "    // Move all things which should be destroyed to accomplish the mission from the above to this array";
+diag_log text "    // -- Move all things which should be destroyed to accomplish the mission from the above to this array";
 diag_log text "];";
 
-// Fetch all infantry/guards
+// -- Fetch all infantry/guards
 diag_log text "";
 diag_log text "private _defenders_to_build = [";
 {
