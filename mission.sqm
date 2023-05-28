@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6435;
+		nextID=6438;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1046;
+		nextID=1057;
 	};
 	class Camera
 	{
-		pos[]={27373.098,121.25927,5280.2231};
-		dir[]={-0.59636927,-0.47384858,0.64792848};
-		up[]={-0.32090241,0.88060629,0.3486461};
-		aside[]={0.73577535,-1.4901161e-008,0.67722565};
+		pos[]={27418.061,153.50075,5233.0439};
+		dir[]={-0.18731713,-0.75934267,0.62314957};
+		up[]={-0.21859442,0.65068823,0.7272011};
+		aside[]={0.95767093,-1.639346e-007,0.28787395};
 	};
 };
 binarizationWanted=0;
-sourceName="myKP_liberation_alive";
+sourceName="Arma3-KPLiberation";
 addons[]=
 {
 	"A3_Ui_F",
@@ -62,96 +62,97 @@ addons[]=
 	"alive_main",
 	"alive_sys_playeroptions",
 	"alive_sys_profile",
-	"alive_mil_ied"
+	"alive_mil_ied",
+	"ace_fortify"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
-			url="https:// --ace3.acemod.org/";
+			url="https://ace3.acemod.org/";
 		};
 		class Item5
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item7
 		{
 			className="ace_sitting";
 			name="ACE3 - Sitting";
 			author="ACE-Team";
-			url="https:// --ace3.acemod.org/";
+			url="https://ace3.acemod.org/";
 		};
 		class Item8
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item9
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item10
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
-			url="https:// --ace3.acemod.org/";
+			url="https://ace3.acemod.org/";
 		};
 		class Item11
 		{
 			className="A3_Boat_F_Jets";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
-			url="https:// --www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item12
 		{
@@ -176,6 +177,13 @@ class AddonsMetaData
 			className="ALiVE_mil_ied";
 			name="alive_mil_ied";
 			author="ALiVE Mod Team";
+		};
+		class Item16
+		{
+			className="ace_fortify";
+			name="ace_fortify";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
 	};
 };
@@ -247,7 +255,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=521;
+		items=524;
 		class Item0
 		{
 			dataType="Marker";
@@ -746,7 +754,7 @@ class Mission
 					{
 						rank="CAPTAIN";
 						init="removeallWeapons this; removebackpack this;";
-						name="second_commandant"
+						name="second_commandant";
 						description="Platoon Sergeant (Adrien)";
 						isPlayable=1;
 					};
@@ -11693,7 +11701,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="IGNORE";
+											value="ADD";
 										};
 									};
 								};
@@ -11955,6 +11963,207 @@ class Mission
 					};
 				};
 				nAttributes=17;
+			};
+		};
+		class Item521
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14841.441,0,6403.458};
+			};
+			id=6435;
+			type="acex_fortify_setupModule";
+			atlOffset=82.537872;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=-1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="small";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item522
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14876.512,-2.6420212,6414.9097};
+			};
+			id=6436;
+			type="acex_fortify_setupModule";
+			atlOffset=83.279892;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=-1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="medium";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item523
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14919.454,-2.6823502,6413.4795};
+			};
+			id=6437;
+			type="acex_fortify_setupModule";
+			atlOffset=82.138412;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=-1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="big";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 	};
