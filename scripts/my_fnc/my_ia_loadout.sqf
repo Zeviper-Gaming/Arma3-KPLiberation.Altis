@@ -4,6 +4,8 @@ params ["_current_unit"];
 
 _is_medic = _current_unit getVariable "ace_medical_medicclass" !=0;
 
+if !("ace_medical_medicclass" in allvariables _current_unit) then {_is_medic = false};
+
 if !(side _current_unit == civilian) then {
 	// -- Suppression des medikits
 	_current_unit removeitems "FirstAidKit";
