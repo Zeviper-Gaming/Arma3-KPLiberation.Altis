@@ -424,12 +424,25 @@ blufor_team_mg = [
 ];
 
 // -- Asault team
-blufor_assault_team = [
+blufor_breacher_team = [
 	"rhsusf_army_ocp_teamleader",
 	"rhsusf_army_ocp_rifleman_m590",
 	"rhsusf_army_ocp_rifleman_m590",
 	"rhsusf_army_ocp_rifleman_m4",
     "rhsusf_army_ocp_medic",
+]
+
+// -- FR Groupe CE
+blufor_r3f_squad = [
+	"R3F_CDG_BLUFOR",
+	"R3F_CDE300_BLUFOR",
+	"R3F_EQUIP_BLUFOR",
+	"R3F_EQUIP1_300_BLUFOR",
+	"R3F_EQUIP2_300_BLUFOR",
+	"R3F_CDE600_BLUFOR",
+	"R3F_EQUIP1_600_BLUFOR",
+	"R3F_EQUIP2_600_BLUFOR",
+	"R3F_MEDIC_BLUFOR"
 ]
 
 /*
