@@ -384,7 +384,7 @@ blufor_squad_recon = [
     "rhsusf_usmc_recon_marpat_d_autorifleman",
     "rhsusf_usmc_recon_marpat_d_machinegunner",
     "rhsusf_usmc_recon_marpat_d_marksman",
-    "rhsusf_usmc_recon_marpat_d_sniper_M107",
+    "rhsusf_usmc_recon_marpat_d_marksman",
     "rhsusf_army_ocp_medic",
     "rhsusf_army_ocp_engineer"
 ];
@@ -396,7 +396,7 @@ blufor_custom_squad = [
     "rhsusf_usmc_recon_marpat_d_autorifleman",
     "rhsusf_usmc_recon_marpat_d_rifleman",
     "rhsusf_usmc_recon_marpat_d_marksman",
-    "rhsusf_usmc_recon_marpat_d_sniper_M107",
+    "rhsusf_usmc_recon_marpat_d_marksman",
     "rhsusf_army_ocp_medic",
     "rhsusf_army_ocp_engineer"
 ];
@@ -422,6 +422,15 @@ blufor_team_mg = [
     "rhsusf_army_ocp_machinegunner",
     "rhsusf_army_ocp_machinegunnera",
 ];
+
+// -- Asault team
+blufor_assault_team = [
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_rifleman_m590",
+	"rhsusf_army_ocp_rifleman_m590",
+	"rhsusf_army_ocp_rifleman_m4",
+    "rhsusf_army_ocp_medic",
+]
 
 /*
     --- Elite vehicles ---
