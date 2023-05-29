@@ -107,9 +107,9 @@ squads_names = [
     localize "STR_LIGHT_RIFLE_SQUAD",
     localize "STR_RIFLE_SQUAD",
     localize "STR_AT_SQUAD",
-    localize "Team AT",
+    "Team AT",
     localize "STR_AA_SQUAD",
-    localize "Team AA",
+    "Team AA",
     localize "STR_RECON_SQUAD",
     localize "STR_PARA_SQUAD",
 	"my Infantry squad"
