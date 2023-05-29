@@ -392,6 +392,14 @@ blufor_squad_at = [
     "B_soldier_F"
 ];
 
+// -- AT specialists team.
+blufor_team_at = [
+    "B_Soldier_TL_F",
+    "B_soldier_AT_F",
+    "B_soldier_AT_F",
+    "B_medic_F",
+];
+
 // -- AA specialists squad.
 blufor_squad_aa = [
     "B_Soldier_TL_F",
@@ -402,6 +410,14 @@ blufor_squad_aa = [
     "B_soldier_AA_F",
     "B_medic_F",
     "B_soldier_F"
+];
+
+// -- AA specialists team.
+blufor_team_aa = [
+    "B_Soldier_TL_F",
+    "B_soldier_AA_F",
+    "B_soldier_AA_F",
+    "B_medic_F",
 ];
 
 // -- Force recon squad.
@@ -417,6 +433,17 @@ blufor_squad_recon = [
     "B_recon_medic_F",
     "B_recon_exp_F"
 ];
+
+// -- Custom recon squad
+blufor_custom_squad = [
+	"B_Soldier_GL_F",
+	"B_soldier_AR_F",
+	"B_soldier_AT_F",
+	"B_Soldier_F",
+    "B_Sharpshooter_F",
+	"B_Soldier_F",
+	"B_medic_F",
+]
 
 // -- Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [

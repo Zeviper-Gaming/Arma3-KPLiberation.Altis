@@ -53,7 +53,7 @@ link24[] = {21,15};
 link25[] = {22,23};
 globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-462.464111,712.458435,919.987671,76.941620,1232,884,1};
 window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
-*// --*%FSM</HEAD>*/
+*//*%FSM</HEAD>*/
 class FSM
 {
         fsmName = "KPLIB Sector Monitor";
@@ -64,9 +64,9 @@ class FSM
                 {
                         name = "Author__KPLIB_Dev";
                         itemno = 0;
-                        init = /*%FSM<STATEINIT""">*/"// -- This FSM is part of KP Liberation" \n
-                         "// -- https:// --github.com/KillahPotatoes/KP-Liberation" \n
-                         "// -- MIT License - http:// --www.opensource.org/licenses/MIT"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"// This FSM is part of KP Liberation" \n
+                         "// https://github.com/KillahPotatoes/KP-Liberation" \n
+                         "// MIT License - http://www.opensource.org/licenses/MIT"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -273,22 +273,22 @@ class FSM
                 {
                         name = "Activate_sector";
                         itemno = 14;
-                        init = /*%FSM<STATEINIT""">*/"// -- Get possible HC" \n
+                        init = /*%FSM<STATEINIT""">*/"// Get possible HC" \n
                          "_hc = [] call KPLIB_fnc_getLessLoadedHC;" \n
                          "" \n
-                         "// -- Start sector manager on HC or server" \n
+                         "// Start sector manager on HC or server" \n
                          "if (isNull _hc) then {" \n
                          "    [_sector] spawn manage_one_sector;" \n
                          "} else {" \n
                          "    [_sector] remoteExec [""manage_one_sector"", _hc];" \n
                          "};" \n
                          "" \n
-                         "// -- Spawn resource crates" \n
+                         "// Spawn resource crates" \n
                          "if (_sector in sectors_factory || _sector in sectors_capture) then {" \n
                          "    [_sector] call KPLIB_fnc_spawnSectorCrates;" \n
                          "};" \n
                          "" \n
-                         "// -- Spawn intel items" \n
+                         "// Spawn intel items" \n
                          "if (_sector in sectors_military) then {" \n
                          "    [_sector] call KPLIB_fnc_spawnSectorIntel;" \n
                          "};"/*%FSM</STATEINIT""">*/;

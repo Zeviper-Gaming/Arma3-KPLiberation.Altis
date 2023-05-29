@@ -62,7 +62,7 @@ link30[] = {25,26};
 link31[] = {26,5};
 globals[] = {0.000000,0,0,0,0,640,480,1,51,6316128,1,-591.886047,787.545105,1145.687378,155.900024,1232,884,1};
 window[] = {2,-1,-1,-1,-1,889,130,1570,130,3,1250};
-*// --*%FSM</HEAD>*/
+*//*%FSM</HEAD>*/
 class FSM
 {
         fsmName = "KPLIB High Command";
@@ -73,11 +73,11 @@ class FSM
                 {
                         name = "Author__KPLIB_Dev";
                         itemno = 0;
-                        init = /*%FSM<STATEINIT""">*/"// -- This FSM is part of KP Liberation" \n
-                         "// -- https:// --github.com/KillahPotatoes/KP-Liberation" \n
-                         "// -- MIT License - http:// --www.opensource.org/licenses/MIT" \n
+                        init = /*%FSM<STATEINIT""">*/"// This FSM is part of KP Liberation" \n
+                         "// https://github.com/KillahPotatoes/KP-Liberation" \n
+                         "// MIT License - http://www.opensource.org/licenses/MIT" \n
                          "" \n
-                         "// -- Local variables" \n
+                         "// Local variables" \n
                          "private _grp = createGroup sideLogic;" \n
                          "private _cmdr = objNull;" \n
                          "private _hcGrps = [];" \n
@@ -120,12 +120,12 @@ class FSM
                         itemno = 2;
                         init = /*%FSM<STATEINIT""">*/"[""High Command started"", ""HIGHCOMMAND""] call KPLIB_fnc_log;" \n
                          "" \n
-                         "// -- Spawn module" \n
+                         "// Spawn module" \n
                          "private _module = _grp createUnit [""HighCommand"", [0, 0, 0], [], 0, ""NONE""];" \n
                          "publicVariable ""BIS_HC_mainscope"";" \n
                          "_module synchronizeObjectsAdd [_cmdr];" \n
                          "" \n
-                         "// -- Logging function for the FSM" \n
+                         "// Logging function for the FSM" \n
                          "private _logging = {" \n
                          "    if (KP_liberation_highcommand_debug > 0) then {" \n
                          "        [format _this, ""HIGHCOMMAND""] call KPLIB_fnc_log;" \n
@@ -248,11 +248,11 @@ class FSM
                 {
                         name = "Start_High_Command";
                         itemno = 10;
-                        init = /*%FSM<STATEINIT""">*/"// -- Get all groups which are currently added to high command" \n
+                        init = /*%FSM<STATEINIT""">*/"// Get all groups which are currently added to high command" \n
                          "_hcGrps = hcAllGroups _cmdr;" \n
                          "" \n
-                         "// -- Get all groups with at least one member alive" \n
-                         "// -- and not already added to high command" \n
+                         "// Get all groups with at least one member alive" \n
+                         "// and not already added to high command" \n
                          "_newGrps = allGroups select {" \n
                          "    (side _x) isEqualTo GRLIB_side_friendly" \n
                          "    && {!(_x in _hcGrps)}" \n
@@ -392,12 +392,12 @@ class FSM
                 {
                         name = "Init_MARTA";
                         itemno = 26;
-                        init = /*%FSM<STATEINIT""">*/"// -- Set MARTA rules again, otherwise all groups are cyan on dedicated" \n
-                         "// -- This is caused by the fact that BIS_fnc_sidecolor returns always" \n
-                         "// -- [0,1,1,0.8] on dedicated server." \n
-                         "// -- e.g. [west] call BIS_fnc_sidecolor returns [0,1,1,0.8]" \n
-                         "// -- As this is used in modules_f\marta\data\scripts\main.sqf it causes" \n
-                         "// -- the issue on dedicated servers, if using that module." \n
+                        init = /*%FSM<STATEINIT""">*/"// Set MARTA rules again, otherwise all groups are cyan on dedicated" \n
+                         "// This is caused by the fact that BIS_fnc_sidecolor returns always" \n
+                         "// [0,1,1,0.8] on dedicated server." \n
+                         "// e.g. [west] call BIS_fnc_sidecolor returns [0,1,1,0.8]" \n
+                         "// As this is used in modules_f\marta\data\scripts\main.sqf it causes" \n
+                         "// the issue on dedicated servers, if using that module." \n
                          "BIS_marta_mainscope setvariable [""rules""," \n
                          "[" \n
                          "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_enemy isEqualTo west)]," \n
