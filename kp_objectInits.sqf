@@ -102,7 +102,7 @@ KPLIB_objectInits = [
     // -- Hide Cover on big GM trucks
     [
         ["gm_ge_army_kat1_454_cargo", "gm_ge_army_kat1_454_cargo_win"],
-        {_this animateSource ["cover_unhide", 0, true];}
+        {_this animateSource ["cover_unhide", 0, true];[_this] execVM "scripts\my_fnc\medical_vehicule_loadout.sqf"}
     ],
 
     // -- Make sure a slingloaded object is local to the helicopter pilot (avoid desync and rope break)
