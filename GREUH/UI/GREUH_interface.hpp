@@ -1,4 +1,4 @@
-// -- Control types
+// Control types
 #define CT_STATIC           0
 #define CT_BUTTON           1
 #define CT_EDIT             2
@@ -15,7 +15,7 @@
 #define CT_STRUCTURED_TEXT  13
 #define CT_CONTEXT_MENU     14
 #define CT_CONTROLS_GROUP   15
-#define CT_SHORTCUT_BUTTON  16 // -- Arma 2 - textured button
+#define CT_SHORTCUT_BUTTON  16 // Arma 2 - textured button
 
 #define CT_XKEYDESC         40
 #define CT_XBUTTON          41
@@ -31,10 +31,10 @@
 #define CT_USER             99
 #define CT_MAP              100
 #define CT_MAP_MAIN         101
-#define CT_List_N_Box       102 // -- Arma 2 - N columns list box
+#define CT_List_N_Box       102 // Arma 2 - N columns list box
 
 
-// -- Static styles
+// Static styles
 #define ST_POS            0x0F
 #define ST_HPOS           0x03
 #define ST_VPOS           0x0C
@@ -63,19 +63,19 @@
 #define ST_LINE           176
 
 #define ST_SHADOW         0x100
-#define ST_NO_RECT        0x200 // -- this style works for CT_STATIC in conjunction with ST_MULTI
+#define ST_NO_RECT        0x200 // this style works for CT_STATIC in conjunction with ST_MULTI
 #define ST_KEEP_ASPECT_RATIO  0x800
 
 #define ST_TITLE          ST_TITLE_BAR + ST_CENTER
 
-// -- Slider styles
+// Slider styles
 #define SL_DIR            0x400
 #define SL_VERT           0
 #define SL_HORZ           0x400
 
 #define SL_TEXTURES       0x10
 
-// -- Listbox styles
+// Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
 
@@ -263,10 +263,10 @@ class GREUH_Menu {
 		colorShadow[] = { 0, 0, 0, 0.5 };
 		colorBorder[] = { 0, 0, 0, 1 };
 		borderSize = 0;
-		soundEnter[] = { "", 0, 1 };          // -- no sound
+		soundEnter[] = { "", 0, 1 };          // no sound
 		soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
-		soundClick[] = { "", 0, 1 };          // -- no sound
-		soundEscape[] = { "", 0, 1 };          // -- no sound
+		soundClick[] = { "", 0, 1 };          // no sound
+		soundEscape[] = { "", 0, 1 };          // no sound
 		x = 0.15 * safezoneW + safezoneX;
 		w = 0.2 * safezoneW; h = 0.03 * safezoneH;
 		text = "";
@@ -779,10 +779,10 @@ class GreuhButton {
 	colorShadow[] = { 0, 0, 0, 0.5 };
 	colorBorder[] = { 0, 0, 0, 1 };
 	borderSize = 0;
-	soundEnter[] = { "", 0, 1 };          // -- no sound
+	soundEnter[] = { "", 0, 1 };          // no sound
 	soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
-	soundClick[] = { "", 0, 1 };          // -- no sound
-	soundEscape[] = { "", 0, 1 };          // -- no sound
+	soundClick[] = { "", 0, 1 };          // no sound
+	soundEscape[] = { "", 0, 1 };          // no sound
 	x = 0.45 * safezoneW + safezoneX;
 	y = ((BASE_Y + 0.7) * safezoneH) + safezoneY;
 	w = 0.1 * safezoneW;
