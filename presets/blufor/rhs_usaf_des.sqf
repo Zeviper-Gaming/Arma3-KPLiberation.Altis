@@ -347,7 +347,7 @@ blufor_squad_at = [
 ];
 
 
-// -- AT specialists squad.
+// -- AT specialists Team.
 blufor_team_at = [
     "rhsusf_army_ocp_teamleader",
     "rhsusf_army_ocp_javelin",
@@ -367,8 +367,7 @@ blufor_squad_aa = [
     "rhsusf_army_ocp_rifleman"
 ];
 
-
-// -- AA specialists squad.
+// -- AA specialists team.
 blufor_team_aa = [
     "rhsusf_army_ocp_teamleader",
     "rhsusf_army_ocp_aa",
@@ -414,6 +413,14 @@ blufor_squad_para = [
     "rhsusf_army_ocp_rifleman_101st",
     "rhsusf_army_ocp_rifleman_101st",
     "rhsusf_army_ocp_rifleman_101st"
+];
+
+// -- MG specialists team.
+blufor_team_mg = [
+    "rhsusf_army_ocp_teamleader",
+    "rhsusf_army_ocp_machinegunner",
+    "rhsusf_army_ocp_machinegunner",
+    "rhsusf_army_ocp_machinegunnera",
 ];
 
 /*

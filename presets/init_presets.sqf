@@ -99,7 +99,8 @@ KPLIB_b_allSquads = [
     [blufor_team_aa,100,150,0],
     [blufor_squad_recon,250,0,0],
     [blufor_squad_para,200,0,0],
-	[blufor_custom_squad,150,50,0]
+	[blufor_custom_squad,150,50,0],
+    [blufor_team_mg,100,50,0]
 ];
 
 // -- Squad names for build menu
@@ -112,7 +113,8 @@ squads_names = [
     "Team AA",
     localize "STR_RECON_SQUAD",
     localize "STR_PARA_SQUAD",
-	"my Infantry squad"
+	"my Infantry squad",
+	"MG Team"
 ];
 
 // -- Classnames of objects which should be ignored when building
@@ -188,6 +190,7 @@ blufor_team_aa                              = blufor_team_aa                    
 blufor_squad_recon                          = blufor_squad_recon                        select {[_x] call KPLIB_fnc_checkClass};
 blufor_squad_para                           = blufor_squad_para                         select {[_x] call KPLIB_fnc_checkClass};
 blufor_custom_squad                         = blufor_custom_squad                       select {[_x] call KPLIB_fnc_checkClass};
+blufor_team_mg                         		= blufor_team_mg                       		select {[_x] call KPLIB_fnc_checkClass};
 elite_vehicles                              = elite_vehicles                            select {[_x] call KPLIB_fnc_checkClass};
 
 // -- Opfor
