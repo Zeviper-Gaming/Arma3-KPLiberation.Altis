@@ -96,7 +96,7 @@ KPLIB_objectInits = [
     ],
     [
         KP_liberation_medical_vehicles,
-        {_this setVariable ["ace_medical_isMedicalVehicle", true, true]; [_this] execVM "scripts\my_fnc\medical_vehicule_loadout.sqf"}
+        {_this setVariable ["ace_medical_isMedicalVehicle", true, true]; [_this] execVM "scripts\my_fnc\medical_vehicule_loadout.sqf";}
     ],
 
     // -- Hide Cover on big GM trucks
