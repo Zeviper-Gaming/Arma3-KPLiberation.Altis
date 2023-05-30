@@ -72,6 +72,15 @@ infantry_units = [
     ["rhsusf_army_ocp_helicrew",10,0,0],                                // -- Helicopter Crew
     ["rhsusf_army_ocp_helipilot",10,0,0],                               // -- Helicopter Pilot
     ["rhsusf_airforce_jetpilot",10,0,0]                                 // -- Pilot
+	["R3F_CDG_BLUFOR",15,0,0],											// -- French Leader
+	["R3F_CDE300_BLUFOR",20,0,0],										// -- French 300
+	["R3F_CDE600_BLUFOR",20,0,0],										// -- French 600
+	["R3F_EQUIP_BLUFOR",20,0,0],										// -- French Equipementier 600
+	["R3F_EQUIP1_300_BLUFOR",25,0,0],									// -- French Equipementier 300
+	["R3F_EQUIP1_600_BLUFOR",25,0,0],									// -- French Equipementier 600
+	["R3F_EQUIP2_300_BLUFOR",25,0,0],									// -- French Equipementier 300
+	["R3F_EQUIP2_600_BLUFOR",25,0,0],									// -- French Equipementier 600
+	["R3F_MEDIC_BLUFOR",30,0,0],										// -- French Medic
 ];
 
 light_vehicles = [
