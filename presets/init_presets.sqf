@@ -119,7 +119,7 @@ squads_names = [
 	"my Infantry squad",
 	"MG Team",
 	"Breachers Team",
-	"FR Team"
+	"FR Squad"
 ];
 
 // -- Classnames of objects which should be ignored when building
