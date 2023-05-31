@@ -346,6 +346,15 @@ blufor_squad_at = [
     "rhsusf_army_ocp_rifleman"
 ];
 
+// -- AT specialists Team.
+blufor_team_at = [
+    "rhsusf_army_ocp_teamleader",
+    "rhsusf_army_ocp_javelin",
+    "rhsusf_army_ocp_javelin",
+    "rhsusf_army_ocp_medic",
+];
+
+
 // -- AA specialists squad.
 blufor_squad_aa = [
     "rhsusf_army_ocp_teamleader",
@@ -358,6 +367,14 @@ blufor_squad_aa = [
     "rhsusf_army_ocp_rifleman"
 ];
 
+// -- AA specialists team.
+blufor_team_aa = [
+    "rhsusf_army_ocp_teamleader",
+    "rhsusf_army_ocp_aa",
+    "rhsusf_army_ocp_aa",
+    "rhsusf_army_ocp_medic",
+];
+
 // -- Force recon squad.
 blufor_squad_recon = [
     "rhsusf_usmc_recon_marpat_d_teamleader",
@@ -368,6 +385,18 @@ blufor_squad_recon = [
     "rhsusf_usmc_recon_marpat_d_machinegunner",
     "rhsusf_usmc_recon_marpat_d_marksman",
     "rhsusf_usmc_recon_marpat_d_sniper_M107",
+    "rhsusf_army_ocp_medic",
+    "rhsusf_army_ocp_engineer"
+];
+
+// -- Force custom squad.
+blufor_custom_squad = [
+    "rhsusf_usmc_recon_marpat_d_teamleader",
+    "rhsusf_usmc_recon_marpat_d_rifleman_at",
+    "rhsusf_usmc_recon_marpat_d_autorifleman",
+    "rhsusf_usmc_recon_marpat_d_rifleman",
+    "rhsusf_usmc_recon_marpat_d_marksman",
+    "rhsusf_usmc_recon_marpat_d_marksman",
     "rhsusf_army_ocp_medic",
     "rhsusf_army_ocp_engineer"
 ];
