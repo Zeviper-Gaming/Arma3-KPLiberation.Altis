@@ -226,7 +226,7 @@ KPLIB_b_buildings_classes                   = buildings                         
 KPLIB_b_support_classes                     = support_vehicles                          apply {toLower (_x select 0)};
 KPLIB_transport_classes                     = KPLIB_transportConfigs                    apply {toLower (_x select 0)};
 
-KPLIB_b_infantry_classes append (blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufor_squad_aa + blufor_squad_recon + blufor_squad_para);
+KPLIB_b_infantry_classes append (blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufot_team_at + blufor_squad_aa + blufor_team_aa + blufor_squad_recon + blufot_custom_squad + blufor_squad_para);
 KPLIB_b_infantry_classes                    = KPLIB_b_infantry_classes                  apply {toLower _x};
 KPLIB_b_infantry_classes                    = KPLIB_b_infantry_classes                  arrayIntersect KPLIB_b_infantry_classes;
 
