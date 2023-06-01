@@ -7,7 +7,7 @@ if (isServer) then {
     ["Not found vehicles listed below are not an issue in general. It just sorts out vehicles from not loaded mods.", "PRESETS"] call KPLIB_fnc_log;
     ["Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.", "PRESETS"] call KPLIB_fnc_log;
 };
-
+systemchat "init_preset -- Initialisation"
 switch (KP_liberation_preset_blufor) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
@@ -88,7 +88,6 @@ switch (KP_liberation_preset_civilians) do {
     case  7: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\CUP_ChernoCivs.sqf";};
     default  {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
-
 // -- Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
     [blufor_squad_inf_light,200,0,0],
@@ -101,8 +100,7 @@ KPLIB_b_allSquads = [
     [blufor_squad_para,200,0,0],
 	[blufor_custom_squad,150,50,0]
 ];
-
-// -- Squad names for build menu
+systemchat "init_preset -- squad cost"
 squads_names = [
     localize "STR_LIGHT_RIFLE_SQUAD",
     localize "STR_RIFLE_SQUAD",
@@ -114,7 +112,7 @@ squads_names = [
     localize "STR_PARA_SQUAD",
 	"my Infantry squad"
 ];
-
+systemchat "init_preset -- Squad name"
 // -- Classnames of objects which should be ignored when building
 GRLIB_ignore_colisions_when_building = [
     "Land_HelipadSquare_F",
@@ -212,7 +210,7 @@ civilian_vehicles                           = civilian_vehicles                 
 // -- Misc
 KPLIB_transportConfigs                      = KPLIB_transportConfigs                    select {[_x select 0] call KPLIB_fnc_checkClass};
 KPLIB_aiResupplySources                     = KPLIB_aiResupplySources                   select {[_x] call KPLIB_fnc_checkClass};
-
+systemchat "init_preset -- Checking classes"
 /*
     Fetch arrays with only classnames from the blufor preset build arrays
     Beware that all classnames are converted to lowercase. Important for e.g. `in` checks, as it's case-sensitive.
@@ -229,7 +227,7 @@ KPLIB_transport_classes                     = KPLIB_transportConfigs            
 KPLIB_b_infantry_classes append (blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufot_team_at + blufor_squad_aa + blufor_team_aa + blufor_squad_recon + blufot_custom_squad + blufor_squad_para);
 KPLIB_b_infantry_classes                    = KPLIB_b_infantry_classes                  apply {toLower _x};
 KPLIB_b_infantry_classes                    = KPLIB_b_infantry_classes                  arrayIntersect KPLIB_b_infantry_classes;
-
+systemchat "init_preset -- Infantry classes added"
 /*
     Opfor squad compositions
 */
@@ -333,3 +331,5 @@ KPLIB_sarFire = "test_EmptyObjectForFireBig";
 KPLIB_initPresets = true;
 
 if (isServer) then {[format ["----- Preset initialization finished. Time needed: %1 seconds -----", diag_ticktime - _start], "PRESETS"] call KPLIB_fnc_log;};
+
+systemchat "init_preset -- out"
