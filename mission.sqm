@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={27428.5,525.59851,4849.5283};
-		dir[]={-0.032283135,-0.73453057,0.67780721};
-		up[]={-0.034945186,0.67857563,0.73369884};
-		aside[]={0.99886769,1.8626451e-009,0.047574855};
+		dir[]={-0.032283138,-0.73453057,0.67780727};
+		up[]={-0.03494519,0.67857563,0.7336989};
+		aside[]={0.99886775,0,0.047574863};
 	};
 };
 binarizationWanted=0;
@@ -12426,7 +12426,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -12625,7 +12625,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -12848,7 +12848,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="true";
+							value="false";
 						};
 					};
 				};
