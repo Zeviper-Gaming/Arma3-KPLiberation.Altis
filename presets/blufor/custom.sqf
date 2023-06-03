@@ -392,14 +392,6 @@ blufor_squad_at = [
     "B_soldier_F"
 ];
 
-// -- AT specialists team.
-blufor_team_at = [
-    "B_Soldier_TL_F",
-    "B_soldier_AT_F",
-    "B_soldier_AT_F",
-    "B_medic_F",
-];
-
 // -- AA specialists squad.
 blufor_squad_aa = [
     "B_Soldier_TL_F",
@@ -410,14 +402,6 @@ blufor_squad_aa = [
     "B_soldier_AA_F",
     "B_medic_F",
     "B_soldier_F"
-];
-
-// -- AA specialists team.
-blufor_team_aa = [
-    "B_Soldier_TL_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_medic_F",
 ];
 
 // -- Force recon squad.
