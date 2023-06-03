@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1057;
+		nextID=1068;
 	};
 	class Camera
 	{
 		pos[]={27418.061,153.50075,5233.0439};
-		dir[]={-0.18731713,-0.75934267,0.62314957};
-		up[]={-0.21859442,0.65068823,0.7272011};
-		aside[]={0.95767093,-1.639346e-007,0.28787395};
+		dir[]={0.13132924,-0.73287314,0.66757685};
+		up[]={0.1414642,0.68036175,0.71909344};
+		aside[]={0.98119855,-8.7649823e-008,-0.19302599};
 	};
 };
 binarizationWanted=0;
@@ -194,8 +194,8 @@ dlcs[]=
 randomSeed=7564349;
 class ScenarioData
 {
-	author="[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
-	overviewText="- Adrien et moi (OTAN vs CSAT avec Insurgés ??)";
+	author="KP Liberation Team - Modified by us";
+	overviewText="Adrien et moi";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -232,7 +232,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="KP Liberation (Mission actuelle)";
+		briefingName="KP Liberation (v1.2.7)";
 		overviewText="@STR_MISSION_DESCRIPTION";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
@@ -245,7 +245,7 @@ class Mission
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=2038;
+		year=2023;
 		month=6;
 		day=6;
 		hour=8;
