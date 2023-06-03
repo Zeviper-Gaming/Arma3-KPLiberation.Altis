@@ -434,17 +434,6 @@ blufor_squad_recon = [
     "B_recon_exp_F"
 ];
 
-// -- Custom recon squad
-blufor_custom_squad = [
-	"B_Soldier_GL_F",
-	"B_soldier_AR_F",
-	"B_soldier_AT_F",
-	"B_Soldier_F",
-    "B_Sharpshooter_F",
-	"B_Soldier_F",
-	"B_medic_F",
-]
-
 // -- Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
     "B_soldier_PG_F",
