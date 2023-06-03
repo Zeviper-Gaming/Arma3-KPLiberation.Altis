@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1068;
+		nextID=1079;
 	};
 	class Camera
 	{
-		pos[]={27425.936,479.10663,4894.6216};
-		dir[]={-0.03228341,-0.73453724,0.67781329};
-		up[]={-0.034944791,0.67856193,0.73370719};
-		aside[]={0.9988752,2.4789733e-007,0.047575235};
+		pos[]={27428.5,525.59851,4849.5283};
+		dir[]={-0.032283135,-0.73453057,0.67780721};
+		up[]={-0.034945186,0.67857563,0.73369884};
+		aside[]={0.99886769,1.8626451e-009,0.047574855};
 	};
 };
 binarizationWanted=0;
@@ -239,7 +239,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -262,7 +262,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="KP Liberation (v1.2.7)";
+		briefingName="KP Liberation (beta 1.2.8)";
 		overviewText="@STR_MISSION_DESCRIPTION";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
@@ -12231,7 +12231,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -12270,7 +12270,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[""rhs_faction_msv""]";
+							value="rhs_faction_msv";
 						};
 					};
 				};
@@ -12492,11 +12492,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={15256.003,0.027839661,13979.89};
+				position[]={15244.883,3.0517578e-005,14000.832};
 			};
 			id=6441;
 			type="ALiVE_mil_placement";
-			atlOffset=71.07901;
+			atlOffset=69.547005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12547,7 +12547,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[""rhs_faction_msv""]";
+							value="rhs_faction_msv";
 						};
 					};
 				};
@@ -12835,7 +12835,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -12913,7 +12913,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[""rhs_faction_msv""]";
+							value="rhs_faction_msv";
 						};
 					};
 				};
@@ -12978,7 +12978,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="OPF_F";
+							value="NONE";
 						};
 					};
 				};
