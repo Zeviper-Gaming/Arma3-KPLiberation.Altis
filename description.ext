@@ -33,7 +33,8 @@ author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
 */
 
 // Mission name displayed in the mission selection menu.
-briefingName = custom KP Liberation (Alive-1.2.8-patch C);
+
+briefingName = custom KP Liberation (Alive beta 1.2.8-patch I);
 
 // Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
