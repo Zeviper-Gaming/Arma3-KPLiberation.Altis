@@ -94,12 +94,9 @@ KPLIB_b_allSquads = [
     [blufor_squad_inf_light,200,0,0],
     [blufor_squad_inf,300,0,0],
     [blufor_squad_at,200,250,0],
-    [blufor_team_at,100,150,0],
     [blufor_squad_aa,200,250,0],
-    [blufor_team_aa,100,150,0],
     [blufor_squad_recon,250,0,0],
-    [blufor_squad_para,200,0,0],
-	[blufor_custom_squad,150,50,0]
+    [blufor_squad_para,200,0,0]
 ];
 
 // -- Squad names for build menu
@@ -107,12 +104,9 @@ squads_names = [
     localize "STR_LIGHT_RIFLE_SQUAD",
     localize "STR_RIFLE_SQUAD",
     localize "STR_AT_SQUAD",
-    "Team AT",
     localize "STR_AA_SQUAD",
-    "Team AA",
     localize "STR_RECON_SQUAD",
-    localize "STR_PARA_SQUAD",
-	"my Infantry squad"
+    localize "STR_PARA_SQUAD"
 ];
 
 // -- Classnames of objects which should be ignored when building
@@ -182,12 +176,9 @@ support_vehicles                            = support_vehicles                  
 blufor_squad_inf_light                      = blufor_squad_inf_light                    select {[_x] call KPLIB_fnc_checkClass};
 blufor_squad_inf                            = blufor_squad_inf                          select {[_x] call KPLIB_fnc_checkClass};
 blufor_squad_at                             = blufor_squad_at                           select {[_x] call KPLIB_fnc_checkClass};
-blufor_team_at                              = blufor_team_at                            select {[_x] call KPLIB_fnc_checkClass};
 blufor_squad_aa                             = blufor_squad_aa                           select {[_x] call KPLIB_fnc_checkClass};
-blufor_team_aa                              = blufor_team_aa                            select {[_x] call KPLIB_fnc_checkClass};
 blufor_squad_recon                          = blufor_squad_recon                        select {[_x] call KPLIB_fnc_checkClass};
 blufor_squad_para                           = blufor_squad_para                         select {[_x] call KPLIB_fnc_checkClass};
-blufor_custom_squad                         = blufor_custom_squad                       select {[_x] call KPLIB_fnc_checkClass};
 elite_vehicles                              = elite_vehicles                            select {[_x] call KPLIB_fnc_checkClass};
 
 // -- Opfor
