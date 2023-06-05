@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1079;
+		nextID=1090;
 	};
 	class Camera
 	{
-		pos[]={27428.5,525.59851,4849.5283};
-		dir[]={-0.032283138,-0.73453057,0.67780727};
-		up[]={-0.03494519,0.67857563,0.7336989};
-		aside[]={0.99886775,0,0.047574863};
+		pos[]={27448.75,157.16243,5248.5479};
+		dir[]={-0.32503334,-0.49007076,0.8088181};
+		up[]={-0.18273778,0.87168187,0.45472786};
+		aside[]={0.927881,7.7372533e-008,0.37287998};
 	};
 };
 binarizationWanted=0;
@@ -347,13 +347,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14481.84,12.643709,5877.9561};
+				position[]={14481.637,13.062296,5874.792};
 				angles[]={0.1299223,0,6.2578607};
 			};
 			name="zm1";
 			id=422;
 			type="ModuleCurator_F";
-			atlOffset=-9.5367432e-007;
+			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -417,7 +417,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=0;
+							value=3;
 						};
 					};
 				};
