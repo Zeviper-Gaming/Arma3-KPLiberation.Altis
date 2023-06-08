@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6491;
+		nextID=6500;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={27203.865,315.84378,4946.0815};
-		dir[]={0.40421677,-0.4809311,0.77802294};
-		up[]={0.22172751,0.87675458,0.42677367};
-		aside[]={0.88738537,-5.3558324e-008,-0.46103555};
+		pos[]={14849.062,348.87784,6163.5474};
+		dir[]={-0.051863536,-0.91054094,0.41016522};
+		up[]={-0.1142239,0.41341424,0.90334833};
+		aside[]={0.99210423,5.5180863e-008,0.12544599};
 	};
 };
 binarizationWanted=0;
@@ -65,13 +65,14 @@ addons[]=
 	"alive_mil_ied",
 	"ace_fortify",
 	"rhs_c_troops",
-	"alive_sup_player_resupply"
+	"alive_sup_player_resupply",
+	"alive_sup_transport"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -200,6 +201,12 @@ class AddonsMetaData
 			name="alive_sup_player_resupply";
 			author="ALiVE Mod Team";
 		};
+		class Item19
+		{
+			className="ALiVE_SUP_TRANSPORT";
+			name="alive_sup_transport";
+			author="ALiVE Mod Team";
+		};
 	};
 };
 dlcs[]=
@@ -271,7 +278,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=526;
+		items=528;
 		class Item0
 		{
 			dataType="Marker";
@@ -10878,11 +10885,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14711.487,101.6608,6432.564};
+								position[]={14770.842,-82.165077,6499.0542};
+								angles[]={0.062583603,0,6.1756024};
 							};
 							id=6429;
 							type="ALiVE_require";
-							atlOffset=166.461;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11036,11 +11043,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14715.431,142.36783,6262.4321};
+								position[]={14774.785,-46.411831,6328.9219};
+								angles[]={0.34082788,0,6.1167336};
 							};
 							id=6430;
 							type="ALiVE_SYS_playeroptions";
-							atlOffset=162.33299;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11532,11 +11539,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14713.823,128.58737,6338.9668};
+								position[]={14773.178,-69.076591,6405.457};
+								angles[]={0.34082788,0,5.9329152};
 							};
 							id=6431;
 							type="ALiVE_sys_profile";
-							atlOffset=162.26585;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11739,22 +11746,22 @@ class Mission
 						};
 					};
 					id=6427;
-					atlOffset=158.42995;
+					atlOffset=3.1735001;
 				};
 			};
 			id=6432;
-			atlOffset=158.42995;
+			atlOffset=3.1735001;
 		};
 		class Item520
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14881.866,-0.00062179565,6283.144};
+				position[]={14924.772,-46.351929,6260.8394};
+				angles[]={0.35026932,0,6.2325621};
 			};
 			id=6433;
 			type="ALiVE_mil_ied";
-			atlOffset=43.812;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11986,11 +11993,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14831.951,0,6414.0874};
+				position[]={14896.526,-83.197632,6507.2651};
+				angles[]={0.12599505,0,6.2086577};
 			};
 			id=6435;
 			type="acex_fortify_setupModule";
-			atlOffset=76.892319;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12053,11 +12060,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14876.512,-2.6420212,6414.9097};
+				position[]={14941.087,-85.371117,6508.0874};
+				angles[]={0.33012685,0,6.1585016};
 			};
 			id=6436;
 			type="acex_fortify_setupModule";
-			atlOffset=83.279892;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12120,11 +12127,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14919.454,-2.6823502,6413.4795};
+				position[]={14984.029,-93.148994,6506.6572};
+				angles[]={6.2631865,0,6.042604};
 			};
 			id=6437;
 			type="acex_fortify_setupModule";
-			atlOffset=82.138412;
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12215,11 +12223,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14786.694,0,6257.3691};
+				position[]={14765.198,-29.078583,6286.0122};
 			};
 			id=6490;
 			type="ALiVE_SUP_PLAYER_RESUPPLY";
-			atlOffset=29.001266;
+			atlOffset=5.5499992;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12340,6 +12348,194 @@ class Mission
 					};
 				};
 				nAttributes=9;
+			};
+		};
+		class Item526
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15051.854,-91.349052,6456.1533};
+				angles[]={6.1025105,0,6.2725158};
+			};
+			id=6492;
+			type="ALiVE_SUP_TRANSPORT";
+			atlOffset=-7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_callsign";
+					expression="_this setVariable ['transport_callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Spartan ONE";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_containers";
+					expression="_this setVariable ['transport_containers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_type";
+					expression="_this setVariable ['transport_type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B_Heli_Transport_01_camo_F";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_slingloading";
+					expression="_this setVariable ['transport_slingloading',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_code";
+					expression="_this setVariable ['transport_code',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_height";
+					expression="_this setVariable ['transport_height',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item527
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15040.012,-88.434311,6411.8301};
+				angles[]={0.46364748,0,0.067895547};
+			};
+			id=6493;
+			type="ALiVE_SUP_TRANSPORT";
+			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_callsign";
+					expression="_this setVariable ['transport_callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Hotel One";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_containers";
+					expression="_this setVariable ['transport_containers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_type";
+					expression="_this setVariable ['transport_type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="R3F_AH6_CE";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_slingloading";
+					expression="_this setVariable ['transport_slingloading',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_code";
+					expression="_this setVariable ['transport_code',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_height";
+					expression="_this setVariable ['transport_height',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				nAttributes=6;
 			};
 		};
 	};
