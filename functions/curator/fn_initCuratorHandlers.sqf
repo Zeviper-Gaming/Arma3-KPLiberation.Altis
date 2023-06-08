@@ -17,7 +17,7 @@
 
 #define ZEUSVAR(var) (format ["KPLIB_zeus_%1", var])
 
-if (isServer) then {
+if (false) then {
 
     // -- delete old Liberation mission placed Zeus module
     deleteVehicle zm1;
@@ -93,7 +93,7 @@ if (isServer) then {
     }];
 };
 
-if (hasInterface) then {
+if (false) then {
     [true, "KPLIB_zeusAssigned", {
         params [
             ["_zeus", objNull, [objNull]],
