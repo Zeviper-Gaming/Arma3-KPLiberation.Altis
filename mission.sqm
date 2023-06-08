@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6487;
+		nextID=6491;
 	};
 	class MarkerIDProvider
 	{
@@ -64,13 +64,14 @@ addons[]=
 	"alive_sys_profile",
 	"alive_mil_ied",
 	"ace_fortify",
-	"rhs_c_troops"
+	"rhs_c_troops",
+	"alive_sup_player_resupply"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -193,6 +194,12 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item18
+		{
+			className="ALiVE_SUP_PLAYER_RESUPPLY";
+			name="alive_sup_player_resupply";
+			author="ALiVE Mod Team";
+		};
 	};
 };
 dlcs[]=
@@ -264,7 +271,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=525;
+		items=526;
 		class Item0
 		{
 			dataType="Marker";
@@ -11525,11 +11532,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14718.12,128.57588,6341.7832};
+								position[]={14713.823,128.58737,6338.9668};
 							};
 							id=6431;
 							type="ALiVE_sys_profile";
-							atlOffset=164.19501;
+							atlOffset=162.26585;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11732,11 +11739,11 @@ class Mission
 						};
 					};
 					id=6427;
-					atlOffset=159.12762;
+					atlOffset=158.42995;
 				};
 			};
 			id=6432;
-			atlOffset=159.12762;
+			atlOffset=158.42995;
 		};
 		class Item520
 		{
@@ -12202,6 +12209,138 @@ class Mission
 			{
 			};
 			id=6439;
+		};
+		class Item525
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14786.694,0,6257.3691};
+			};
+			id=6490;
+			type="ALiVE_SUP_PLAYER_RESUPPLY";
+			atlOffset=29.001266;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_restrictionType";
+					expression="_this setVariable ['pr_restrictionType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="SIDE";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_item";
+					expression="_this setVariable ['pr_item',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="LaserDesignator";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_restrictionDeliveryInsert";
+					expression="_this setVariable ['pr_restrictionDeliveryInsert',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_restrictionBlacklist";
+					expression="_this setVariable ['pr_restrictionBlacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_restrictionDeliveryConvoy";
+					expression="_this setVariable ['pr_restrictionDeliveryConvoy',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_audio";
+					expression="_this setVariable ['pr_audio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_restrictionWhitelist";
+					expression="_this setVariable ['pr_restrictionWhitelist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_factionWhitelist";
+					expression="_this setVariable ['pr_factionWhitelist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_SUP_PLAYER_RESUPPLY_pr_restrictionDeliveryAirDrop";
+					expression="_this setVariable ['pr_restrictionDeliveryAirDrop',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				nAttributes=9;
+			};
 		};
 	};
 	class Connections
