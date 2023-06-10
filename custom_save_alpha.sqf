@@ -1134,3 +1134,14 @@ _object174 setVectorDirAndUp [[0,1,0],[0,0,1]];
 _object175 attachTo [_object171, [2.45117,1.79883,0.299999]];
 _object175 setVectorDirAndUp [[0,1,0],[0,0,1]];
 
+
+_marker = createMarker ["_USER_DEFINED #2/1/3", [21248.1,23646.4,0.0104094]];
+_marker setMarkerDir 0;
+_marker setMarkerType "hd_dot";
+_marker setMarkerShape "ICON";
+_marker setMarkerSize [1,1];
+_marker setMarkerText "Equipage capturÃ©";
+_marker setMarkerBrush "Solid";
+_marker setMarkerColor "ColorBlack";
+_marker setMarkerAlpha 1;
+
