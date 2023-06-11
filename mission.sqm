@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6496;
+		nextID=6497;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={25240.652,70.651779,23660.703};
-		dir[]={0.91357213,-0.22084589,-0.34167179};
-		up[]={0.20694999,0.97528315,-0.077396311};
-		aside[]={-0.35032642,2.5040936e-007,-0.93669921};
+		pos[]={25208.561,276.05878,23492.514};
+		dir[]={0.37264088,-0.89868116,0.23132442};
+		up[]={0.76352799,0.43860242,0.4739756};
+		aside[]={0.52741241,1.4901161e-008,-0.84960938};
 	};
 };
 binarizationWanted=0;
@@ -9603,7 +9603,7 @@ class Mission
 			name="huronmarker";
 			text="Spartan 01";
 			type="b_air";
-			angle=151.75331;
+			angle=151.7533;
 			id=5267;
 			atlOffset=185.97;
 		};
@@ -12682,7 +12682,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=10;
+							value=0;
 						};
 					};
 				};
