@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6494;
+		nextID=6496;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19854.541,137.54312,24623.801};
-		dir[]={-0.43018657,-0.83209205,-0.35017326};
-		up[]={-0.64534342,0.55459374,-0.52531362};
-		aside[]={-0.63131309,1.0550539e-006,0.77556646};
+		pos[]={25240.652,70.651779,23660.703};
+		dir[]={0.91357213,-0.22084589,-0.34167179};
+		up[]={0.20694999,0.97528315,-0.077396311};
+		aside[]={-0.35032642,2.5040936e-007,-0.93669921};
 	};
 };
 binarizationWanted=0;
@@ -66,13 +66,14 @@ addons[]=
 	"ace_fortify",
 	"rhs_c_troops",
 	"alive_sup_player_resupply",
-	"alive_sup_transport"
+	"alive_sup_transport",
+	"CUP_WaterVehicles_Type072"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=21;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -207,6 +208,11 @@ class AddonsMetaData
 			name="alive_sup_transport";
 			author="ALiVE Mod Team";
 		};
+		class Item20
+		{
+			className="CUP_WaterVehicles_Type072";
+			name="CUP_WaterVehicles_Type072";
+		};
 	};
 };
 dlcs[]=
@@ -278,7 +284,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=529;
+		items=530;
 		class Item0
 		{
 			dataType="Marker";
@@ -12622,6 +12628,117 @@ class Mission
 					};
 				};
 				nAttributes=6;
+			};
+		};
+		class Item529
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={25351.93,-1.4008684,23692.721};
+				angles[]={0,3.6492567,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6495;
+			type="CUP_Type072_Main";
+			atlOffset=11.334;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TopRampState";
+					expression="[([_this, 'CUP_Type072_Front'] call bis_fnc_destroyer01GetShipPart), _value, 'ramp_4_source'] spawn cup_fnc_type072animatedoors;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="RearRampState";
+					expression="[([_this, 'CUP_Type072_Rear'] call bis_fnc_destroyer01GetShipPart), _value, 'ramp_rear_source'] spawn cup_fnc_type072animatedoors;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="CustomShipNumber1";
+					expression="[([_this, 'CUP_Type072_Num'] call bis_fnc_destroyer01GetShipPart), _value, 0] spawn cup_fnc_type072InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="CustomShipNumber2";
+					expression="[([_this, 'CUP_Type072_Num'] call bis_fnc_destroyer01GetShipPart), _value, 1] spawn cup_fnc_type072InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="CustomShipNumber3";
+					expression="[([_this, 'CUP_Type072_Num'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn cup_fnc_type072InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=7;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="RailingsState";
+					expression="[([_this, 'CUP_Type072_Rear'] call bis_fnc_destroyer01GetShipPart), (1 - _value), 'railings_source'] spawn cup_fnc_type072animatedoors;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="FrontRampState";
+					expression="[([_this, 'CUP_Type072_Front'] call bis_fnc_destroyer01GetShipPart), _value, 'ramp_front_source'] spawn cup_fnc_type072animatedoors;";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				nAttributes=7;
 			};
 		};
 	};
