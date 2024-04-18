@@ -4,8 +4,7 @@
 - Ceci est une copie du mod [KP Liberation](https://github.com/KillahPotatoes/KP-Liberation) pour la carte Altis de Arma 3.
 
 ## Détails de la branch
-Cette branch comprends des [modifications personnelles](https://github.com/Zeviper-Gaming/Arma3-KPLiberation.Altis/compare/Vanilla...Alive/main) de la [version officielle](https://github.com/KillahPotatoes/KP-Liberation/tree/696c395f68987762d34928371c2cf8ec3a5b50d8) pour la carte Altis
-
+Branche pour la mise a jour v1.4.X
 
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will most likely span several weeks of real time.
