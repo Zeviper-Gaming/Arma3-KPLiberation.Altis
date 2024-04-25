@@ -1,10 +1,10 @@
 // -- Custom script
 
-_current_unit = _this select 0;
+_current_unit = _this select 0; // Renvoi a l'unité actuelle
 
 
 if !(_current_unit in switchableUnits) 
-then {
+then { // Si le personnage est une IA
 	[_current_unit] execVM "scripts\my_fnc\my_ia_class.sqf";
 	[_current_unit] execVM "scripts\my_fnc\my_ia_loadout.sqf";
 	
@@ -17,7 +17,7 @@ then {
 	  };
 	}];
 	
-}else{
+}else{  // Si le personnage est joueur
 	systemchat "Hello there";
 	[_current_unit] execVM "player_init.sqf";
 };
