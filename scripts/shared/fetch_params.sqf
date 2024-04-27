@@ -97,7 +97,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_commander_zeus, "CommanderZeus", 1);
     GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
     GET_PARAM_BOOL(KP_liberation_high_command, "HighCommand", 1);
-    GET_PARAM(KP_liberation_suppMod, "SuppMod", 1);
+    GET_PARAM(KP_liberation_suppMod, "SuppMod", 2);
     GET_PARAM_BOOL(KP_liberation_tutorial, "Tutorial", 1);
 
     // -- Technical Options
