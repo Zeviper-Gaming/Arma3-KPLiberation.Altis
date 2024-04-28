@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6497;
+		nextID=6498;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1112;
+		nextID=1123;
 	};
 	class Camera
 	{
-		pos[]={25208.561,276.05878,23492.514};
-		dir[]={0.37264088,-0.89868116,0.23132442};
-		up[]={0.76352799,0.43860242,0.4739756};
-		aside[]={0.52741241,1.4901161e-008,-0.84960938};
+		pos[]={24885.029,504.02878,23386.361};
+		dir[]={-0.84298736,-0.44059682,-0.30863395};
+		up[]={-0.41374147,0.8977015,-0.15147878};
+		aside[]={-0.34380263,-9.6450094e-008,0.93904549};
 	};
 };
 binarizationWanted=0;
@@ -67,13 +67,14 @@ addons[]=
 	"rhs_c_troops",
 	"alive_sup_player_resupply",
 	"alive_sup_transport",
-	"CUP_WaterVehicles_Type072"
+	"CUP_WaterVehicles_Type072",
+	"alive_sys_data"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=22;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -213,6 +214,12 @@ class AddonsMetaData
 			className="CUP_WaterVehicles_Type072";
 			name="CUP_WaterVehicles_Type072";
 		};
+		class Item21
+		{
+			className="ALiVE_sys_data";
+			name="alive_sys_data";
+			author="ALiVE Mod Team";
+		};
 	};
 };
 dlcs[]=
@@ -284,7 +291,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=530;
+		items=531;
 		class Item0
 		{
 			dataType="Marker";
@@ -735,15 +742,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.291,8.7843142,5887.9565};
-						angles[]={0.2229002,6.0991402,0.042640556};
+						position[]={14491.29,8.7841711,5887.957};
+						angles[]={0.22289599,6.0991402,0.042638395};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						rank="COLONEL";
-						init="removeallWeapons this; removebackpack this; this setVariable ['ace_medical_medicClass', 1]; this setVariable ['ACE_isEngineer', 1];";
+						init="removeallWeapons this; removebackpack this; [this] execVM ""scripts\my_fnc\player_init.sqf""";
 						name="commandant";
 						description="Platoon Leader (Florian)";
 						isPlayer=1;
@@ -754,6 +761,19 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male08ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -766,7 +786,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -774,15 +794,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14492.637,9.0073614,5887.1875};
-						angles[]={0.19995819,6.1139932,0.042640556};
+						position[]={14492.637,9.0072689,5887.188};
+						angles[]={0.19996236,6.1139932,0.042638395};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="removeallWeapons this; removebackpack this;";
+						init="removeallWeapons this; removebackpack this;[this] execVM ""scripts\my_fnc\player_init.sqf""";
 						name="second_commandant";
 						description="Platoon Sergeant (Adrien)";
 						isPlayable=1;
@@ -792,6 +812,19 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -804,7 +837,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -9603,7 +9636,7 @@ class Mission
 			name="huronmarker";
 			text="Spartan 01";
 			type="b_air";
-			angle=151.7533;
+			angle=151.75328;
 			id=5267;
 			atlOffset=185.97;
 		};
@@ -10360,7 +10393,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19812.354,23.518646,24534.779};
-				angles[]={-0,2.6485951,0};
+				angles[]={0,2.6485951,0};
 			};
 			side="Empty";
 			class Attributes
@@ -10394,7 +10427,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19821.029,23.528442,24497.43};
-				angles[]={-0,2.6485951,0};
+				angles[]={0,2.6485951,0};
 			};
 			side="Empty";
 			class Attributes
@@ -10428,7 +10461,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19765.725,23.542114,24584.932};
-				angles[]={-0,2.6485951,0};
+				angles[]={0,2.6485951,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10463,7 +10496,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19838.232,23.528442,24465.82};
-				angles[]={-0,2.6485951,0};
+				angles[]={0,2.6485951,0};
 			};
 			side="Empty";
 			class Attributes
@@ -10497,7 +10530,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19862.453,23.538574,24420.797};
-				angles[]={-0,2.6485951,-0};
+				angles[]={0,2.6485951,0};
 			};
 			side="Empty";
 			class Attributes
@@ -10531,7 +10564,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19829.398,23.539337,24610.5};
-				angles[]={0,2.6485951,-0};
+				angles[]={0,2.6485951,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10598,7 +10631,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={19782.965,24.218647,24556.594};
-				angles[]={0,4.2196884,-0};
+				angles[]={0,4.2196884,0};
 			};
 			side="Empty";
 			flags=1;
@@ -12739,6 +12772,151 @@ class Mission
 					};
 				};
 				nAttributes=7;
+			};
+		};
+		class Item530
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14471.532,4.4449515,5922.6582};
+				angles[]={0.47214437,0,6.2805109};
+			};
+			id=6497;
+			type="ALiVE_sys_data";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_sys_data_killFeed";
+					expression="_this setVariable ['killFeed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="side";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_sys_data_disablePerfMon";
+					expression="_this setVariable ['disablePerfMon',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_sys_data_source";
+					expression="_this setVariable ['source',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="pns";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_sys_data_customPerfMonCode";
+					expression="_this setVariable ['customPerfMonCode',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[['entities',150],['vehicles',300],['agents',450],['allDead',600],['objects',750],['triggers',900], ['activeScripts',1050]]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_sys_data_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="false";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_sys_data_disableStats";
+					expression="_this setVariable ['disableStats',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="false";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_sys_data_saveDateTime";
+					expression="_this setVariable ['saveDateTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_sys_data_disableAAR";
+					expression="_this setVariable ['disableAAR',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="false";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_sys_data_saveCompositions";
+					expression="_this setVariable ['saveCompositions',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_sys_data_disablePerf";
+					expression="_this setVariable ['disablePerf',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="false";
+						};
+					};
+				};
+				nAttributes=10;
 			};
 		};
 	};
