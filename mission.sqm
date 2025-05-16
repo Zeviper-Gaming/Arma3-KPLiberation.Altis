@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=521;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14502.415,19.082226,5913.9082};
-		dir[]={-0.39988834,-0.39723489,-0.82601088};
-		up[]={-0.17309214,0.91771692,-0.3575398};
-		aside[]={-0.9000715,1.4901161e-08,0.4357425};
+		pos[]={24726.604,67.455101,26440.064};
+		dir[]={-0.81591004,-0.38716817,0.42940873};
+		up[]={-0.34261525,0.92200911,0.18031642};
+		aside[]={0.46573153,0,0.8849262};
 	};
 };
 binarizationWanted=0;
@@ -9728,7 +9728,7 @@ class Mission
 			name="huronmarker";
 			text="Spartan 01";
 			type="b_air";
-			angle=206.62656;
+			angle=181.63779;
 			id=5267;
 			atlOffset=184.46031;
 		};
@@ -10484,7 +10484,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24548.766,18.973358,26409.621};
+				position[]={24550.836,22.760071,26408.732};
 				angles[]={0,3.6063139,0};
 			};
 			side="Empty";
@@ -10494,7 +10494,7 @@ class Mission
 			};
 			id=5818;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=207.97894;
+			atlOffset=0.80042648;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10518,8 +10518,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24523.211,21.756638,26381.033};
-				angles[]={-0,3.6063139,0};
+				position[]={24523.211,22.685364,26381.033};
+				angles[]={0,3.6063139,0};
 			};
 			side="Empty";
 			class Attributes
@@ -10528,7 +10528,7 @@ class Mission
 			};
 			id=5821;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=10.370007;
+			atlOffset=0.72572136;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10552,18 +10552,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24562.957,22.063568,26476.613};
-				angles[]={-0,3.6063139,0};
+				position[]={24562.957,22.598053,26476.613};
+				angles[]={0,3.6063139,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				name="huronspawn";
 			};
 			id=5828;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=0.090261459;
+			atlOffset=0.62474632;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10587,7 +10586,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24507.258,19.574585,26348.775};
+				position[]={24507.463,22.644196,26348.648};
 				angles[]={0,3.6063139,0};
 			};
 			side="Empty";
@@ -10597,7 +10596,7 @@ class Mission
 			};
 			id=5829;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=207.98874;
+			atlOffset=0.68455315;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10621,7 +10620,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24484.369,26.977356,26303.061};
+				position[]={24489.857,22.639145,26310.363};
 				angles[]={0,3.6063139,0};
 			};
 			side="Empty";
@@ -10631,7 +10630,7 @@ class Mission
 			};
 			id=5830;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=5.0075817;
+			atlOffset=0.66928482;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10662,6 +10661,7 @@ class Mission
 			class Attributes
 			{
 				name="base_boxspawn";
+				dynamicSimulation=1;
 			};
 			id=5831;
 			type="Land_ClutterCutter_small_F";
@@ -10692,7 +10692,7 @@ class Mission
 			text="Operation Base";
 			type="mil_start";
 			colorName="ColorWEST";
-			angle=206.62656;
+			angle=0.33850446;
 			id=5832;
 			atlOffset=184.4603;
 		};
@@ -10722,7 +10722,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24549.699,21.317921,26446.209};
+				position[]={24549.699,22.659641,26446.209};
 				angles[]={0,5.1774068,-0};
 			};
 			side="Empty";
@@ -10733,7 +10733,7 @@ class Mission
 			};
 			id=6417;
 			type="Land_Medevac_house_V1_F";
-			atlOffset=207.97894;
+			atlOffset=209.32066;
 		};
 		class Item511
 		{
@@ -10784,7 +10784,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24626.715,-2.1940918,26495.766};
+				position[]={24626.826,0.99252319,26495.131};
 				angles[]={0,0.46472126,0};
 			};
 			side="Empty";
@@ -10794,14 +10794,14 @@ class Mission
 			};
 			id=6422;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=184.46028;
+			atlOffset=187.6599;
 		};
 		class Item515
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24617.775,-2.5327606,26500.246};
+				position[]={24617.775,0.74182129,26500.246};
 				angles[]={0,0.46472126,0};
 			};
 			side="Empty";
@@ -10811,14 +10811,14 @@ class Mission
 			};
 			id=6423;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=184.4603;
+			atlOffset=187.73488;
 		};
 		class Item516
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24608.836,-2.9656525,26504.729};
+				position[]={24608.836,0.70628357,26504.729};
 				angles[]={0,0.46472126,0};
 			};
 			side="Empty";
@@ -10828,14 +10828,14 @@ class Mission
 			};
 			id=6424;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=184.4603;
+			atlOffset=188.13223;
 		};
 		class Item517
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24599.896,-3.6611176,26509.211};
+				position[]={24599.896,0.66300964,26509.211};
 				angles[]={0,0.46472126,0};
 			};
 			side="Empty";
@@ -10845,7 +10845,7 @@ class Mission
 			};
 			id=6425;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=184.4603;
+			atlOffset=188.78442;
 		};
 		class Item518
 		{
