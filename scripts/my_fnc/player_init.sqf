@@ -4,7 +4,7 @@ params ["_current_unit"];
 _current_unit globalChat "New player detected";
 
 // Suppression des items
-removeallWeapons this; removebackpack this;
+removeallWeapons _current_unit; removebackpack _current_unit;
 
 // Attribution des rôles ACE
 _current_unit setVariable ["ace_medical_medicClass", 1, true];  // Médecin niveau 1
