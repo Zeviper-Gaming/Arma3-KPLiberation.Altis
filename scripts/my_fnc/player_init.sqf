@@ -1,6 +1,9 @@
 params [current_unit];
 
-current_unit sidechat "Here i am.";
+current_unit globalChat "New player detected";
+
+current_unit setVariable ["ace_medical_medicClass",1];
+current_unit setVariable ["ACE_isEngineer",1];
 
 if name current_unit == "commandant" then {
     
@@ -11,10 +14,9 @@ if name current_unit == "commandant" then {
                 ],true];
     
 	current_unit setvariable ["Medals",[
-                "",
+                "Médaille du sauveur de l'humanité",
                 ],true];
 };
-
 
 if name current_unit == "second_commandant" then {
     
