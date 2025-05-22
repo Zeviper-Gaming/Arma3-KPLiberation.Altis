@@ -6,12 +6,12 @@ DEBUG = false;
 if !("ace_medical_medicclass" in allvariables _current_unit) then {
 	_current_unit setVariable ["ace_medical_medicclass", 0, true];
 };
-if !("ace_isengineer" in allvariables _current_unit) then {
-	_current_unit setVariable ["ACE_isEngineer", 0, true];
+if (!("ACE_isEngineer" in allVariables _current_unit)) then {
+    _current_unit setVariable ["ACE_isEngineer", 0, true];
 };
 
 is_ACE_medic = _current_unit getVariable "ace_medical_medicclass" != 0;
-is_ACE_engineer = _current_unit getVariable "ACE_isEngineer" != 0;
+is_ACE_engineer = (_current_unit getVariable ["ACE_isEngineer", 0]) != 0;
 is_BIS_medic = _current_unit getUnitTrait "Medic";
 is_BIS_engineer = _current_unit getUnitTrait "Engineer";
 
