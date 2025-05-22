@@ -1,5 +1,5 @@
 params ["_veh"];
-DEBUG = true;
+DEBUG = false;
 
 // Récupération du nom affiché dans le jeu (ex: "MRAP", "Camion logistique", etc.)
 private _display_name = getText (configFile >> "CfgVehicles" >> typeOf _veh >> "displayName");
