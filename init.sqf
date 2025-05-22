@@ -62,3 +62,14 @@ if (isServer) then {
     KPLIB_initServer = true;
     publicVariable "KPLIB_initServer";
 };
+
+addMissionEventHandler ["EntityCreated", {
+    params ["_unit"];
+
+    if (!isNull _unit && {alive _unit} && {isPlayer _unit isEqualTo false}) then {
+        [_unit] spawn {
+            sleep 0.5;
+            _this call (compile preprocessFileLineNumbers "scripts\my_fnc\man_init.sqf");
+        };
+    };
+}];
