@@ -1,11 +1,14 @@
 // -- Custom script
 
-_current_unit = _this select 0;
+_current_unit = _this;
+DEBUG = false;
 
+// if DEBUG then {systemChat "man_init runned"};
 
-if !(_current_unit in switchableUnits) 
+if (true) 
 then {
 	[_current_unit] execVM "scripts\my_fnc\my_ia_class.sqf";
+	sleep 0.1; // sécuriser l'ordre d'éxécution
 	[_current_unit] execVM "scripts\my_fnc\my_ia_loadout.sqf";
 	
 	// -- Event handler when a player kill this unit
@@ -16,8 +19,9 @@ then {
 		_killer sidechat format ["J'ai eu %1 !", name _unit];
 	  };
 	}];
+	if DEBUG then {systemChat "-- Initialized"};
 	
 }else{
-	systemchat "Hello there";
+	systemchat "-- Initialisation Failed";
 	[_current_unit] execVM "player_init.sqf";
 };

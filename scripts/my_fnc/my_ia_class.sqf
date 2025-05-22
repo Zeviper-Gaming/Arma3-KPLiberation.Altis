@@ -1,6 +1,7 @@
 // -- Custom script
 
 params ["_current_unit"];
+DEBUG = false;
 
 if !("ace_medical_medicclass" in allvariables _current_unit) then {
 	_current_unit setVariable ["ace_medical_medicclass", 0, true];
@@ -36,3 +37,5 @@ if is_only_ACE_engineer then {
 if is_only_BIS_engineer then {
     _current_unit setVariable ["ACE_isEngineer", 1, true];
 };
+
+if DEBUG then {systemChat format ["-- IA class DONE (%1,%2,%3,%4)",is_ACE_medic,is_BIS_medic,is_ACE_engineer,is_BIS_engineer]};

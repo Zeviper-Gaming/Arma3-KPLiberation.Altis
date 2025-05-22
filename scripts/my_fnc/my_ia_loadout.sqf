@@ -1,6 +1,9 @@
 // -- Custom script
 
 params ["_current_unit"];
+DEBUG = false;
+
+if DEBUG then {systemChat "-- IA loadout runned"};
 
 _is_medic = _current_unit getVariable "ace_medical_medicclass" !=0;
 
@@ -33,5 +36,6 @@ if !(side _current_unit == civilian) then {
 		for "_i" from 1 to 2 do {_current_unit addItemToBackpack "ACE_salineIV";};
 		for "_i" from 1 to 3 do {_current_unit addItemToBackpack "ACE_salineIV_500";};
 		for "_i" from 1 to 2 do {_current_unit addItemToBackpack "ACE_splint";};
+		if DEBUG then {systemChat "-- Medic loadout loaded"};
 	};
 };

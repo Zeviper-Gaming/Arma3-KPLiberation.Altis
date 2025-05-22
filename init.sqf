@@ -63,13 +63,32 @@ if (isServer) then {
     publicVariable "KPLIB_initServer";
 };
 
-addMissionEventHandler ["EntityCreated", {
-    params ["_unit"];
+// Detecte le spawn d'entités (Men, Vehicules, etc)
+[] spawn {
+    sleep 0.1;  // Délai pour laisser le moteur finir d'initialiser
 
-    if (!isNull _unit && {alive _unit} && {isPlayer _unit isEqualTo false}) then {
-        [_unit] spawn {
-            sleep 0.5;
-            _this call (compile preprocessFileLineNumbers "scripts\my_fnc\man_init.sqf");
+    addMissionEventHandler ["EntityCreated", {
+        params ["_entity"];
+        DEBUG = false;
+
+        // Cas des unités humaines non-joueurs
+        if (!isNull _entity && {alive _entity} && {isPlayer _entity isEqualTo false} && {_entity isKindOf "Man"}) then {
+            [_entity] spawn {
+                params ["_unit"];
+                sleep 0.5;
+                if (DEBUG) then { systemChat format ["Man detected: %1", name _unit]; };
+                _unit call (compile preprocessFileLineNumbers "scripts\my_fnc\man_init.sqf");
+            };
         };
-    };
-}];
+
+        // Cas des véhicules terrestres ou aériens
+        if (!isNull _entity && {alive _entity} && {_entity isKindOf "LandVehicle" || _entity isKindOf "Air"}) then {
+            [_entity] spawn {
+                params ["_veh"];
+                sleep 0.5;
+                if (DEBUG) then { systemChat format ["Vehicle detected: %1", typeOf _veh]; };
+                _veh call (compile preprocessFileLineNumbers "scripts\my_fnc\vehicule_init.sqf");
+            };
+        };
+    }];
+};
