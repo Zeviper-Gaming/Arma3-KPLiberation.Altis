@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1134;
+		nextID=1145;
 	};
 	class Camera
 	{
-		pos[]={24726.604,67.455101,26440.064};
-		dir[]={-0.81591004,-0.38716817,0.42940873};
-		up[]={-0.34261525,0.92200911,0.18031642};
-		aside[]={0.46573153,0,0.8849262};
+		pos[]={24767.08,106.09158,26401.068};
+		dir[]={-0.61258894,-0.7833485,-0.10536981};
+		up[]={-0.77201188,0.62158209,-0.13279168};
+		aside[]={-0.16951807,6.8597728e-08,0.98552901};
 	};
 };
 binarizationWanted=0;
@@ -247,6 +247,130 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="cba_settings_hash";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="#CBA_HASH#";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_overheating_cookoffcoef";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_pylons_timeperpylon";
+										};
+									};
+								};
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=3.1177678;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								nil=1;
+								singleType="ANY";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -258,7 +382,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -9728,7 +9852,7 @@ class Mission
 			name="huronmarker";
 			text="Spartan 01";
 			type="b_air";
-			angle=181.63779;
+			angle=181.63777;
 			id=5267;
 			atlOffset=184.46031;
 		};
@@ -10723,7 +10847,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24549.699,22.659641,26446.209};
-				angles[]={0,5.1774068,-0};
+				angles[]={0,5.1774068,0};
 			};
 			side="Empty";
 			flags=1;
