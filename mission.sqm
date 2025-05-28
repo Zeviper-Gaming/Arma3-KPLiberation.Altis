@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=6497;
+		nextID=6509;
 	};
 	class MarkerIDProvider
 	{
-		nextID=335;
+		nextID=337;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1156;
+		nextID=1189;
 	};
 	class Camera
 	{
-		pos[]={24820.762,188.71864,26414.1};
-		dir[]={-0.61258894,-0.7833485,-0.10536981};
-		up[]={-0.77201188,0.62158209,-0.13279168};
-		aside[]={-0.16951807,6.8597728e-08,0.98552901};
+		pos[]={25008.588,511.27292,26435.055};
+		dir[]={-0.28690293,-0.95552194,-0.068297736};
+		up[]={-0.92954683,0.29492,-0.22128022};
+		aside[]={-0.23158047,0,0.97281575};
 	};
 };
 binarizationWanted=0;
@@ -69,17 +69,18 @@ addons[]=
 	"alive_sys_profile",
 	"alive_mil_ied",
 	"ace_fortify",
-	"rhs_c_troops",
 	"alive_sup_player_resupply",
 	"alive_sup_transport",
 	"alive_mil_opcom",
-	"alive_civ_placement"
+	"alive_civ_placement",
+	"alive_mil_cqb",
+	"alive_mil_placement"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=24;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -202,41 +203,45 @@ class AddonsMetaData
 		};
 		class Item18
 		{
-			className="rhs_c_troops";
-			name="AFRF Infantry & Equipment";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item19
-		{
 			className="ALiVE_SUP_PLAYER_RESUPPLY";
 			name="alive_sup_player_resupply";
 			author="ALiVE Mod Team";
 		};
-		class Item20
+		class Item19
 		{
 			className="ALiVE_SUP_TRANSPORT";
 			name="alive_sup_transport";
 			author="ALiVE Mod Team";
 		};
-		class Item21
+		class Item20
 		{
 			className="ALiVE_mil_OPCOM";
 			name="alive_mil_opcom";
 			author="ALiVE Mod Team";
 		};
-		class Item22
+		class Item21
 		{
 			className="ALiVE_civ_placement";
 			name="alive_civ_placement";
+			author="ALiVE Mod Team";
+		};
+		class Item22
+		{
+			className="ALiVE_mil_cqb";
+			name="alive_mil_cqb";
+			author="ALiVE Mod Team";
+		};
+		class Item23
+		{
+			className="ALiVE_mil_placement";
+			name="alive_mil_placement";
 			author="ALiVE Mod Team";
 		};
 	};
 };
 dlcs[]=
 {
-	"Jets",
-	"RHS_AFRF"
+	"Jets"
 };
 randomSeed=7564349;
 class ScenarioData
@@ -426,7 +431,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=531;
+		items=536;
 		class Item0
 		{
 			dataType="Marker";
@@ -11162,11 +11167,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14428.575,121.92846,5945.0044};
+								position[]={15053.753,124.23521,6551.7021};
 							};
 							id=6429;
 							type="ALiVE_require";
-							atlOffset=124.77621;
+							atlOffset=231.8363;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11320,11 +11325,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14428.124,149.34489,5927.2598};
+								position[]={15037.346,149.31088,6344.2695};
 							};
 							id=6430;
 							type="ALiVE_SYS_playeroptions";
-							atlOffset=149.73914;
+							atlOffset=225.34068;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11816,11 +11821,11 @@ class Mission
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={14428.235,145.61795,5935.5894};
+								position[]={15052.58,147.38274,6448.5718};
 							};
 							id=6431;
 							type="ALiVE_sys_profile";
-							atlOffset=147.92891;
+							atlOffset=239.65401;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -12036,22 +12041,22 @@ class Mission
 						};
 					};
 					id=6427;
-					atlOffset=143.00841;
+					atlOffset=234.26199;
 				};
 			};
 			id=6432;
-			atlOffset=143.00841;
+			atlOffset=234.26199;
 		};
 		class Item520
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14463.309,5.2261076,5923.3101};
-				angles[]={0.49410036,0,6.0363255};
+				position[]={15165.087,0.017967224,6347.7832};
 			};
 			id=6433;
 			type="ALiVE_mil_ied";
+			atlOffset=95.117165;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12481,34 +12486,6 @@ class Mission
 		};
 		class Item524
 		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={17890.428,79.434967,10207.028};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=6440;
-					type="rhs_msv_emr_arifleman_rpk";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=6439;
-		};
-		class Item525
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -12588,16 +12565,16 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item526
+		class Item525
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14505.461,34.195637,5957.8584};
+				position[]={15257.67,34.197945,6358.3301};
 			};
 			id=6488;
 			type="ALiVE_SUP_PLAYER_RESUPPLY";
-			atlOffset=36.280296;
+			atlOffset=144.57976;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12720,16 +12697,16 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item527
+		class Item526
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14515.332,0,5958.6582};
+				position[]={15254.154,0.084007263,6436.853};
 			};
 			id=6489;
 			type="ALiVE_SUP_TRANSPORT";
-			atlOffset=3.0488279;
+			atlOffset=102.41584;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12813,16 +12790,16 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item528
+		class Item527
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14525.068,0.77307987,5957.5928};
+				position[]={15261.187,0.76123047,6568.1104};
 			};
 			id=6490;
 			type="ALiVE_SUP_TRANSPORT";
-			atlOffset=4.9320006;
+			atlOffset=100.82678;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12906,16 +12883,16 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item529
+		class Item528
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8776.1992,0.0068969727,5677.2637};
+				position[]={14059.505,200.61714,7535.6763};
 			};
 			id=6495;
 			type="ALiVE_mil_OPCOM";
-			atlOffset=122.59631;
+			atlOffset=288.72339;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12992,7 +12969,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="";
+							value="Jean Pascontent";
 						};
 					};
 				};
@@ -13031,7 +13008,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[""OPF_F""]";
+							value="rhs_faction_msv";
 						};
 					};
 				};
@@ -13116,16 +13093,16 @@ class Mission
 				nAttributes=15;
 			};
 		};
-		class Item530
+		class Item529
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9781.0928,0.015029907,5824.29};
+				position[]={14444.174,127.72108,6947.7539};
 			};
 			id=6496;
 			type="ALiVE_civ_placement";
-			atlOffset=84.968002;
+			atlOffset=194.03879;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13189,7 +13166,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[""OPF_F""]";
+							value="rhs_faction_msv";
 						};
 					};
 				};
@@ -13241,7 +13218,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="";
+							value="BLU_TAOR";
 						};
 					};
 				};
@@ -13404,16 +13381,1536 @@ class Mission
 				nAttributes=21;
 			};
 		};
+		class Item530
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15514.493,28.191528,7524.3237};
+			};
+			id=6498;
+			type="ALiVE_mil_OPCOM";
+			atlOffset=180.59508;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_mil_OPCOM_faction3";
+					expression="_this setVariable ['faction3',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_mil_OPCOM_controltype";
+					expression="_this setVariable ['controltype',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="invasion";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_mil_OPCOM_persistent";
+					expression="_this setVariable ['persistent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_mil_OPCOM_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_mil_OPCOM_roadblocks";
+					expression="_this setVariable ['roadblocks',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_mil_OPCOM_customName";
+					expression="_this setVariable ['customName',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Michel Legentil";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_mil_OPCOM_reinforcements";
+					expression="_this setVariable ['reinforcements',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.9";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_mil_OPCOM_faction4";
+					expression="_this setVariable ['faction4',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_mil_OPCOM_factions";
+					expression="_this setVariable ['factions',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="rhs_faction_usarmy_d";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_mil_OPCOM_minAgents";
+					expression="_this setVariable ['minAgents',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=2;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_mil_OPCOM_intelchance";
+					expression="_this setVariable ['intelchance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_mil_OPCOM_asym_occupation";
+					expression="_this setVariable ['asym_occupation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=25;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_mil_OPCOM_simultanObjectives";
+					expression="_this setVariable ['simultanObjectives',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_mil_OPCOM_faction1";
+					expression="_this setVariable ['faction1',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_mil_OPCOM_faction2";
+					expression="_this setVariable ['faction2',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=15;
+			};
+		};
+		class Item531
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15243.063,50.800011,6944.0972};
+			};
+			id=6503;
+			type="ALiVE_civ_placement";
+			atlOffset=165.01628;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_civ_placement_readinessLevel";
+					expression="_this setVariable ['readinessLevel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_civ_placement_guardProbability";
+					expression="_this setVariable ['guardProbability',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.2";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_civ_placement_sizeFilter";
+					expression="_this setVariable ['sizeFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="250";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_civ_placement_size";
+					expression="_this setVariable ['size',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="200";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_civ_placement_faction";
+					expression="_this setVariable ['faction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="rhs_faction_usarmy_d";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_civ_placement_customInfantryCount";
+					expression="_this setVariable ['customInfantryCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_civ_placement_customMotorisedCount";
+					expression="_this setVariable ['customMotorisedCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_civ_placement_roadblocks";
+					expression="_this setVariable ['roadblocks',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_civ_placement_blacklist";
+					expression="_this setVariable ['blacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_civ_placement_customSpecOpsCount";
+					expression="_this setVariable ['customSpecOpsCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_civ_placement_clusterType";
+					expression="_this setVariable ['clusterType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="All";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_civ_placement_guardRadius";
+					expression="_this setVariable ['guardRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="200";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_civ_placement_type";
+					expression="_this setVariable ['type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Random";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_civ_placement_customMechanisedCount";
+					expression="_this setVariable ['customMechanisedCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_civ_placement_customArmourCount";
+					expression="_this setVariable ['customArmourCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ALiVE_civ_placement_guardPatrolPercentage";
+					expression="_this setVariable ['guardPatrolPercentage',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="50";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ALiVE_civ_placement_taor";
+					expression="_this setVariable ['taor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="BLU_TAOR";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ALiVE_civ_placement_placeSeaPatrols";
+					expression="_this setVariable ['placeSeaPatrols',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ALiVE_civ_placement_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="ALiVE_civ_placement_priorityFilter";
+					expression="_this setVariable ['priorityFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="ALiVE_civ_placement_withPlacement";
+					expression="_this setVariable ['withPlacement',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				nAttributes=21;
+			};
+		};
+		class Item532
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14858.19,86.52459,6851.2261};
+			};
+			id=6504;
+			type="ALiVE_mil_cqb";
+			atlOffset=207.99408;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_maxwaittime";
+					expression="_this setVariable ['CQB_patrol_maxwaittime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="30";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_mil_cqb_CQB_amount";
+					expression="_this setVariable ['CQB_amount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="3";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_mil_cqb_CQB_locality_setting";
+					expression="_this setVariable ['CQB_locality_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="server";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_mil_cqb_CQB_LOCATIONTYPE";
+					expression="_this setVariable ['CQB_LOCATIONTYPE',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="all";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_mil_cqb_CQB_spawndistanceStatic";
+					expression="_this setVariable ['CQB_spawndistanceStatic',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1200";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_mil_cqb_CQB_debug_setting";
+					expression="_this setVariable ['CQB_debug_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_mil_cqb_CQB_DENSITY";
+					expression="_this setVariable ['CQB_DENSITY',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="99999";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_mil_cqb_blacklist";
+					expression="_this setVariable ['blacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_mil_cqb_whitelist";
+					expression="_this setVariable ['whitelist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_mil_cqb_units_blacklist";
+					expression="_this setVariable ['units_blacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_midwaittime";
+					expression="_this setVariable ['CQB_patrol_midwaittime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="15";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_chance";
+					expression="_this setVariable ['CQB_patrol_chance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.3";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_mil_cqb_CQB_spawndistanceJet";
+					expression="_this setVariable ['CQB_spawndistanceJet',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_mil_cqb_CQB_UseDominantFaction";
+					expression="_this setVariable ['CQB_UseDominantFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_mil_cqb_CQB_TYPE";
+					expression="_this setVariable ['CQB_TYPE',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="regular";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ALiVE_mil_cqb_CQB_staticWeaponsClassnames";
+					expression="_this setVariable ['CQB_staticWeaponsClassnames',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B_HMG_01_high_F,O_Mortar_01_F,O_HMG_01_high_F";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_minwaittime";
+					expression="_this setVariable ['CQB_patrol_minwaittime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_searchchance";
+					expression="_this setVariable ['CQB_patrol_searchchance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.3";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ALiVE_mil_cqb_CQB_staticWeapons";
+					expression="_this setVariable ['CQB_staticWeapons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_mindist";
+					expression="_this setVariable ['CQB_patrol_mindist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="50";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="ALiVE_mil_cqb_CQB_spawndistance";
+					expression="_this setVariable ['CQB_spawndistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="700";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="ALiVE_mil_cqb_CQB_spawn_setting";
+					expression="_this setVariable ['CQB_spawn_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.02";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="ALiVE_mil_cqb_CQB_persistent";
+					expression="_this setVariable ['CQB_persistent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="ALiVE_mil_cqb_CQB_spawndistanceHeli";
+					expression="_this setVariable ['CQB_spawndistanceHeli',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute24
+				{
+					property="ALiVE_mil_cqb_CQB_FACTIONS";
+					expression="_this setVariable ['CQB_FACTIONS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[""rhs_faction_msv"",""rhs_faction_usarmy_d""]";
+						};
+					};
+				};
+				class Attribute25
+				{
+					property="ALiVE_mil_cqb_CQB_patrol_maxist";
+					expression="_this setVariable ['CQB_patrol_maxist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="100";
+						};
+					};
+				};
+				nAttributes=26;
+			};
+		};
+		class Item533
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14437.454,153.88565,7231.6367};
+			};
+			id=6505;
+			type="ALiVE_mil_placement";
+			atlOffset=273.78043;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_mil_placement_taor";
+					expression="_this setVariable ['taor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_mil_placement_sizeFilter";
+					expression="_this setVariable ['sizeFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_mil_placement_ambientVehicleAmount";
+					expression="_this setVariable ['ambientVehicleAmount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.2";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_mil_placement_faction";
+					expression="_this setVariable ['faction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="rhs_faction_msv";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_mil_placement_guardProbability";
+					expression="_this setVariable ['guardProbability',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.2";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_mil_placement_customMechanisedCount";
+					expression="_this setVariable ['customMechanisedCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_mil_placement_blacklist";
+					expression="_this setVariable ['blacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="BLU_TAOR";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_mil_placement_guardPatrolPercentage";
+					expression="_this setVariable ['guardPatrolPercentage',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="50";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_mil_placement_withPlacement";
+					expression="_this setVariable ['withPlacement',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_mil_placement_createFieldHQ";
+					expression="_this setVariable ['createFieldHQ',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_mil_placement_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="false";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_mil_placement_size";
+					expression="_this setVariable ['size',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="200";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_mil_placement_placeHelis";
+					expression="_this setVariable ['placeHelis',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_mil_placement_customMotorisedCount";
+					expression="_this setVariable ['customMotorisedCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_mil_placement_createHQ";
+					expression="_this setVariable ['createHQ',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ALiVE_mil_placement_priorityFilter";
+					expression="_this setVariable ['priorityFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ALiVE_mil_placement_customArmourCount";
+					expression="_this setVariable ['customArmourCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ALiVE_mil_placement_readinessLevel";
+					expression="_this setVariable ['readinessLevel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ALiVE_mil_placement_type";
+					expression="_this setVariable ['type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Random";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="ALiVE_mil_placement_customSpecOpsCount";
+					expression="_this setVariable ['customSpecOpsCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="ALiVE_mil_placement_randomcamps";
+					expression="_this setVariable ['randomcamps',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="ALiVE_mil_placement_placeSupplies";
+					expression="_this setVariable ['placeSupplies',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="ALiVE_mil_placement_customInfantryCount";
+					expression="_this setVariable ['customInfantryCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="ALiVE_mil_placement_guardRadius";
+					expression="_this setVariable ['guardRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="200";
+						};
+					};
+				};
+				nAttributes=24;
+			};
+		};
+		class Item534
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15259.449,70.862289,7233.124};
+			};
+			id=6506;
+			type="ALiVE_mil_placement";
+			atlOffset=193.2063;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_mil_placement_taor";
+					expression="_this setVariable ['taor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="BLU_TAOR";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_mil_placement_sizeFilter";
+					expression="_this setVariable ['sizeFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_mil_placement_ambientVehicleAmount";
+					expression="_this setVariable ['ambientVehicleAmount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.2";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_mil_placement_faction";
+					expression="_this setVariable ['faction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="rhs_faction_usarmy_d";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_mil_placement_guardProbability";
+					expression="_this setVariable ['guardProbability',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0.2";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_mil_placement_customMechanisedCount";
+					expression="_this setVariable ['customMechanisedCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_mil_placement_blacklist";
+					expression="_this setVariable ['blacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_mil_placement_guardPatrolPercentage";
+					expression="_this setVariable ['guardPatrolPercentage',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="50";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_mil_placement_withPlacement";
+					expression="_this setVariable ['withPlacement',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_mil_placement_createFieldHQ";
+					expression="_this setVariable ['createFieldHQ',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_mil_placement_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="false";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_mil_placement_size";
+					expression="_this setVariable ['size',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="200";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_mil_placement_placeHelis";
+					expression="_this setVariable ['placeHelis',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_mil_placement_customMotorisedCount";
+					expression="_this setVariable ['customMotorisedCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_mil_placement_createHQ";
+					expression="_this setVariable ['createHQ',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ALiVE_mil_placement_priorityFilter";
+					expression="_this setVariable ['priorityFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ALiVE_mil_placement_customArmourCount";
+					expression="_this setVariable ['customArmourCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ALiVE_mil_placement_readinessLevel";
+					expression="_this setVariable ['readinessLevel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ALiVE_mil_placement_type";
+					expression="_this setVariable ['type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Random";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="ALiVE_mil_placement_customSpecOpsCount";
+					expression="_this setVariable ['customSpecOpsCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="ALiVE_mil_placement_randomcamps";
+					expression="_this setVariable ['randomcamps',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="ALiVE_mil_placement_placeSupplies";
+					expression="_this setVariable ['placeSupplies',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="ALiVE_mil_placement_customInfantryCount";
+					expression="_this setVariable ['customInfantryCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="ALiVE_mil_placement_guardRadius";
+					expression="_this setVariable ['guardRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="200";
+						};
+					};
+				};
+				nAttributes=24;
+			};
+		};
+		class Item535
+		{
+			dataType="Marker";
+			position[]={24909.953,38.202999,21477.609};
+			name="BLU_TAOR";
+			markerType="ELLIPSE";
+			type="";
+			colorName="ColorWEST";
+			alpha=0.7075569;
+			a=5000;
+			b=3000;
+			angle=137.108;
+			id=6507;
+			atlOffset=0.00017166138;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=7;
+			nextID=18;
 		};
 		class Links
 		{
-			items=7;
+			items=18;
 			class Item0
 			{
 				linkID=0;
@@ -13478,6 +14975,116 @@ class Mission
 			{
 				linkID=6;
 				item0=6495;
+				item1=6496;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item7
+			{
+				linkID=7;
+				item0=6503;
+				item1=6498;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item8
+			{
+				linkID=8;
+				item0=6498;
+				item1=6506;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item9
+			{
+				linkID=9;
+				item0=6503;
+				item1=6504;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item10
+			{
+				linkID=10;
+				item0=6506;
+				item1=6504;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item11
+			{
+				linkID=11;
+				item0=6505;
+				item1=6504;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item12
+			{
+				linkID=12;
+				item0=6495;
+				item1=6505;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item13
+			{
+				linkID=13;
+				item0=6496;
+				item1=6504;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item14
+			{
+				linkID=14;
+				item0=6495;
+				item1=6506;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item15
+			{
+				linkID=15;
+				item0=6495;
+				item1=6503;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item16
+			{
+				linkID=16;
+				item0=6498;
+				item1=6505;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item17
+			{
+				linkID=17;
+				item0=6498;
 				item1=6496;
 				class CustomData
 				{
