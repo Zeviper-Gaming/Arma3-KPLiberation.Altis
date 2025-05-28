@@ -3,6 +3,15 @@
 _current_unit = _this;
 DEBUG = false;
 
+if (typeName _current_unit != "OBJECT") exitWith {
+    diag_log format ["ERREUR : _current_unit n'est pas un objet mais %1", typeName _current_unit];
+};
+
+if (!(_current_unit isKindOf "CAManBase")) exitWith {
+    diag_log "ERREUR : _current_unit n'est pas une unité (CAManBase)";
+};
+
+
 // if DEBUG then {systemChat "man_init runned"};
 
 if (true) 

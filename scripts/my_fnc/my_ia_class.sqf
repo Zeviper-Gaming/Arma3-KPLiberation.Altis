@@ -3,12 +3,22 @@
 params ["_current_unit"];
 DEBUG = false;
 
+if (!(_current_unit isKindOf "CAManBase")) exitWith {
+    diag_log format ["[ERREUR] _current_unit n'est pas une unité valide : %1", _current_unit];
+};
+
 if !("ace_medical_medicclass" in allvariables _current_unit) then {
 	_current_unit setVariable ["ace_medical_medicclass", 0, true];
 };
 if (!("ACE_isEngineer" in allVariables _current_unit)) then {
     _current_unit setVariable ["ACE_isEngineer", 0, true];
 };
+
+// Initialise les valeurs à "false" par défaut.
+is_ACE_medic = false;
+is_BIS_medic = false;
+is_ACE_engineer = false;
+is_BIS_engineer = false;
 
 is_ACE_medic = _current_unit getVariable "ace_medical_medicclass" != 0;
 is_ACE_engineer = (_current_unit getVariable ["ACE_isEngineer", 0]) != 0;
