@@ -13543,7 +13543,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="true";
+									value="false";
 								};
 							};
 						};
@@ -13831,7 +13831,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="true";
+									value="false";
 								};
 							};
 						};
@@ -14002,7 +14002,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="200";
+									value="400";
 								};
 							};
 						};
@@ -14815,11 +14815,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={15209.87,81.260513,7553.0913};
+						position[]={15209.87,81.260284,7553.0908};
 					};
 					id=6514;
 					type="ALiVE_mil_placement";
-					atlOffset=209.85832;
+					atlOffset=209.85799;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14935,7 +14935,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="true";
+									value="false";
 								};
 							};
 						};
@@ -14974,7 +14974,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="200";
+									value="30";
 								};
 							};
 						};
@@ -15142,11 +15142,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={14700.565,3.8936615,7506.0352};
+						position[]={14700.565,3.8934174,7506.0352};
 					};
 					id=6515;
 					type="ALiVE_civ_placement";
-					atlOffset=179.69124;
+					atlOffset=179.69099;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15197,7 +15197,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="200";
+									value="30";
 								};
 							};
 						};
@@ -15418,7 +15418,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="true";
+									value="false";
 								};
 							};
 						};
@@ -15427,7 +15427,7 @@ class Mission
 				};
 			};
 			id=6432;
-			atlOffset=164.09174;
+			atlOffset=164.09155;
 		};
 		class Item520
 		{

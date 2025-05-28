@@ -15,37 +15,37 @@ if (!("ACE_isEngineer" in allVariables _current_unit)) then {
 };
 
 // Initialise les valeurs à "false" par défaut.
-is_ACE_medic = false;
-is_BIS_medic = false;
-is_ACE_engineer = false;
-is_BIS_engineer = false;
+_is_ACE_medic = false;
+_is_BIS_medic = false;
+_is_ACE_engineer = false;
+_is_BIS_engineer = false;
 
-is_ACE_medic = _current_unit getVariable "ace_medical_medicclass" != 0;
-is_ACE_engineer = (_current_unit getVariable ["ACE_isEngineer", 0]) != 0;
-is_BIS_medic = _current_unit getUnitTrait "Medic";
-is_BIS_engineer = _current_unit getUnitTrait "Engineer";
+_is_ACE_medic = _current_unit getVariable "ace_medical_medicclass" != 0;
+_is_ACE_engineer = (_current_unit getVariable ["ACE_isEngineer", 0]) != 0;
+_is_BIS_medic = _current_unit getUnitTrait "Medic";
+_is_BIS_engineer = _current_unit getUnitTrait "Engineer";
 
-is_only_ACE_medic = (is_ACE_medic) && !(is_BIS_medic);
-is_only_BIS_medic = (is_BIS_medic) && !(is_ACE_medic);
+_is_only_ACE_medic = (_is_ACE_medic) && !(_is_BIS_medic);
+_is_only_BIS_medic = (_is_BIS_medic) && !(_is_ACE_medic);
 
-is_only_ACE_engineer = (is_ACE_engineer) && !(is_BIS_engineer);
-is_only_BIS_engineer = (is_BIS_engineer) && (is_ACE_engineer);
+_is_only_ACE_engineer = (_is_ACE_engineer) && !(_is_BIS_engineer);
+_is_only_BIS_engineer = (_is_BIS_engineer) && (_is_ACE_engineer);
 
 
-if is_only_ACE_medic then {
+if _is_only_ACE_medic then {
     _current_unit setUnitTrait ["Medic", true];
 };
 
-if is_only_BIS_medic then {
+if _is_only_BIS_medic then {
     _current_unit setVariable ["ace_medical_medicclass", 1, true];
 };
 
-if is_only_ACE_engineer then {
+if _is_only_ACE_engineer then {
     _current_unit setUnitTrait ["Engineer", true];
 };
 
-if is_only_BIS_engineer then {
+if _is_only_BIS_engineer then {
     _current_unit setVariable ["ACE_isEngineer", 1, true];
 };
 
-if DEBUG then {systemChat format ["-- IA class DONE (%1,%2,%3,%4)",is_ACE_medic,is_BIS_medic,is_ACE_engineer,is_BIS_engineer]};
+if DEBUG then {systemChat format ["-- IA class DONE (%1,%2,%3,%4)",_is_ACE_medic,_is_BIS_medic,_is_ACE_engineer,_is_BIS_engineer]};
