@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1244;
+		nextID=1255;
 	};
 	class Camera
 	{
@@ -11956,7 +11956,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="3500";
+											value="2500";
 										};
 									};
 								};
@@ -12034,7 +12034,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="true";
+											value="false";
 										};
 									};
 								};
@@ -14030,7 +14030,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="60";
+									value="100";
 								};
 							};
 						};
@@ -14134,7 +14134,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="";
+									value="1";
 								};
 							};
 						};
