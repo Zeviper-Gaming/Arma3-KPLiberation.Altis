@@ -15556,17 +15556,16 @@ class Mission
 		class Item524
 		{
 			dataType="Marker";
-			position[]={24909.953,38.202999,21477.609};
+			position[]={25485.781,47.700607,22154.84};
 			name="BLU_TAOR";
 			markerType="ELLIPSE";
 			type="";
 			colorName="ColorWEST";
 			alpha=0;
-			a=5000;
+			a=4700;
 			b=3000;
 			angle=137.108;
 			id=6507;
-			atlOffset=0.00017166138;
 		};
 		class Item525
 		{
