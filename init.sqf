@@ -63,6 +63,28 @@ if (isServer) then {
     publicVariable "KPLIB_initServer";
 };
 
+[] spawn { // Vérification des objets lors de l'initialisation de la mission
+    sleep 0.2; // Laisse le temps au moteur d'initialiser les objets
+    { // Detecte les filet de levage (OTAN)
+        if (_x isKindOf "B_CargoNet_01_ammo_F") then { // TODO: Enlever cette condition ???
+            [_x] spawn {
+                params ["_caisse"];
+                sleep 0.2;
+                if (DEBUG) then { systemChat "Caisse de munition déjà présente détectée"; };
+                _caisse call (compile preprocessFileLineNumbers "init_ammobox.sqf");
+            };
+        };
+    } forEach allMissionObjects "B_CargoNet_01_ammo_F";
+    { // Détecte les filets de levage (Bidons)
+        [_x] spawn {
+            params ["_caisse"];
+            sleep 0.2;
+            if (DEBUG) then { systemChat "Caisse de fuel déjà présente détectée"; };
+            _caisse call (compile preprocessFileLineNumbers "init_fuelbox.sqf");
+        };
+    } forEach allMissionObjects "CargoNet_01_barrels_F";
+};
+
 // Detecte le spawn d'entités (Men, Vehicules, etc)
 [] spawn {
     sleep 0.1;  // Délai pour laisser le moteur finir d'initialiser
@@ -70,7 +92,6 @@ if (isServer) then {
     addMissionEventHandler ["EntityCreated", {
         params ["_entity"];
         DEBUG = false;
-
         // Cas des unités humaines non-joueurs
         if (!isNull _entity && {alive _entity} && {isPlayer _entity isEqualTo false} && {_entity isKindOf "Man"}) then {
             [_entity] spawn {
@@ -90,5 +111,23 @@ if (isServer) then {
                 _veh call (compile preprocessFileLineNumbers "scripts\my_fnc\vehicule_init.sqf");
             };
         };
+        // Detection des filets de levages (OTAN)
+        if (!isNull _entity && {alive _entity} && {_entity isKindOf "B_CargoNet_01_ammo_F"}) then {
+            [_entity] spawn {
+				params ["_caisse"];
+                sleep 0.2;
+                if (DEBUG) then { systemChat "Caisse de munition détéctées" };
+				_caisse call (compile preprocessFileLineNumbers "scripts\my_fnc\init_ammobox.sqf");
+            };
+        };
+        // Detection des filets de levages (Bidons)
+        if (!isNull _entity && {alive _entity} && {_entity isKindOf "CargoNet_01_barrels_F"}) then {
+            [_entity] spawn {
+				params ["_caisse"];
+                sleep 0.2;
+                if (DEBUG) then { systemChat "Caisse de Fuel détéctées" };
+				_caisse call (compile preprocessFileLineNumbers "scripts\my_fnc\init_fuelbox.sqf");
+            };
+        };
     }];
-};
+    };
