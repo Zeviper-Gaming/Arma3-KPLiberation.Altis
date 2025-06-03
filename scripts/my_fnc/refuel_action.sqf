@@ -1,5 +1,5 @@
 params ["_caisse", "_camion"];
-DEBUG = true;
+DEBUG = false;
 if (DEBUG) then { systemChat "+++ Refuel script runned +++" };
 
 // Paramètres de refuel

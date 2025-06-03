@@ -71,7 +71,7 @@ if (isServer) then {
                 params ["_caisse"];
                 sleep 0.2;
                 if (DEBUG) then { systemChat "Caisse de munition déjà présente détectée"; };
-                _caisse call (compile preprocessFileLineNumbers "init_ammobox.sqf");
+                _caisse call (compile preprocessFileLineNumbers "scripts\my_fnc\init_ammobox.sqf");
             };
         };
     } forEach allMissionObjects "B_CargoNet_01_ammo_F";
@@ -80,7 +80,7 @@ if (isServer) then {
             params ["_caisse"];
             sleep 0.2;
             if (DEBUG) then { systemChat "Caisse de fuel déjà présente détectée"; };
-            _caisse call (compile preprocessFileLineNumbers "init_fuelbox.sqf");
+            _caisse call (compile preprocessFileLineNumbers "scripts\my_fnc\init_fuelbox.sqf");
         };
     } forEach allMissionObjects "CargoNet_01_barrels_F";
 };
