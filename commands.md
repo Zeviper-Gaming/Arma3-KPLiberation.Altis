@@ -52,5 +52,24 @@ GRLIB_resources_multiplier
 [KP_liberation_fuel_crate] call KPLIB_fnc_createCrate;
 ```
 
+## Achat en jeu (manuel)
+```sqf
+// Quantités à dépenser
+_price_s = 200;
+_price_a = 150;
+_price_f = 100;
+
+// FOB proche
+_nearFob = [] call KPLIB_fnc_getNearestFob;
+
+// Zones de stockage rattachées à cette FOB
+_storage_areas = (_nearFob nearObjects (GRLIB_fob_range * 2)) select {
+    (_x getVariable ["KP_liberation_storage_type", -1]) == 0
+};
+
+// Appel distant sur le serveur
+[_price_s, _price_a, _price_f, "", -1, _storage_areas] remoteExec ["build_remote_call", 2];
+```
+
 # Sources
 see https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Commands
