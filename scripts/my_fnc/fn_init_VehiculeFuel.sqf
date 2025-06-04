@@ -5,6 +5,7 @@ if (DEBUG) then { systemChat "+++ Fuel Vehicle script runned +++"; };
 // Fonction pour vérifier la proximité d'une FOB
 _nearFob = [] call KPLIB_fnc_getNearestFob;
 
+[_this,0] call ace_refuel_fnc_setFuel;
 // Action "Remplir Camion"
 _veh addAction [
     "Remplir Camion",
