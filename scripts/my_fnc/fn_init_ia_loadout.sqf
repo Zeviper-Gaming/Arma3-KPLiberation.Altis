@@ -17,20 +17,6 @@ if !(side _current_unit == civilian) then {
 	// -- Suppression des medikits
 	_current_unit removeitems "FirstAidKit";
 	_current_unit removeitems "MediKit";
-	_current_unit removeitems "ACE_morphine";
-    _current_unit removeitems "ACE_elasticBandage";
-    _current_unit removeitems "ACE_Flashlight_KSF1";
-    _current_unit removeitems "ACE_MapTools";
-    _current_unit removeitems "ACE_IR_Strobe_Item";
-    _current_unit removeitems "ACE_packingBandage";
-    _current_unit removeitems "ACE_tourniquet";
-    _current_unit removeitems "ACE_quikclot";
-    _current_unit removeitems "ACE_surgicalKit";
-    _current_unit removeitems "ACE_epinephrine";
-    _current_unit removeitems "ACE_adenosine";
-    _current_unit removeitems "ACE_salineIV";
-    _current_unit removeitems "ACE_salineIV_500";
-    _current_unit removeitems "ACE_splint";
 
 	// -- Chargment classique
 	if (true) then {
