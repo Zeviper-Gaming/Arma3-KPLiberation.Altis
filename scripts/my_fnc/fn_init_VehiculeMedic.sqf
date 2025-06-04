@@ -2,8 +2,30 @@ params ["_veh"];
 DEBUG = false;
 if (DEBUG) then { systemChat "+++ Medic Vehicle script runned +++"; };
 
-// Initialisation des caisses de matériel médical
+// Suppression des items médicaux du cargo
+_veh removeItemCargoGlobal ["ACE_splint",9999];
+_veh removeItemCargoGlobal ["ACE_epinephrine",9999];
+_veh removeItemCargoGlobal ["ACE_adenosine",9999];
+_veh removeItemCargoGlobal ["ACE_morphine",9999];
+_veh removeItemCargoGlobal ["ACE_packingBandage",9999];
+_veh removeItemCargoGlobal ["ACE_elasticBandage",9999];
+_veh removeItemCargoGlobal ["ACE_EarPlugs",9999];
+_veh removeItemCargoGlobal ["ACE_quikclot",9999];
+_veh removeItemCargoGlobal ["ACE_fieldDressing",9999];
+_veh removeItemCargoGlobal ["ACE_bloodIV",9999];
+_veh removeItemCargoGlobal ["ACE_bloodIV_250",9999];
+_veh removeItemCargoGlobal ["ACE_bloodIV_500",9999];
+_veh removeItemCargoGlobal ["ACE_plasmaIV",9999];
+_veh removeItemCargoGlobal ["ACE_plasmaIV_250",9999];
+_veh removeItemCargoGlobal ["ACE_plasmaIV_500",9999];
+_veh removeItemCargoGlobal ["ACE_salineIV",9999];
+_veh removeItemCargoGlobal ["ACE_salineIV_250",9999];
+_veh removeItemCargoGlobal ["ACE_salineIV_500",9999];
+_veh removeItemCargoGlobal ["ACE_surgicalKit",9999];
+_veh removeItemCargoGlobal ["ACE_personalAidKit",9999];
+_veh removeItemCargoGlobal ["ACE_bodyBag",9999];
 
+// Initialisation des caisses de matériel médical
 _veh addItemCargoGlobal ["ACE_splint",15];
 _veh addItemCargoGlobal ["ACE_epinephrine",50];
 _veh addItemCargoGlobal ["ACE_adenosine",30];
