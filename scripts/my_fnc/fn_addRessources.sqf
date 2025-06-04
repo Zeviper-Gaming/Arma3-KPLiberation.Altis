@@ -28,7 +28,7 @@ if ((count _storage_areas) == 0) exitWith {
 };
 
 // Calcul le nombre de caisses nécessaires pour chaque ressource
-private _crateSum = (ceil(_price_s / 100)) + (ceil(_price_a / 100)) + (ceil(_price_f / 100));
+private _crateSum = (ceil(_supply / 100)) + (ceil(_ammo / 100)) + (ceil(_fuel / 100));
 // Calcul de l'espace disponible dans les zones de stockage
 private _spaceSum = 0;
 {
@@ -58,39 +58,39 @@ if (_spaceSum < _crateSum) exitWith {
 
     diag_log format ["[DEBUG][addRessources] Début ajout sur stockage %1, espace: %2", _x, _space];
 
-    while {(_space > 0) && (_price_s > 0)} do {
+    while {(_space > 0) && (_supply > 0)} do {
         private _amount = 100;
-        if ((_price_s / 100) < 1) then { _amount = _price_s; };
-        _price_s = _price_s - _amount;
+        if ((_supply / 100) < 1) then { _amount = _supply; };
+        _supply = _supply - _amount;
         private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
         [_crate, _x] call KPLIB_fnc_crateToStorage;
         diag_log format ["[DEBUG][addRessources] Ajouté supply: %1 sur %2", _amount, _x];
         _space = _space - 1;
     };
 
-    while {(_space > 0) && (_price_a > 0)} do {
+    while {(_space > 0) && (_ammo > 0)} do {
         private _amount = 100;
-        if ((_price_a / 100) < 1) then { _amount = _price_a; };
-        _price_a = _price_a - _amount;
+        if ((_ammo / 100) < 1) then { _amount = _ammo; };
+        _ammo = _ammo - _amount;
         private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
         [_crate, _x] call KPLIB_fnc_crateToStorage;
         diag_log format ["[DEBUG][addRessources] Ajouté ammo: %1 sur %2", _amount, _x];
         _space = _space - 1;
     };
 
-    while {(_space > 0) && (_price_f > 0)} do {
+    while {(_space > 0) && (_fuel > 0)} do {
         private _amount = 100;
-        if ((_price_f / 100) < 1) then { _amount = _price_f; };
-        _price_f = _price_f - _amount;
+        if ((_fuel / 100) < 1) then { _amount = _fuel; };
+        _fuel = _fuel - _amount;
         private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
         [_crate, _x] call KPLIB_fnc_crateToStorage;
         diag_log format ["[DEBUG][addRessources] Ajouté fuel: %1 sur %2", _amount, _x];
         _space = _space - 1;
     };
 
-    diag_log format ["[DEBUG][addRessources] Fin ajout sur stockage %1. Restant: supply=%2, ammo=%3, fuel=%4", _x, _price_s, _price_a, _price_f];
+    diag_log format ["[DEBUG][addRessources] Fin ajout sur stockage %1. Restant: supply=%2, ammo=%3, fuel=%4", _x, _supply, _ammo, _fuel];
 
-    if ((_price_s == 0) && (_price_a == 0) && (_price_f == 0)) exitWith {
+    if ((_supply == 0) && (_ammo == 0) && (_fuel == 0)) exitWith {
         diag_log "[DEBUG][addRessources] Toutes les ressources ont été ajoutées, sortie.";
     };
 } forEach _storage_areas;
