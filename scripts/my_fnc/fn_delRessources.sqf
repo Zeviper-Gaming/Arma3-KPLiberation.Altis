@@ -5,7 +5,7 @@
         3: SCALAR - Prix ammo
         4: SCALAR - Prix fuel
     Exemple d'appel :
-        [1000, 500, 200] remoteExec ["delRessources", 2];
+        [100, 100, 100] call ZV_fnc_delRessources;
     Retour : rien
 */
 params ["_price_s", "_price_a", "_price_f"];

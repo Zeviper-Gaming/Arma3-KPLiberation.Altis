@@ -5,7 +5,7 @@
 		1: SCALAR - Prix ammo
 		2: SCALAR - Prix fuel
 	Exemple d'appel :
-		[1000, 500, 200] remoteExec ["my_fnc_addRessources", 0];
+		[100, 100, 100] call ZV_fnc_addRessources;
 */
 diag_log ">>> fn_addRessources loaded";
 params ["_supply", "_ammo", "_fuel"];
