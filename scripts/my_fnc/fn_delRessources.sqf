@@ -4,9 +4,13 @@
         2: SCALAR - Prix supply
         3: SCALAR - Prix ammo
         4: SCALAR - Prix fuel
+    Exemple d'appel :
+        [1000, 500, 200] remoteExec ["delRessources", 2];
     Retour : rien
 */
 params ["_price_s", "_price_a", "_price_f"];
+DEBUG = true;
+if (DEBUG) then { systemChat "+++ delRessources script runned +++"; };
 
 // Vérifier la FOB la plus proche
 _nearFob = [] call KPLIB_fnc_getNearestFob;

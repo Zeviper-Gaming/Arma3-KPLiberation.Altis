@@ -5,7 +5,7 @@ if (DEBUG) then { systemChat "+++ ammo Vehicle script runned +++"; };
 // Fonction pour vérifier la proximité d'une FOB
 _nearFob = [] call KPLIB_fnc_getNearestFob;
 
-[_this,0] call ace_rearm_fnc_setSupplyCount;
+[_veh,0] call ace_rearm_fnc_setSupplyCount;
 // Action "Remplir Camion"
 _veh addAction [
     "Remplir Camion",
@@ -16,7 +16,7 @@ _veh addAction [
 		_supply_ammont_per_ammo = 10; // Rapport de conversion
 		_cost = _difference / _supply_ammont_per_ammo;
 		// TODO : Vérifier si le coût est négatif ou supérieur à la quantité disponible dans les caisse
-		[0,_cost,0] remoteExec ["delRessources", 0]; // Appel à la fonction de consommation de ressources
+		[0,_cost,0] remoteExec ["ZV_fnc_delRessources", 0]; // Appel à la fonction de consommation de ressources
 		[_this,_ammo_in_car + _cost * _supply_ammont_per_ammo] call ace_rearm_fnc_setSupplyCount;
 		if (DEBUG) then { systemChat format ["%1: %2 munitions ajoutées", name _this, _cost * _supply_ammont_per_ammo]; };
     },
@@ -31,7 +31,7 @@ _veh addAction [
 		_supply_ammont_per_ammo = 10; // Rapport de conversion
 		_gain = _ammo_in_car / _supply_ammont_per_ammo;
 
-		[0,_gain,0] remoteExec ["addRessources", 0]; // Appel à la fonction d'ajout de ressources
+		[0,_gain,0] remoteExec ["ZV_fnc_addRessources", 0]; // Appel à la fonction d'ajout de ressources
 		[_this, 0] call ace_rearm_fnc_setSupplyCount; // Réinitialiser le carburant du camion
 		if (DEBUG) then { systemChat format ["%1: %2 munitions retirées", name _this, _gain * _supply_ammont_per_ammo]; };
     },

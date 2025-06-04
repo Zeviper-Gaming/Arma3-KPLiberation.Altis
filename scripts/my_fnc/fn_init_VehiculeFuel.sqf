@@ -16,7 +16,7 @@ _veh addAction [
 		_supply_ammont_per_fuel = 100; // Rapport de conversion
 		_cost = _difference / _supply_ammont_per_fuel;
 		// TODO : Vérifier si le coût est négatif ou supérieur à la quantité disponible dans les caisse
-		[0,0,_cost] remoteExec ["delRessources", 0]; // Appel à la fonction de consommation de ressources
+		[0,0,_cost] remoteExec ["ZV_fnc_delRessources", 0]; // Appel à la fonction de consommation de ressources
 		[_this,_fuel_in_car + _cost * _supply_ammont_per_fuel] call ace_refuel_fnc_setFuel;
 		if (DEBUG) then { systemChat format ["%1: %2 litres de carburant ajoutés", name _this, _cost * _supply_ammont_per_fuel]; };
     },
@@ -31,7 +31,7 @@ _veh addAction [
 		_supply_ammont_per_fuel = 100; // Rapport de conversion
 		_gain = _fuel_in_car / _supply_ammont_per_fuel;
 
-		[0,0,_gain] remoteExec ["addRessources", 0]; // Appel à la fonction d'ajout de ressources
+		[0,0,_gain] remoteExec ["ZV_fnc_addRessources", 0]; // Appel à la fonction d'ajout de ressources
 		[_this, 0] call ace_refuel_fnc_setFuel; // Réinitialiser le carburant du camion
 		if (DEBUG) then { systemChat format ["%1: %2 litres de carburant retirés", name _this, _gain * _supply_ammont_per_fuel]; };
     },

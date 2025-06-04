@@ -1,15 +1,24 @@
 /*
     Ajoute des ressources à la FOB la plus proche.
-    [_pos, _supply, _ammo, _fuel] call my_fnc_addRessources;
+	Paramètres :
+		0: SCALAR - Prix supply
+		1: SCALAR - Prix ammo
+		2: SCALAR - Prix fuel
+	Exemple d'appel :
+		[1000, 500, 200] remoteExec ["my_fnc_addRessources", 0];
 */
-
+diag_log ">>> fn_addRessources loaded";
 params ["_supply", "_ammo", "_fuel"];
+DEBUG = true;
+if (DEBUG) then { systemChat "+++ addRessources script runned +++"; };
 
 // Trouver la FOB la plus proche
 _nearFob = [] call KPLIB_fnc_getNearestFob;
+if DEBUG then { systemChat format ["-- FOB trouvée : %1", _nearFob]; };
 
 // Trouver les zones de stockage
 private _storage_areas = (_nearfob nearobjects GRLIB_fob_range) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+if DEBUG then {systemChat format ["-- Zones de stockage trouvées : %1", count _storage_areas];};
 
 // Vérifier si des zones de stockage sont trouvées
 if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
