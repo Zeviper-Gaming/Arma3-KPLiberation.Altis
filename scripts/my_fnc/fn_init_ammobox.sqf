@@ -44,7 +44,7 @@ _keywords = ["ammunition","munitions","ammo","RSV"];
                 {
                     params ["_target", "_caller", "_actionId", "_arguments"];
                     _camion = _arguments select 0;
-                    [_target, _camion] execVM "scripts\my_fnc\reammo_action.sqf";
+                    [_target, _camion] remoteExecCall ["reammo_action", 0];
                     // hint format ["%1 a été réarmé !", getText (configFile >> "CfgVehicles" >> typeOf _camion >> "displayName")];
                 },
                 [_camion]

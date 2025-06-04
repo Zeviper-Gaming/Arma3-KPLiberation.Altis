@@ -253,6 +253,8 @@ class CfgFunctions {
 			// Fonction pour initialiser les caisses
 			class init_ammobox {};
 			class init_fuelbox {};
+            class reammo_action {};
+            class refuel_action {};
 
             class delRessources {};
             class addRessources {};
