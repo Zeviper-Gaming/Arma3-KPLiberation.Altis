@@ -1,6 +1,6 @@
 // -- Custom script
 params ["_current_unit"];
-DEBUG = true;
+DEBUG = false;
 
 if (typeName _current_unit != "OBJECT") exitWith {
     diag_log format ["ERREUR : _current_unit n'est pas un objet mais %1", typeOf _current_unit];

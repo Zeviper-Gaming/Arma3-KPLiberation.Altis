@@ -123,7 +123,7 @@ if (isServer) then {
 
     addMissionEventHandler ["EntityCreated", {
         params ["_entity"];
-        DEBUG = true;
+        DEBUG = false;
         // Cas des unités humaines non-joueurs
         if (!isNull _entity && 
             {alive _entity} && 

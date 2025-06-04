@@ -1,7 +1,7 @@
 // -- Custom script
 
 params ["_current_unit"];
-DEBUG = true;
+DEBUG = false;
 
 if (!(_current_unit isKindOf "CAManBase")) exitWith {
     diag_log format ["[ERREUR] _current_unit n'est pas une unité valide : %1", _current_unit];

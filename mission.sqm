@@ -917,7 +917,7 @@ class Mission
 					class Attributes
 					{
 						rank="COLONEL";
-						init="[this] execVM ""scripts\my_fnc\florian_init.sqf""; " \n "";
+						init="[this] execVM ""scripts\my_fnc\fn_florian_init.sqf""; " \n "";
 						name="commandant";
 						description="Seigneur Supreme (Florian)";
 						isPlayer=1;
@@ -1008,7 +1008,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="[this] execVM ""scripts\my_fnc\adrien_init.sqf"";";
+						init="[this] execVM ""scripts\my_fnc\fn_adrien_init.sqf"";";
 						name="second_commandant";
 						description="Préposé aux tâches ingrates (Adrien)";
 						isPlayable=1;

@@ -278,13 +278,3 @@ class CfgTaskDescriptions {
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
 
-
-// Custom addon
-// Executed when a unit man is spawned
-
-class Extended_Init_EventHandlers {
- class Man {
-  init = "_this call (compile preprocessFileLineNumbers 'scripts\my_fnc\man_init.sqf')";
- };
-};
-
