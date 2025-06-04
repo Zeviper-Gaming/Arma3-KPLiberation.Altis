@@ -254,7 +254,8 @@ class CfgFunctions {
 			class init_ammobox {};
 			class init_fuelbox {};
 
-            class remote_buy {};
+            class delRessources {};
+            class addRessources {};
         };
     };
 };
