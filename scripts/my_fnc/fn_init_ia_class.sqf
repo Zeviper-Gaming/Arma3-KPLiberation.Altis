@@ -1,7 +1,7 @@
 // -- Custom script
 
 params ["_current_unit"];
-DEBUG = false;
+DEBUG = true;
 
 if (!(_current_unit isKindOf "CAManBase")) exitWith {
     diag_log format ["[ERREUR] _current_unit n'est pas une unité valide : %1", _current_unit];
@@ -25,6 +25,10 @@ _is_ACE_engineer = (_current_unit getVariable ["ACE_isEngineer", 0]) != 0;
 _is_BIS_medic = _current_unit getUnitTrait "Medic";
 _is_BIS_engineer = _current_unit getUnitTrait "Engineer";
 
+if (DEBUG) then {
+    systemChat format ["-- IA class runned (%1,%2,%3,%4)", _is_ACE_medic, _is_BIS_medic, _is_ACE_engineer, _is_BIS_engineer];
+};
+
 _is_only_ACE_medic = (_is_ACE_medic) && !(_is_BIS_medic);
 _is_only_BIS_medic = (_is_BIS_medic) && !(_is_ACE_medic);
 
@@ -47,5 +51,3 @@ if _is_only_ACE_engineer then {
 if _is_only_BIS_engineer then {
     _current_unit setVariable ["ACE_isEngineer", 1, true];
 };
-
-if DEBUG then {systemChat format ["-- IA class DONE (%1,%2,%3,%4)",_is_ACE_medic,_is_BIS_medic,_is_ACE_engineer,_is_BIS_engineer]};

@@ -230,6 +230,31 @@ class CfgDiscordRichPresence {
 class CfgFunctions {
     #include "CfgFunctions.hpp"
     #include "KP\KPPLM\KPPLM_functions.hpp"
+    class ZV
+    {
+        class my_fnc
+        {
+            file = "scripts\my_fnc"; // Chemin vers les scripts
+			// Fonction pour initialiser les scripts
+			class init_man {}
+            class init_ia_class {};
+            class init_ia_loadout {};
+
+            class init_player {};
+            class florian_init {};
+            class adrien_init {};
+
+            // Fonction pour initialiser les véhicules
+			class init_Vehicules {};
+            class init_VehiculeMedic {};
+            class init_VehiculeAmmo {};
+            class init_VehiculeFuel {};
+
+			// Fonction pour initialiser les caisses
+			class init_ammobox {};
+			class init_fuelbox {};
+        };
+    };
 };
 
 class CfgRespawnTemplates {

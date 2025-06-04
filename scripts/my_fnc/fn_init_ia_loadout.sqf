@@ -1,15 +1,15 @@
 // -- Custom script
 
 params ["_current_unit"];
-DEBUG = false;
+DEBUG = true;
 
 if (!(_current_unit isKindOf "CAManBase")) exitWith {
     diag_log format ["[ERREUR] _current_unit n'est pas une unité valide : %1", _current_unit];
 };
 
-if DEBUG then {systemChat "-- IA loadout runned"};
-
 _is_medic = _current_unit getVariable "ace_medical_medicclass" !=0;
+
+if DEBUG then {systemChat format ["-- IA loadout runned | _is_medic = %1", _is_medic];};
 
 if !("ace_medical_medicclass" in allvariables _current_unit) then {_is_medic = false};
 

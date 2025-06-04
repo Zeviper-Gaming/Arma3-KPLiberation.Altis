@@ -2,7 +2,7 @@
     Ce script ajoute une action "Réarmer" à la caisse passée en paramètre.
 */
 params ["_caisse"];
-DEBUG = false;
+DEBUG = true;
 if (DEBUG) then { systemChat "+++ Fuel init runned +++" };
 
 // paramètres
