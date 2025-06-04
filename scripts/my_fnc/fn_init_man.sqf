@@ -10,7 +10,7 @@ if (!(_current_unit isKindOf "CAManBase")) exitWith {
     diag_log "ERREUR : _current_unit n'est pas une unité (CAManBase)";
 };
 
-if DEBUG then {systemChat "man_init runned"};
+if DEBUG then {diag_log "man_init runned"};
 
 if (true) then {
     // Appel des fonctions définies dans description.ext
@@ -25,7 +25,7 @@ if (true) then {
             _killer sidechat format ["J'ai eu %1 !", name _unit];
         };
     }];
-    if DEBUG then {systemChat "-- Initialized"};
+    if DEBUG then {diag_log "-- Initialized"};
 } else {
-    systemChat "-- Initialisation Failed";
+    diag_log "-- Initialisation Failed";
     [_current_unit] remoteExecCall ["ZV_fnc_init_player", 0];}

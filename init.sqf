@@ -76,7 +76,7 @@ if (isServer) then {
         [_x] spawn {
             params ["_unit"];
             sleep 0.2;
-            if (DEBUG) then { systemChat format ["Man detected (init): %1", typeOf _unit]; };
+            if (DEBUG) then { diag_log format ["Man detected (init): %1", typeOf _unit]; };
             [_unit] remoteExecCall ["ZV_fnc_init_man", 0];
         };
     };
@@ -86,7 +86,7 @@ if (isServer) then {
             [_x] spawn {
                 params ["_caisse"];
                 sleep 0.2;
-                if (DEBUG) then { systemChat "Caisse de munition déjà présente détectée"; };
+                if (DEBUG) then { diag_log "Caisse de munition déjà présente détectée"; };
                 [_caisse] remoteExecCall ["ZV_fnc_init_ammobox", 0];
             };
         };
@@ -95,7 +95,7 @@ if (isServer) then {
         [_x] spawn {
             params ["_caisse"];
             sleep 0.2;
-            if (DEBUG) then { systemChat "Caisse de fuel déjà présente détectée"; };
+            if (DEBUG) then { diag_log "Caisse de fuel déjà présente détectée"; };
             [_caisse] remoteExecCall ["ZV_fnc_init_fuelbox", 0];
         };
     } forEach allMissionObjects "CargoNet_01_barrels_F";
@@ -103,7 +103,7 @@ if (isServer) then {
         [_x] spawn {
             params ["_veh"];
             sleep 0.2;
-            if (DEBUG) then { systemChat "Véhicule déjà présente détectée"; };
+            if (DEBUG) then { diag_log "Véhicule déjà présente détectée"; };
             [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
         };
     } forEach allMissionObjects "LandVehicle";
@@ -111,7 +111,7 @@ if (isServer) then {
         [_x] spawn {
             params ["_veh"];
             sleep 0.2;
-            if (DEBUG) then { systemChat "Véhicule déjà présente détectée"; };
+            if (DEBUG) then { diag_log "Véhicule déjà présente détectée"; };
             [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
         };
     } forEach allMissionObjects "Air";
@@ -133,7 +133,7 @@ if (isServer) then {
             [_entity] spawn {
                 params ["_unit"];
                 sleep 0.5;
-                if (DEBUG) then { systemChat format ["Man detected: %1", typeOf _unit]; };
+                if (DEBUG) then { diag_log format ["Man detected: %1", typeOf _unit]; };
                 [_unit] remoteExecCall ["ZV_fnc_init_man", 0];
             };
         };
@@ -143,7 +143,7 @@ if (isServer) then {
             [_entity] spawn {
                 params ["_veh"];
                 sleep 0.5;
-                if (DEBUG) then { systemChat format ["Vehicle detected: %1", typeOf _veh]; };
+                if (DEBUG) then { diag_log format ["Vehicle detected: %1", typeOf _veh]; };
                 [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
             };
         };
@@ -152,7 +152,7 @@ if (isServer) then {
             [_entity] spawn {
 				params ["_caisse"];
                 sleep 0.2;
-                if (DEBUG) then { systemChat "Caisse de munition détéctées" };
+                if (DEBUG) then { diag_log "Caisse de munition détéctées" };
 				[_caisse] remoteExecCall ["ZV_fnc_init_ammobox", 0];
             };
         };
@@ -161,7 +161,7 @@ if (isServer) then {
             [_entity] spawn {
 				params ["_caisse"];
                 sleep 0.2;
-                if (DEBUG) then { systemChat "Caisse de Fuel détéctées" };
+                if (DEBUG) then { diag_log "Caisse de Fuel détéctées" };
                 [_caisse] remoteExecCall ["ZV_fnc_init_fuelbox", 0];
             };
         };

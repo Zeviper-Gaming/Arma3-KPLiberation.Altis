@@ -10,7 +10,7 @@
 */
 params ["_price_s", "_price_a", "_price_f"];
 DEBUG = true;
-if (DEBUG) then { systemChat "+++ delRessources script runned +++"; };
+if (DEBUG) then { diag_log "+++ delRessources script runned +++"; };
 
 // Vérifier la FOB la plus proche
 _nearFob = [] call KPLIB_fnc_getNearestFob;

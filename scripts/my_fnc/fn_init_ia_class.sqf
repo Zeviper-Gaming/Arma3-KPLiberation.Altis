@@ -26,7 +26,7 @@ _is_BIS_medic = _current_unit getUnitTrait "Medic";
 _is_BIS_engineer = _current_unit getUnitTrait "Engineer";
 
 if (DEBUG) then {
-    systemChat format ["-- IA class runned (%1,%2,%3,%4)", _is_ACE_medic, _is_BIS_medic, _is_ACE_engineer, _is_BIS_engineer];
+    diag_log format ["-- IA class runned (%1,%2,%3,%4)", _is_ACE_medic, _is_BIS_medic, _is_ACE_engineer, _is_BIS_engineer];
 };
 
 _is_only_ACE_medic = (_is_ACE_medic) && !(_is_BIS_medic);

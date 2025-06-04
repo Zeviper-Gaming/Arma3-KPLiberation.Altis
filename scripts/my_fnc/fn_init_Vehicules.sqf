@@ -1,6 +1,6 @@
 params ["_veh"];
-if (DEBUG) then { systemChat "+++ Vehicle init runned +++" };
-DEBUG = false;
+if (DEBUG) then { diag_log "+++ Vehicle init runned +++" };
+DEBUG = true;
 
 // Récupération du nom affiché dans le jeu (ex: "MRAP", "Camion logistique", etc.)
 private _display_name = getText (configFile >> "CfgVehicles" >> typeOf _veh >> "displayName");
@@ -23,13 +23,13 @@ private _fuel_keywords = 		["Carburant","Fuel","Citerne"];
 // Si au moins un mot correspond, appeler la fonction correspondante
 if (_isMedivac) then {
     [_veh] remoteExecCall ["ZV_fnc_init_VehiculeMedic", 0];
-    if DEBUG then {systemChat format ["%1 détecté Medical: %2", name _veh, _display_name]};
+    if DEBUG then {diag_log format ["%1 détecté Medical: %2", name _veh, _display_name]};
 };
 if (_isAmmunition) then {
     [_veh] remoteExecCall ["ZV_fnc_init_VehiculeAmmo", 0];
-    if DEBUG then {systemChat format ["%1 détecté Ammunition: %2", name _veh, _display_name]};
+    if DEBUG then {diag_log format ["%1 détecté Ammunition: %2", name _veh, _display_name]};
 };
 if (_isFuel) then {
     [_veh] remoteExecCall ["ZV_fnc_init_VehiculeFuel", 0];
-    if DEBUG then {systemChat format ["%1 détecté Fuel: %2", name _veh, _display_name]};
+    if DEBUG then {diag_log format ["%1 détecté Fuel: %2", name _veh, _display_name]};
 };

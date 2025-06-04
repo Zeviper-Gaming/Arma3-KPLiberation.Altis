@@ -9,7 +9,7 @@ if (!(_current_unit isKindOf "CAManBase")) exitWith {
 
 _is_medic = _current_unit getVariable "ace_medical_medicclass" !=0;
 
-if DEBUG then {systemChat format ["-- IA loadout runned | _is_medic = %1", _is_medic];};
+if DEBUG then {diag_log format ["-- IA loadout runned | _is_medic = %1", _is_medic];};
 
 if !("ace_medical_medicclass" in allvariables _current_unit) then {_is_medic = false};
 
@@ -54,6 +54,6 @@ if !(side _current_unit == civilian) then {
 		for "_i" from 1 to 2 do {_current_unit addItemToBackpack "ACE_salineIV";};
 		for "_i" from 1 to 3 do {_current_unit addItemToBackpack "ACE_salineIV_500";};
 		for "_i" from 1 to 2 do {_current_unit addItemToBackpack "ACE_splint";};
-		if DEBUG then {systemChat "-- Medic loadout loaded"};
+		if DEBUG then {diag_log "-- Medic loadout loaded"};
 	};
 };

@@ -3,11 +3,11 @@
 */
 params ["_caisse"];
 DEBUG = false;
-if (DEBUG) then { systemChat "+++ Ammo init runned +++" };
+if (DEBUG) then { diag_log "+++ Ammo init runned +++" };
 
 // paramètres
 _rayon = 20;
-if (DEBUG) then { systemChat format ["-- Ammobox = %1", _caisse] };
+if (DEBUG) then { diag_log format ["-- Ammobox = %1", _caisse] };
 
 if (isNull _caisse) exitWith {};
 

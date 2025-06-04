@@ -1,6 +1,6 @@
 params ["_veh"];
 DEBUG = false;
-if (DEBUG) then { systemChat "+++ Medic Vehicle script runned +++"; };
+if (DEBUG) then { diag_log "+++ Medic Vehicle script runned +++"; };
 
 // Suppression des items médicaux du cargo
 _veh removeItemCargoGlobal ["ACE_splint",9999];

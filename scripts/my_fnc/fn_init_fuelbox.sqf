@@ -3,11 +3,11 @@
 */
 params ["_caisse"];
 DEBUG = false;
-if (DEBUG) then { systemChat "+++ Fuel init runned +++" };
+if (DEBUG) then { diag_log "+++ Fuel init runned +++" };
 
 // paramètres
 _rayon = 20;
-if (DEBUG) then { systemChat format ["-- Fuelbox = %1", _caisse] };
+if (DEBUG) then { diag_log format ["-- Fuelbox = %1", _caisse] };
 
 if (isNull _caisse) exitWith {};
 
