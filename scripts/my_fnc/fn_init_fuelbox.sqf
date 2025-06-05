@@ -44,7 +44,7 @@ _keywords = ["Carburant","Fuel","Citerne"];
                 {
                     params ["_target", "_caller", "_actionId", "_arguments"];
                     _camion = _arguments select 0;
-                    [_target, _camion] remoteExecCall ["refuel_action", 0];
+                    [_target, _camion] call ZV_fnc_refuel_action;
                     // hint format ["%1 a été réarmé !", getText (configFile >> "CfgVehicles" >> typeOf _camion >> "displayName")];
                 },
                 [_camion]
