@@ -13,7 +13,7 @@ private _isFuel = false;
 // Liste des mots à vérifier
 private _medevac_keywords = 	["medevac", "medic", "medecin", "ambulance","medical","médecin","médical"];
 private _ammunition_keywords =	["ammunition","munitions","ammo","RSV"];
-private _fuel_keywords = 		["Carburant","Fuel","Citerne"];
+private _fuel_keywords = 		["carburant","fuel","citerne"];
 
 // Vérification si le nom contient des mots clés pour les véhicules
 {if (_display_name_lower find _x > -1) exitWith {_isMedivac = true;};} forEach _medevac_keywords;
@@ -22,14 +22,14 @@ private _fuel_keywords = 		["Carburant","Fuel","Citerne"];
 
 // Si au moins un mot correspond, appeler la fonction correspondante
 if (_isMedivac) then {
-    [_veh] remoteExecCall ["ZV_fnc_init_VehiculeMedic", 0];
+    [_veh] call ZV_fnc_init_VehiculeMedic;
     if DEBUG then {diag_log format ["%1 détecté Medical: %2", name _veh, _display_name]};
 };
 if (_isAmmunition) then {
-    [_veh] remoteExecCall ["ZV_fnc_init_VehiculeAmmo", 0];
+    [_veh] call ZV_fnc_init_VehiculeAmmo;
     if DEBUG then {diag_log format ["%1 détecté Ammunition: %2", name _veh, _display_name]};
 };
 if (_isFuel) then {
-    [_veh] remoteExecCall ["ZV_fnc_init_VehiculeFuel", 0];
+    [_veh] call ZV_fnc_init_VehiculeFuel;
     if DEBUG then {diag_log format ["%1 détecté Fuel: %2", name _veh, _display_name]};
 };
