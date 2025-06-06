@@ -7,7 +7,7 @@ diag_log format ["[DEBUG][VehiculeFuel] FOB la plus proche : %1", _nearFob];
 
 if (side _nearFob == blufor) then {
     [_veh,0] call ace_refuel_fnc_setFuel;
-}
+};
 
 // Action "Remplir Camion"
 _veh addAction [
