@@ -5,7 +5,9 @@ diag_log format ["[DEBUG][VehiculeFuel] Initialisation pour %1", _veh];
 _nearFob = [] call KPLIB_fnc_getNearestFob;
 diag_log format ["[DEBUG][VehiculeFuel] FOB la plus proche : %1", _nearFob];
 
-[_veh,0] call ace_refuel_fnc_setFuel;
+if (side _nearFob == blufor) then {
+    [_veh,0] call ace_refuel_fnc_setFuel;
+}
 
 // Action "Remplir Camion"
 _veh addAction [
