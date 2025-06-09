@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1288;
+		nextID=1299;
 	};
 	class Camera
 	{
-		pos[]={22189.479,1241.8243,20923.955};
-		dir[]={0.65818375,-0.56242883,0.50046772};
-		up[]={0.44770327,0.82684565,0.3404232};
-		aside[]={0.60527337,-2.9802322e-08,-0.79601765};
+		pos[]={22084.279,1315.901,20890.209};
+		dir[]={0.37532553,-0.87023598,0.31909314};
+		up[]={0.66300911,0.4926348,0.56367469};
+		aside[]={0.6477266,1.7695129e-08,-0.76187289};
 	};
 };
 binarizationWanted=0;
@@ -77,14 +77,13 @@ addons[]=
 	"alive_mil_logistics",
 	"alive_mil_c2istar",
 	"alive_amb_civ_placement",
-	"alive_amb_civ_population",
-	"alive_sys_data"
+	"alive_amb_civ_population"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=27;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -257,12 +256,6 @@ class AddonsMetaData
 		{
 			className="ALiVE_amb_civ_population";
 			name="alive_amb_civ_population";
-			author="ALiVE Mod Team";
-		};
-		class Item27
-		{
-			className="ALiVE_sys_data";
-			name="alive_sys_data";
 			author="ALiVE Mod Team";
 		};
 	};
@@ -459,7 +452,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=531;
+		items=530;
 		class Item0
 		{
 			dataType="Marker";
@@ -16901,151 +16894,6 @@ class Mission
 					};
 				};
 				nAttributes=21;
-			};
-		};
-		class Item530
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={15928.29,0.087051392,8000.5811};
-			};
-			id=6539;
-			type="ALiVE_sys_data";
-			atlOffset=133.63402;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ALiVE_sys_data_killFeed";
-					expression="_this setVariable ['killFeed',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="side";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ALiVE_sys_data_disablePerfMon";
-					expression="_this setVariable ['disablePerfMon',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ALiVE_sys_data_source";
-					expression="_this setVariable ['source',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="pns";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ALiVE_sys_data_customPerfMonCode";
-					expression="_this setVariable ['customPerfMonCode',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[['entities',150],['vehicles',300],['agents',450],['allDead',600],['objects',750],['triggers',900], ['activeScripts',1050]]";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ALiVE_sys_data_debug";
-					expression="_this setVariable ['debug',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ALiVE_sys_data_disableStats";
-					expression="_this setVariable ['disableStats',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ALiVE_sys_data_saveDateTime";
-					expression="_this setVariable ['saveDateTime',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ALiVE_sys_data_disableAAR";
-					expression="_this setVariable ['disableAAR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ALiVE_sys_data_saveCompositions";
-					expression="_this setVariable ['saveCompositions',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="ALiVE_sys_data_disablePerf";
-					expression="_this setVariable ['disablePerf',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				nAttributes=10;
 			};
 		};
 	};
