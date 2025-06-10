@@ -11,7 +11,7 @@ private _isAmmunition = false;
 private _isFuel = false;
 
 // Liste des mots à vérifier
-private _medevac_keywords = 	["medevac", "medic", "medecin", "ambulance","medical","médecin","médical"];
+private _medevac_keywords = 	["medevac", "medic", "medecin", "ambulance","medical","médecin","médical","mev"];
 private _ammunition_keywords =	["ammunition","munitions","ammo","RSV"];
 private _fuel_keywords = 		["carburant","fuel","citerne"];
 
