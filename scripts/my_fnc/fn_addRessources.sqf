@@ -7,10 +7,13 @@
 	Exemple d'appel :
 		[100, 100, 100] call ZV_fnc_addRessources;
 */
-diag_log ">>> fn_addRessources loaded";
+diag_log "[DEBUG][addRessources] >>> fn_addRessources loaded";
 params ["_supply", "_ammo", "_fuel"];
-DEBUG = true;
-if (DEBUG) then { diag_log "+++ addRessources script runned +++"; };
+DEBUG = false;
+if (DEBUG) then { 
+    diag_log "[DEBUG][addRessources] addRessources script runned +++"; 
+    systemChat format ["[DEBUG][addRessources] addRessources script runned +++"];
+};
 
 diag_log format ["[DEBUG][addRessources] Appel avec params: supply=%1, ammo=%2, fuel=%3", _supply, _ammo, _fuel];
 

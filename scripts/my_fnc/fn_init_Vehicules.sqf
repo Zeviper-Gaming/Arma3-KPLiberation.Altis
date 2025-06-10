@@ -1,6 +1,6 @@
 params ["_veh"];
 if (DEBUG) then { diag_log "+++ Vehicle init runned +++" };
-DEBUG = true;
+DEBUG = false;
 
 // Récupération du nom affiché dans le jeu (ex: "MRAP", "Camion logistique", etc.)
 private _display_name = getText (configFile >> "CfgVehicles" >> typeOf _veh >> "displayName");
