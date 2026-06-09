@@ -1,5 +1,5 @@
 params ["_root","_target"];
-systemchat "copying";
+diag_log "copying";
 {
 	_target setvariable [_x,_target getvariable _x, true]		
 

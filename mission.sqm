@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=653;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=6540;
+		nextID=6544;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1255;
+		nextID=1332;
 	};
 	class Camera
 	{
-		pos[]={25123.32,2548.3247,26606.436};
-		dir[]={-0.28312203,-0.86163676,-0.42121726};
-		up[]={-0.48066232,0.50752544,-0.71510953};
-		aside[]={-0.82994312,0,0.55784798};
+		pos[]={22739.621,2258.2368,20220.104};
+		dir[]={0.10555512,-0.97353178,0.20272854};
+		up[]={0.44959924,0.22854707,0.8634963};
+		aside[]={0.88697451,9.9033059e-08,-0.46182275};
 	};
 };
 binarizationWanted=0;
@@ -40,6 +40,7 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Characters_F",
 	"ace_explosives",
+	"AMF_ObjectMover",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Mil_TentHangar",
 	"A3_Structures_F_Civ_InfoBoards",
@@ -77,8 +78,7 @@ addons[]=
 	"alive_mil_logistics",
 	"alive_mil_c2istar",
 	"alive_amb_civ_placement",
-	"alive_amb_civ_population",
-	"alive_sys_data"
+	"alive_amb_civ_population"
 };
 class AddonsMetaData
 {
@@ -127,142 +127,142 @@ class AddonsMetaData
 		};
 		class Item6
 		{
+			className="AMF_ObjectMover";
+			name="AMF_ObjectMover";
+			author="AMF";
+		};
+		class Item7
+		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item9
 		{
 			className="ace_sitting";
 			name="ACE3 - Sitting";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item9
+		class Item10
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item11
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item12
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Boat_F_Jets";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item14
 		{
 			className="ALiVE_main";
 			name="alive_main";
 			author="ALiVE Mod Team";
 		};
-		class Item14
+		class Item15
 		{
 			className="ALiVE_SYS_playeroptions";
 			name="alive_sys_playeroptions";
 			author="ALiVE Mod Team";
 		};
-		class Item15
+		class Item16
 		{
 			className="ALiVE_sys_profile";
 			name="alive_sys_profile";
 			author="ALiVE Mod Team";
 		};
-		class Item16
+		class Item17
 		{
 			className="ALiVE_mil_OPCOM";
 			name="alive_mil_opcom";
 			author="ALiVE Mod Team";
 		};
-		class Item17
+		class Item18
 		{
 			className="ALiVE_mil_cqb";
 			name="alive_mil_cqb";
 			author="ALiVE Mod Team";
 		};
-		class Item18
+		class Item19
 		{
 			className="ALiVE_mil_ied";
 			name="alive_mil_ied";
 			author="ALiVE Mod Team";
 		};
-		class Item19
+		class Item20
 		{
 			className="ALiVE_civ_placement";
 			name="alive_civ_placement";
 			author="ALiVE Mod Team";
 		};
-		class Item20
+		class Item21
 		{
 			className="ALiVE_mil_placement";
 			name="alive_mil_placement";
 			author="ALiVE Mod Team";
 		};
-		class Item21
+		class Item22
 		{
 			className="ALiVE_SUP_PLAYER_RESUPPLY";
 			name="alive_sup_player_resupply";
 			author="ALiVE Mod Team";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_fortify";
 			name="ACE3 - Fortify";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item23
+		class Item24
 		{
 			className="ALiVE_mil_logistics";
 			name="alive_mil_logistics";
 			author="ALiVE Mod Team";
 		};
-		class Item24
+		class Item25
 		{
 			className="ALiVE_MIL_C2ISTAR";
 			name="alive_mil_c2istar";
 			author="ALiVE Mod Team";
 		};
-		class Item25
+		class Item26
 		{
 			className="ALiVE_amb_civ_placement";
 			name="alive_amb_civ_placement";
 			author="ALiVE Mod Team";
 		};
-		class Item26
+		class Item27
 		{
 			className="ALiVE_amb_civ_population";
 			name="alive_amb_civ_population";
-			author="ALiVE Mod Team";
-		};
-		class Item27
-		{
-			className="ALiVE_sys_data";
-			name="alive_sys_data";
 			author="ALiVE Mod Team";
 		};
 	};
@@ -459,7 +459,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=531;
+		items=530;
 		class Item0
 		{
 			dataType="Marker";
@@ -903,7 +903,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -917,7 +917,7 @@ class Mission
 					class Attributes
 					{
 						rank="COLONEL";
-						init="[this] execVM ""scripts\my_fnc\florian_init.sqf""; " \n "";
+						init="[this] execVM ""scripts\my_fnc\fn_florian_init.sqf""; " \n "";
 						name="commandant";
 						description="Seigneur Supreme (Florian)";
 						isPlayer=1;
@@ -1008,7 +1008,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="[this] execVM ""scripts\my_fnc\adrien_init.sqf"";";
+						init="[this] execVM ""scripts\my_fnc\fn_adrien_init.sqf"";";
 						name="second_commandant";
 						description="Préposé aux tâches ingrates (Adrien)";
 						isPlayable=1;
@@ -1016,6 +1016,186 @@ class Mission
 					id=564;
 					type="B_Soldier_SL_F";
 					atlOffset=-4.7683716e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_advanced_fatigue_performanceFactor";
+							expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.9501863;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14498.06,8.0533047,5893.981};
+						angles[]={0.15344934,6.0835018,6.118042};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="[this] execVM ""scripts\my_fnc\fn_adrien_init.sqf"";";
+						name="second_commandant_1";
+						description="Stagiaire 1";
+						isPlayable=1;
+					};
+					id=6541;
+					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_advanced_fatigue_performanceFactor";
+							expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.9501863;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14500.479,8.00282,5894.5908};
+						angles[]={6.2605309,6.028646,0.010663962};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="[this] execVM ""scripts\my_fnc\fn_adrien_init.sqf"";";
+						name="second_commandant_2";
+						description="Stagiaire 2";
+						isPlayable=1;
+					};
+					id=6543;
+					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11891,7 +12071,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="255";
+											value="400";
 										};
 									};
 								};
@@ -11956,7 +12136,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="2500";
+											value="3500";
 										};
 									};
 								};
@@ -11969,7 +12149,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="true";
+											value="false";
 										};
 									};
 								};
@@ -12328,7 +12508,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="true";
+									value="false";
 								};
 							};
 						};
@@ -15556,17 +15736,16 @@ class Mission
 		class Item524
 		{
 			dataType="Marker";
-			position[]={24909.953,38.202999,21477.609};
+			position[]={25485.781,47.700607,22154.84};
 			name="BLU_TAOR";
 			markerType="ELLIPSE";
 			type="";
 			colorName="ColorWEST";
 			alpha=0;
-			a=5000;
+			a=4700;
 			b=3000;
 			angle=137.108;
 			id=6507;
-			atlOffset=0.00017166138;
 		};
 		class Item525
 		{
@@ -16902,151 +17081,6 @@ class Mission
 					};
 				};
 				nAttributes=21;
-			};
-		};
-		class Item530
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={15928.29,0.087051392,8000.5811};
-			};
-			id=6539;
-			type="ALiVE_sys_data";
-			atlOffset=133.63402;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ALiVE_sys_data_killFeed";
-					expression="_this setVariable ['killFeed',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="side";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ALiVE_sys_data_disablePerfMon";
-					expression="_this setVariable ['disablePerfMon',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ALiVE_sys_data_source";
-					expression="_this setVariable ['source',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="pns";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ALiVE_sys_data_customPerfMonCode";
-					expression="_this setVariable ['customPerfMonCode',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[['entities',150],['vehicles',300],['agents',450],['allDead',600],['objects',750],['triggers',900], ['activeScripts',1050]]";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ALiVE_sys_data_debug";
-					expression="_this setVariable ['debug',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ALiVE_sys_data_disableStats";
-					expression="_this setVariable ['disableStats',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ALiVE_sys_data_saveDateTime";
-					expression="_this setVariable ['saveDateTime',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ALiVE_sys_data_disableAAR";
-					expression="_this setVariable ['disableAAR',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ALiVE_sys_data_saveCompositions";
-					expression="_this setVariable ['saveCompositions',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="ALiVE_sys_data_disablePerf";
-					expression="_this setVariable ['disablePerf',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="false";
-						};
-					};
-				};
-				nAttributes=10;
 			};
 		};
 	};

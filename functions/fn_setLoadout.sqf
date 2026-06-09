@@ -28,7 +28,7 @@ _options = [];
 // -- addAction support
 if(count _this < 4) then {
     #define PARAM_START private ["_PARAM_INDEX"]; _PARAM_INDEX=0;
-    #define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { systemChat format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
+    #define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { diag_log format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
     #define PARAM(A,B) A = B; if (count _this > _PARAM_INDEX) then { A = _this select _PARAM_INDEX; }; _PARAM_INDEX=_PARAM_INDEX+1;
     PARAM_START
     PARAM_REQ(_target)
@@ -41,10 +41,10 @@ if(count _this < 4) then {
 };
 
 if(isNil{_data}) exitWith {
-    systemChat "you are trying to set/load empty loadout";
+    diag_log "you are trying to set/load empty loadout";
 };
 if(count _data < 13) exitWith {
-    systemChat "you are trying to set/load corrupted loadout";
+    diag_log "you are trying to set/load corrupted loadout";
 };
 
 #define QUOTE(A) #A
@@ -185,7 +185,7 @@ _addWeapon = {
                 };
             } forEach (_data select (1+_THIS(1))); // -- add weapon items
         } else {
-            systemchat format["%1 %2 doesn't exist",_THIS(2),_weapon];
+            diag_log format["%1 %2 doesn't exist",_THIS(2),_weapon];
             if (_currentWeapon == _weapon) then {
                 _currentWeapon = "";
                 _currentMode = "";
@@ -252,7 +252,7 @@ if(vehicle _target == _target && _currentWeapon != "" && _currentMode != "") the
         _muzzles = _muzzles + 1;
     };
     if(_muzzles >= 100) then {
-        systemchat format["mode %1 for %2 doesn't exist", _currentMode, _currentWeapon];
+        diag_log format["mode %1 for %2 doesn't exist", _currentMode, _currentWeapon];
         _currentMode = "";
     };
 } else {
@@ -283,7 +283,7 @@ if(_outfit != "") then {
             };
         };
     } else {
-        systemchat format["uniform %1 doesn't exist",_outfit];
+        diag_log format["uniform %1 doesn't exist",_outfit];
     };
 };
 
@@ -306,7 +306,7 @@ if(_outfit != "") then {
             };
         };
     } else {
-        systemchat format["vest %1 doesn't exist",_outfit];
+        diag_log format["vest %1 doesn't exist",_outfit];
     };
 };
 
@@ -325,7 +325,7 @@ if(_outfit != "") then {
             } forEach (_data select 12);
         };
     } else {
-        systemchat format["backpack %1 doesn't exist",_outfit];
+        diag_log format["backpack %1 doesn't exist",_outfit];
     };
 };
 

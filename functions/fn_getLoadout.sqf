@@ -55,7 +55,7 @@ _options = [];
 // -- addAction support
 if(count _this < 4) then {
     #define PARAM_START private ["_PARAM_INDEX"]; _PARAM_INDEX=0;
-    #define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { systemChat format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
+    #define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { diag_log format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
     #define PARAM(A,B) A = B; if (count _this > _PARAM_INDEX) then { A = _this select _PARAM_INDEX; }; _PARAM_INDEX=_PARAM_INDEX+1;
     PARAM_START
     PARAM_REQ(_target)

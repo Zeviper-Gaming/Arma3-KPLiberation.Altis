@@ -13,11 +13,11 @@
         KPLIB_objectInits = [
             [
                 ["O_soldierU_F"],
-                {systemChat "CSAT urban soldier was spawned!"}
+                {diag_log "CSAT urban soldier was spawned!"}
             ],
             [
                 ["CAManBase"],
-                {systemChat format ["Some human named '%1' was spawned!", name _this]},
+                {diag_log format ["Some human named '%1' was spawned!", name _this]},
                 true
             ]
         ];
