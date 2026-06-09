@@ -190,7 +190,7 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_save_interval = 60;                                       // -- Interval in seconds for automatic save.
+KP_liberation_save_interval = 300;                                       // -- Interval in seconds for automatic save.
 
 GRLIB_side_friendly = WEST;                                             // -- Friendly side.
 GRLIB_side_enemy = EAST;                                                // -- Enemy side.
@@ -220,7 +220,7 @@ GRLIB_surrender_chance = 80;                                            // -- Ch
 GRLIB_civilians_amount = 10;                                            // -- Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // -- Time in seconds until bodies of dead soldiers are cleaned up.
 
-GRLIB_blufor_cap = 100;                                                 // -- Cap for BLUFOR.
+GRLIB_blufor_cap = 250;                                                 // -- Cap for BLUFOR.
 GRLIB_sector_cap = 180;                                                 // -- Cap for sector defenders.
 GRLIB_battlegroup_cap = 150;                                            // -- Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150;                                                 // -- Cap for enemy patrols.

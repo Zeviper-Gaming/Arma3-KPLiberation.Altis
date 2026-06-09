@@ -3,9 +3,13 @@
 params ["_current_unit"];
 DEBUG = false;
 
-if DEBUG then {systemChat "-- IA loadout runned"};
+if (!(_current_unit isKindOf "CAManBase")) exitWith {
+    diag_log format ["[ERREUR] _current_unit n'est pas une unité valide : %1", _current_unit];
+};
 
 _is_medic = _current_unit getVariable "ace_medical_medicclass" !=0;
+
+if DEBUG then {diag_log format ["-- IA loadout runned | _is_medic = %1", _is_medic];};
 
 if !("ace_medical_medicclass" in allvariables _current_unit) then {_is_medic = false};
 
@@ -36,6 +40,6 @@ if !(side _current_unit == civilian) then {
 		for "_i" from 1 to 2 do {_current_unit addItemToBackpack "ACE_salineIV";};
 		for "_i" from 1 to 3 do {_current_unit addItemToBackpack "ACE_salineIV_500";};
 		for "_i" from 1 to 2 do {_current_unit addItemToBackpack "ACE_splint";};
-		if DEBUG then {systemChat "-- Medic loadout loaded"};
+		if DEBUG then {diag_log "-- Medic loadout loaded"};
 	};
 };
