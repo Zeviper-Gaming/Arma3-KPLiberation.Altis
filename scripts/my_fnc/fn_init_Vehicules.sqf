@@ -22,7 +22,7 @@ private _fuel_keywords = 		["carburant","fuel","citerne","ch-47"];
 
 // Si au moins un mot correspond, appeler la fonction correspondante
 if (_isMedivac) then {
-    [_veh] call ZV_fnc_init_VehiculeMedic;
+    //[_veh] call ZV_fnc_init_VehiculeMedic;
     if DEBUG then {diag_log format ["%1 détecté Medical: %2", name _veh, _display_name]};
 };
 if (_isAmmunition) then {
