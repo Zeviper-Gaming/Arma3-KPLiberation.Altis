@@ -13,7 +13,7 @@ if DEBUG then {diag_log format ["-- IA loadout runned | _is_medic = %1", _is_med
 
 if !("ace_medical_medicclass" in allvariables _current_unit) then {_is_medic = false};
 
-if !(side _current_unit == civilian) && !(isPlayer _current_unit) then {
+if !(side _current_unit == civilian && !isPlayer _current_unit) then {
 	// -- Suppression des medikits
 	_current_unit removeitems "FirstAidKit";
 	_current_unit removeitems "MediKit";
@@ -31,6 +31,7 @@ if !(side _current_unit == civilian) && !(isPlayer _current_unit) then {
 	if (_is_medic) then {
 		for "_i" from 1 to 20 do {_current_unit addItemToBackpack "ACE_elasticBandage";};
 		for "_i" from 1 to 10 do {_current_unit addItemToBackpack "ACE_packingBandage";};
+		for "_i" from 1 to 10 do {_current_unit addItemToBackpack "ACE_painkillers";};
 		for "_i" from 1 to 5 do {_current_unit addItemToBackpack "ACE_tourniquet";};
 		for "_i" from 1 to 10 do {_current_unit addItemToBackpack "ACE_morphine";};
 		for "_i" from 1 to 5 do {_current_unit addItemToBackpack "ACE_quikclot";};
