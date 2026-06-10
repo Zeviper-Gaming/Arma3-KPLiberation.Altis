@@ -7,8 +7,8 @@ _current_unit globalChat "Ah ! Vlà l'autre...";
 removeallWeapons _current_unit; removebackpack _current_unit;
 
 // Attribution des rôles ACE
-_current_unit setVariable ["ace_medical_medicClass", 1, true];  // Médecin niveau 1
-_current_unit setVariable ["ACE_isEngineer", 1, true];          // Ingénieur
+_current_unit setVariable ["ace_medical_medicClass", 2, true];  // Médecin niveau 1
+_current_unit setVariable ["ACE_isEngineer", 2, true];          // Ingénieur
 
 // Attribution personnalisée : Commandant
 _current_unit setVariable ["PlayerName", "Adrien", true];
