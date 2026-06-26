@@ -13,7 +13,7 @@ if DEBUG then {diag_log format ["-- IA loadout runned | _is_medic = %1", _is_med
 
 if !("ace_medical_medicclass" in allvariables _current_unit) then {_is_medic = false};
 
-if !(side _current_unit == civilian && !isPlayer _current_unit) then {
+if (!isPlayer _current_unit && {side _current_unit != civilian}) then {
 	// -- Suppression des medikits
 	_current_unit removeitems "FirstAidKit";
 	_current_unit removeitems "MediKit";
