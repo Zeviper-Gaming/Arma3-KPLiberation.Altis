@@ -13,7 +13,7 @@ private _isFuel = false;
 // Liste des mots à vérifier
 // private _medevac_keywords = 	["medevac", "medic", "medecin", "ambulance","medical","médecin","médical","mev"];
 private _ammunition_keywords =	["ammunition","munitions","ammo","rsv"];
-private _fuel_keywords = 		["carburant","fuel","citerne","storagebladder"];
+private _fuel_keywords = 		["carburant","fuel","citerne","conteneur de carburant","réservoir souple de carburant","nacelle carburant","poche de carburant"];
 
 // Vérification si le nom contient des mots clés pour les véhicules
 {if (_display_name_lower find _x > -1) exitWith {_isMedivac = true;};} forEach _medevac_keywords;
