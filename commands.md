@@ -11,8 +11,8 @@ Voir ce fichier _functions/fn_getSaveData.sqf_
 # Commandes
 `[player, KPLIB_suppMod_req, KPLIB_suppMod_arty] call BIS_fnc_addSupportLink;` : _Donne a `player` le lien vers le modules de support
 
-# Scripts snippets
-ajoute une valeur de ressources a un objet
+# Ressources snippets
+## Ajoute une valeur de ressources a un objet
  - **ATTENTION NE MARCHE QUE POUR LES OBJET SUIVANTS**:
    - _filet de levage (bidons)_ : `fuel`
    - _filet de levage (caisse)_ : `ammo`
@@ -20,6 +20,26 @@ ajoute une valeur de ressources a un objet
 ```sqf
 _this setvariable ["kp_liberation_crate_value",100];
 ```
+## Déclencher un achat personnalisé
+Déclenche un achat en utilisant la méthode de KPlib. Je joueur doit se trouver dans une FOB
+```sqf
+// Quantités à dépenser
+_price_s = 200;
+_price_a = 150;
+_price_f = 100;
+
+// FOB proche
+_nearFob = [] call KPLIB_fnc_getNearestFob;
+
+// Zones de stockage rattachées à cette FOB
+_storage_areas = (_nearFob nearObjects (GRLIB_fob_range * 2)) select {
+    (_x getVariable ["KP_liberation_storage_type", -1]) == 0
+};
+
+// Appel distant sur le serveur
+[_price_s, _price_a, _price_f, "", -1, _storage_areas] remoteExec ["build_remote_call", 2];
+```
+Source (Chat GPT)[https://chatgpt.com/g/g-p-6822424c0db8819194e45f4b7e15d5e0-arma-3-kp-liberation/c/6837e87b-a6bc-8013-898f-cd7b4e456e9b]
 
 # Admins variables
 ## Variables OPFOR Hostility:
