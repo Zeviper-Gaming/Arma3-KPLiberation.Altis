@@ -12,8 +12,8 @@ private _isFuel = false;
 
 // Liste des mots à vérifier
 // private _medevac_keywords = 	["medevac", "medic", "medecin", "ambulance","medical","médecin","médical","mev"];
-private _ammunition_keywords =	["ammunition","munitions","ammo","RSV","ch-47"];
-private _fuel_keywords = 		["carburant","fuel","citerne","ch-47"];
+private _ammunition_keywords =	["ammunition","munitions","ammo","rsv"];
+private _fuel_keywords = 		["carburant","fuel","citerne","conteneur de carburant","réservoir souple de carburant","nacelle carburant","poche de carburant"];
 
 // Vérification si le nom contient des mots clés pour les véhicules
 {if (_display_name_lower find _x > -1) exitWith {_isMedivac = true;};} forEach _medevac_keywords;
@@ -22,7 +22,7 @@ private _fuel_keywords = 		["carburant","fuel","citerne","ch-47"];
 
 // Si au moins un mot correspond, appeler la fonction correspondante
 if (_isMedivac) then {
-    [_veh] call ZV_fnc_init_VehiculeMedic;
+    //[_veh] call ZV_fnc_init_VehiculeMedic;
     if DEBUG then {diag_log format ["%1 détecté Medical: %2", name _veh, _display_name]};
 };
 if (_isAmmunition) then {

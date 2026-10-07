@@ -115,6 +115,17 @@ if (isServer) then {
             [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
         };
     } forEach allMissionObjects "Air";
+    { // Détecte les citernes/poches de carburant statiques (non-véhicules)
+        private _type_lower = toLower (typeOf _x);
+        if (_type_lower find "storagebladder_01_fuel" > -1 || _type_lower find "flexibletank_01" > -1) then {
+            [_x] spawn {
+                params ["_veh"];
+                sleep 0.2;
+                if (DEBUG) then { diag_log format ["Citerne de carburant statique déjà présente détectée: %1", typeOf _veh]; };
+                [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
+            };
+        };
+    } forEach (entities []);
 };
 
 // Detecte le spawn d'entités (Men, Vehicules, etc)
@@ -144,6 +155,15 @@ if (isServer) then {
                 params ["_veh"];
                 sleep 0.5;
                 if (DEBUG) then { diag_log format ["Vehicle detected: %1", typeOf _veh]; };
+                [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
+            };
+        };
+        // Détection des citernes/poches de carburant statiques (non-véhicules)
+        if (!isNull _entity && {alive _entity} && {(toLower typeOf _entity) find "storagebladder_01_fuel" > -1 || (toLower typeOf _entity) find "flexibletank_01" > -1}) then {
+            [_entity] spawn {
+                params ["_veh"];
+                sleep 0.5;
+                if (DEBUG) then { diag_log format ["Citerne de carburant statique détectée: %1", typeOf _veh]; };
                 [_veh] remoteExecCall ["ZV_fnc_init_Vehicules", 0];
             };
         };

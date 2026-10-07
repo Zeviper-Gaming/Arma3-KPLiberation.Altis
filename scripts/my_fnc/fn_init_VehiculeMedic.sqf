@@ -5,6 +5,7 @@ if (DEBUG) then { diag_log "+++ Medic Vehicle script runned +++"; };
 // Initialisation des caisses de matériel médical
 
 _veh addItemCargoGlobal ["ACE_splint",15];
+_veh addItemCargoGlobal ["ACE_painkillers",50];
 _veh addItemCargoGlobal ["ACE_epinephrine",50];
 _veh addItemCargoGlobal ["ACE_adenosine",30];
 _veh addItemCargoGlobal ["ACE_morphine",50];

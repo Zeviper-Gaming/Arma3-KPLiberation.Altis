@@ -261,7 +261,9 @@ The Steam UIDs entered in this array will allow corresponding players to access 
 even if they are not in the commander slot. */
 KP_liberation_commander_actions = [
     "76561198142602901",
-	"76561198017128331"
+	"76561198017128331",
+    "76561198944780342",
+    "76561198119331141"
 	/*
     Example:
     "1324678",
@@ -274,7 +276,9 @@ KP_liberation_commander_actions = [
 Same format as for the commander actions. */
 KP_liberation_suppMod_whitelist = [
     "76561198142602901",
-	"76561198017128331"
+	"76561198017128331",
+    "76561198944780342",
+    "76561198119331141"
 ];
 
 /* Array of radio tower classnames to place at radio tower sectors.
